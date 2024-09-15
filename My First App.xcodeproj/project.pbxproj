@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9900E1892B9B8EB5002E372E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1882B9B8EB5002E372E /* FourthViewController.swift */; };
+		9900E1912B9C91FE002E372E /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1902B9C91FE002E372E /* FifthViewController.swift */; };
+		9902892B2B9B3D180016D8C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */; };
+		990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990EBBDC2C0794720059A612 /* RemindersController.swift */; };
+		991373B82C0F036A006D1A8D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991373B72C0F036A006D1A8D /* Model.swift */; };
+		9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7B2B94735C00202CAC /* AppDelegate.swift */; };
+		9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7D2B94735C00202CAC /* SceneDelegate.swift */; };
+		9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7F2B94735C00202CAC /* FirstViewController.swift */; };
+		9914AD832B94735C00202CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD812B94735C00202CAC /* Main.storyboard */; };
+		9914AD852B94735E00202CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD842B94735E00202CAC /* Assets.xcassets */; };
+		9914AD882B94735E00202CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD862B94735E00202CAC /* LaunchScreen.storyboard */; };
+		99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C5E2BAE32FB003B2550 /* ImagePicker.swift */; };
+		99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C622BAF0BF8003B2550 /* LastViewController.swift */; };
+		993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EC2BB81E630020A2D4 /* LifeDaysOne.swift */; };
+		993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */; };
+		993F6F402C2C91B50071650D /* testtext.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 993F6F3F2C2C91B50071650D /* testtext.rtf */; };
+		993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F6F412C2C92410071650D /* TypingtestViewController.swift */; };
+		995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */; };
+		9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* SeventhViewController.swift */; };
+		996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */; };
+		997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */; };
+		998245D42C1B42E300E13656 /* Тверская.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CD2C1B42DD00E13656 /* Тверская.mp3 */; };
+		998245D52C1B42E300E13656 /* Специфичный.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CE2C1B42DE00E13656 /* Специфичный.mp3 */; };
+		998245D62C1B42E300E13656 /* Audi Quattro 2021.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CF2C1B42DF00E13656 /* Audi Quattro 2021.mp3 */; };
+		998245D72C1B42E300E13656 /* Города.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245D02C1B42E000E13656 /* Города.mp3 */; };
+		998245D82C1B42E300E13656 /* Onward Love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245D12C1B42E100E13656 /* Onward Love.mp3 */; };
+		998245D92C1B42E300E13656 /* Action.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245D22C1B42E200E13656 /* Action.mp3 */; };
+		998245DA2C1B42E300E13656 /* Audi Quattro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245D32C1B42E300E13656 /* Audi Quattro.mp3 */; };
+		998245DC2C1B42F100E13656 /* СИНИЙ AUDI.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */; };
+		998245DE2C1B431200E13656 /* Заключительная.wav in Resources */ = {isa = PBXBuildFile; fileRef = 998245DD2C1B431200E13656 /* Заключительная.wav */; };
+		998245E02C1B43C300E13656 /* 10 FAULTS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */; };
+		998245E22C1B55D600E13656 /* music.gif in Resources */ = {isa = PBXBuildFile; fileRef = 998245E12C1B55D600E13656 /* music.gif */; };
+		99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */; };
+		99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3B2BAC1EA800A4D34E /* PageViewController.swift */; };
+		99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */; };
+		99948A4C2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */; };
+		99948A4E2BAD916400A4D34E /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A4D2BAD916400A4D34E /* TabViewController.swift */; };
+		9998E1932C19D20D00A353FD /* ambient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9998E1922C19D20C00A353FD /* ambient.mp3 */; };
+		9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998E1962C19E99100A353FD /* DiceGameViewController.swift */; };
+		99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */; };
+		99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */; };
+		99C507BB2B9A2A6F00076A8B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */; };
+		99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */; };
+		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
+		99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758BC2BA2F7250068F192 /* NinthViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9900E1882B9B8EB5002E372E /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		9900E1902B9C91FE002E372E /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
+		9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		990EBBDC2C0794720059A612 /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
+		991373B72C0F036A006D1A8D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9914AD782B94735C00202CAC /* My First App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My First App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9914AD7B2B94735C00202CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9914AD7D2B94735C00202CAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9914AD7F2B94735C00202CAC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		9914AD822B94735C00202CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9914AD842B94735E00202CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9914AD872B94735E00202CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9914AD892B94735E00202CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99256C5E2BAE32FB003B2550 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		99256C622BAF0BF8003B2550 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
+		993179EC2BB81E630020A2D4 /* LifeDaysOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysOne.swift; sourceTree = "<group>"; };
+		993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysTwo.swift; sourceTree = "<group>"; };
+		993F6F3F2C2C91B50071650D /* testtext.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = testtext.rtf; sourceTree = "<group>"; };
+		993F6F412C2C92410071650D /* TypingtestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingtestViewController.swift; sourceTree = "<group>"; };
+		995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTextPicker.swift; sourceTree = "<group>"; };
+		9957C4062B9E02980054D61C /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
+		996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Покиньте Зал.mp3"; sourceTree = "<group>"; };
+		997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		998245CD2C1B42DD00E13656 /* Тверская.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Тверская.mp3"; sourceTree = "<group>"; };
+		998245CE2C1B42DE00E13656 /* Специфичный.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Специфичный.mp3"; sourceTree = "<group>"; };
+		998245CF2C1B42DF00E13656 /* Audi Quattro 2021.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Audi Quattro 2021.mp3"; sourceTree = "<group>"; };
+		998245D02C1B42E000E13656 /* Города.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Города.mp3"; sourceTree = "<group>"; };
+		998245D12C1B42E100E13656 /* Onward Love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Onward Love.mp3"; sourceTree = "<group>"; };
+		998245D22C1B42E200E13656 /* Action.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Action.mp3; sourceTree = "<group>"; };
+		998245D32C1B42E300E13656 /* Audi Quattro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Audi Quattro.mp3"; sourceTree = "<group>"; };
+		998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "СИНИЙ AUDI.mp3"; sourceTree = "<group>"; };
+		998245DD2C1B431200E13656 /* Заключительная.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Заключительная.wav"; sourceTree = "<group>"; };
+		998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 FAULTS.mp3"; sourceTree = "<group>"; };
+		998245E12C1B55D600E13656 /* music.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = music.gif; sourceTree = "<group>"; };
+		99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ninth(1)ViewController.swift"; sourceTree = "<group>"; };
+		99948A3B2BAC1EA800A4D34E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthViewController.swift; sourceTree = "<group>"; };
+		99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eleventh_1_ViewController.swift; sourceTree = "<group>"; };
+		99948A4D2BAD916400A4D34E /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		9998E1922C19D20C00A353FD /* ambient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ambient.mp3; sourceTree = "<group>"; };
+		9998E1962C19E99100A353FD /* DiceGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameViewController.swift; sourceTree = "<group>"; };
+		99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompTwo.swift; sourceTree = "<group>"; };
+		99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompOne.swift; sourceTree = "<group>"; };
+		99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthTableViewController.swift; sourceTree = "<group>"; };
+		99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
+		99F758BC2BA2F7250068F192 /* NinthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinthViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9914AD752B94735C00202CAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9914AD6F2B94735C00202CAC = {
+			isa = PBXGroup;
+			children = (
+				9914AD7A2B94735C00202CAC /* My First App */,
+				9914AD792B94735C00202CAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9914AD792B94735C00202CAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9914AD782B94735C00202CAC /* My First App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9914AD7A2B94735C00202CAC /* My First App */ = {
+			isa = PBXGroup;
+			children = (
+				9914AD7B2B94735C00202CAC /* AppDelegate.swift */,
+				9914AD7D2B94735C00202CAC /* SceneDelegate.swift */,
+				9914AD7F2B94735C00202CAC /* FirstViewController.swift */,
+				9936A6A92C00C4C8002813F2 /* NamesComp */,
+				9936A6A72C00C4B0002813F2 /* LifeDays */,
+				995182F42C0BAECD0064D136 /* Reminders */,
+				993F6F412C2C92410071650D /* TypingtestViewController.swift */,
+				9998E1962C19E99100A353FD /* DiceGameViewController.swift */,
+				99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */,
+				9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */,
+				9900E1882B9B8EB5002E372E /* FourthViewController.swift */,
+				9900E1902B9C91FE002E372E /* FifthViewController.swift */,
+				99256C5E2BAE32FB003B2550 /* ImagePicker.swift */,
+				997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */,
+				9957C4062B9E02980054D61C /* SeventhViewController.swift */,
+				99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */,
+				99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */,
+				99F758BC2BA2F7250068F192 /* NinthViewController.swift */,
+				99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */,
+				99948A3B2BAC1EA800A4D34E /* PageViewController.swift */,
+				99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */,
+				99948A4D2BAD916400A4D34E /* TabViewController.swift */,
+				99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */,
+				99256C622BAF0BF8003B2550 /* LastViewController.swift */,
+				9914AD812B94735C00202CAC /* Main.storyboard */,
+				9914AD842B94735E00202CAC /* Assets.xcassets */,
+				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
+				9914AD892B94735E00202CAC /* Info.plist */,
+				998245E12C1B55D600E13656 /* music.gif */,
+				993F6F3F2C2C91B50071650D /* testtext.rtf */,
+				996539C72C1B2EF400602588 /* Sounds */,
+			);
+			path = "My First App";
+			sourceTree = "<group>";
+		};
+		9936A6A72C00C4B0002813F2 /* LifeDays */ = {
+			isa = PBXGroup;
+			children = (
+				993179EC2BB81E630020A2D4 /* LifeDaysOne.swift */,
+				993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */,
+			);
+			path = LifeDays;
+			sourceTree = "<group>";
+		};
+		9936A6A92C00C4C8002813F2 /* NamesComp */ = {
+			isa = PBXGroup;
+			children = (
+				99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */,
+				99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */,
+			);
+			path = NamesComp;
+			sourceTree = "<group>";
+		};
+		995182F42C0BAECD0064D136 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				990EBBDC2C0794720059A612 /* RemindersController.swift */,
+				995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */,
+				991373B72C0F036A006D1A8D /* Model.swift */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		996539C72C1B2EF400602588 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9998E1922C19D20C00A353FD /* ambient.mp3 */,
+				996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */,
+				998245D32C1B42E300E13656 /* Audi Quattro.mp3 */,
+				998245CF2C1B42DF00E13656 /* Audi Quattro 2021.mp3 */,
+				998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */,
+				998245D22C1B42E200E13656 /* Action.mp3 */,
+				998245CD2C1B42DD00E13656 /* Тверская.mp3 */,
+				998245D02C1B42E000E13656 /* Города.mp3 */,
+				998245CE2C1B42DE00E13656 /* Специфичный.mp3 */,
+				998245D12C1B42E100E13656 /* Onward Love.mp3 */,
+				998245DD2C1B431200E13656 /* Заключительная.wav */,
+				998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9914AD772B94735C00202CAC /* My First App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9914AD8C2B94735E00202CAC /* Build configuration list for PBXNativeTarget "My First App" */;
+			buildPhases = (
+				9914AD742B94735C00202CAC /* Sources */,
+				9914AD752B94735C00202CAC /* Frameworks */,
+				9914AD762B94735C00202CAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My First App";
+			productName = "My First App";
+			productReference = 9914AD782B94735C00202CAC /* My First App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9914AD702B94735C00202CAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					9914AD772B94735C00202CAC = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 9914AD732B94735C00202CAC /* Build configuration list for PBXProject "My First App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9914AD6F2B94735C00202CAC;
+			productRefGroup = 9914AD792B94735C00202CAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9914AD772B94735C00202CAC /* My First App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9914AD762B94735C00202CAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9998E1932C19D20D00A353FD /* ambient.mp3 in Resources */,
+				996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */,
+				998245D52C1B42E300E13656 /* Специфичный.mp3 in Resources */,
+				998245E02C1B43C300E13656 /* 10 FAULTS.mp3 in Resources */,
+				998245D82C1B42E300E13656 /* Onward Love.mp3 in Resources */,
+				998245D72C1B42E300E13656 /* Города.mp3 in Resources */,
+				998245D62C1B42E300E13656 /* Audi Quattro 2021.mp3 in Resources */,
+				998245D42C1B42E300E13656 /* Тверская.mp3 in Resources */,
+				9914AD882B94735E00202CAC /* LaunchScreen.storyboard in Resources */,
+				998245DC2C1B42F100E13656 /* СИНИЙ AUDI.mp3 in Resources */,
+				9914AD852B94735E00202CAC /* Assets.xcassets in Resources */,
+				9914AD832B94735C00202CAC /* Main.storyboard in Resources */,
+				998245D92C1B42E300E13656 /* Action.mp3 in Resources */,
+				998245DA2C1B42E300E13656 /* Audi Quattro.mp3 in Resources */,
+				993F6F402C2C91B50071650D /* testtext.rtf in Resources */,
+				998245E22C1B55D600E13656 /* music.gif in Resources */,
+				998245DE2C1B431200E13656 /* Заключительная.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9914AD742B94735C00202CAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				991373B82C0F036A006D1A8D /* Model.swift in Sources */,
+				9900E1892B9B8EB5002E372E /* FourthViewController.swift in Sources */,
+				995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */,
+				99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */,
+				99C507BB2B9A2A6F00076A8B /* SecondViewController.swift in Sources */,
+				9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */,
+				990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */,
+				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
+				993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */,
+				9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */,
+				99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */,
+				993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */,
+				99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */,
+				99948A4E2BAD916400A4D34E /* TabViewController.swift in Sources */,
+				993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */,
+				99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */,
+				99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */,
+				99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */,
+				99948A4C2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift in Sources */,
+				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
+				99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */,
+				997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */,
+				9902892B2B9B3D180016D8C3 /* ThirdViewController.swift in Sources */,
+				99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */,
+				9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */,
+				9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */,
+				99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */,
+				9900E1912B9C91FE002E372E /* FifthViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9914AD812B94735C00202CAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9914AD822B94735C00202CAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9914AD862B94735E00202CAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9914AD872B94735E00202CAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9914AD8A2B94735E00202CAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9914AD8B2B94735E00202CAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9914AD8D2B94735E00202CAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V459R55R59;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My First App/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "to save images into an app";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artyom-Tabenskiy.My-First-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9914AD8E2B94735E00202CAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V459R55R59;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "My First App/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "to save images into an app";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Artyom-Tabenskiy.My-First-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9914AD732B94735C00202CAC /* Build configuration list for PBXProject "My First App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9914AD8A2B94735E00202CAC /* Debug */,
+				9914AD8B2B94735E00202CAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9914AD8C2B94735E00202CAC /* Build configuration list for PBXNativeTarget "My First App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9914AD8D2B94735E00202CAC /* Debug */,
+				9914AD8E2B94735E00202CAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9914AD702B94735C00202CAC /* Project object */;
+}
