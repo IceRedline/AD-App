@@ -59,11 +59,11 @@ class TestViewController: UIViewController {
         }
         
         if textLabel.text! == textField.text! {
+            textField.resignFirstResponder()
             let seconds = Date().timeIntervalSince(startTime)
             let minutes = seconds / 60
             let charactersPerMinute = Double(textField.text!.count) / minutes
             resultLabel.text = String(format: "Твой результат: %.2f зн/мин.", charactersPerMinute)
-            textField.resignFirstResponder()
         }
     }
 }
