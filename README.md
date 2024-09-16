@@ -1,9 +1,9 @@
-# Head 1
+# AirDevelopment App
 
-## Head 2
+## Code, design and music by Ice
 
 ### Head 3
 
-Text
+This is the first Ice's app, made from different swift Youtube lessons'
 
-> quote
+> AirDev Studio is trademark, licenesed 2020-2024
