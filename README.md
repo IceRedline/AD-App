@@ -1,8 +1,8 @@
 # AirDevelopment App
 
-## Code, design and music by Ice
+## (pet-project)
 
-### Head 3
+### Code, design and music by Ice
 
 This is the first Ice's app, made from different swift Youtube lessons'
 
