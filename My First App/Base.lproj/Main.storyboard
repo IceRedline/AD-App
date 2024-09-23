@@ -1330,9 +1330,8 @@ QXBwbGUgU3RvcmUgAe+jvw
                                     <action selector="nextButtonTapped" destination="Pmv-Sp-srA" eventType="touchUpInside" id="l3z-kx-xBN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Привет! Я текст, который можно скроллить -&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-Lz-qWi">
-                                <rect key="frame" x="70" y="366" width="253" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Я текст, который можно скроллить -&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-Lz-qWi">
+                                <rect key="frame" x="12.333333333333343" y="416" width="368.33333333333326" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1340,6 +1339,10 @@ QXBwbGUgU3RvcmUgAe+jvw
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OmS-B8-byi"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="GM9-Lz-qWi" firstAttribute="centerX" secondItem="Sn8-RI-qES" secondAttribute="centerX" id="3nr-Ew-rrq"/>
+                            <constraint firstItem="GM9-Lz-qWi" firstAttribute="centerY" secondItem="Sn8-RI-qES" secondAttribute="centerY" id="a9n-hq-nrj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gUv-4P-emy"/>
                     <connections>

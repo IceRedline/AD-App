@@ -483,6 +483,7 @@
 				DEVELOPMENT_TEAM = V459R55R59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My First App/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для доступа к камере нужно разрешение";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "to save images into an app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -517,6 +518,7 @@
 				DEVELOPMENT_TEAM = V459R55R59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "My First App/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для доступа к камере нужно разрешение";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "to save images into an app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
