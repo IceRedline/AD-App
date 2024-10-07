@@ -7,6 +7,49 @@
 
 import UIKit
 
+import UIKit
+
+extension UIButton {
+    private struct AssociatedKeys {
+        static var activityIndicator = "activityIndicator"
+    }
+    
+    private var activityIndicator: UIActivityIndicatorView? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.activityIndicator) as? UIActivityIndicatorView
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.activityIndicator, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+
+    var showsActivityIndicator: Bool {
+        get {
+            return activityIndicator != nil
+        }
+        set {
+            if newValue {
+                let indicator = UIActivityIndicatorView(style: .medium)
+                indicator.translatesAutoresizingMaskIntoConstraints = false
+                addSubview(indicator)
+                
+                NSLayoutConstraint.activate([
+                    indicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+                    indicator.centerYAnchor.constraint(equalTo: centerYAnchor)
+                ])
+                
+                indicator.startAnimating()
+                activityIndicator = indicator
+                self.setTitle("", for: .normal) // Скрываем текст кнопки
+            } else {
+                activityIndicator?.stopAnimating()
+                activityIndicator?.removeFromSuperview()
+                activityIndicator = nil
+            }
+        }
+    }
+}
+
 class FifthViewController: UIViewController {
 
     
@@ -60,12 +103,15 @@ class FifthViewController: UIViewController {
     @IBAction func fabricBought() {
         numCookies -= fabricPrice
         totalCookies.text = "\(numCookies)"
-        activityindicator.startAnimating()
+        fabricBuyButton.showsActivityIndicator = true
+        // activityindicator.startAnimating()
         fabricBuyLabel.text = "Везём фабрику с алиэкспресса..."
         fabricBuyButton.isEnabled = false
         fabricPrice *= 10
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.activityindicator.stopAnimating()
+            // self.activityindicator.stopAnimating()
+            self.fabricBuyButton.setTitle("Купить", for: .normal)
+            self.fabricBuyButton.showsActivityIndicator = false
             self.fabricBuyLabel.text = "Фабрика куплена! Цена следующей - \(self.fabricPrice)"
             self.incrementCookies += 1000
             self.stepper.value += 1000

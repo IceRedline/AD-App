@@ -29,12 +29,12 @@ class Model {
         loadData()
     }
     
-    func  addItem(title: String) {
+    func addItem(title: String) {
         items.append(ToDoItem(title: title, date: Date(), isCompleted: false))
         saveData()
     }
     
-    func  deleteItem(atIndex index: Int) {
+    func deleteItem(atIndex index: Int) {
         items.remove(at: index)
         saveData()
     }

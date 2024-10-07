@@ -50,4 +50,16 @@ class FirstViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func quizBuutonTapped() {
+        if musicplayer.isPlaying {
+            musicplayer.stop()
+            }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "QuizID")
+        self.present(vc, animated: true)
+    }
+    
+    
 }

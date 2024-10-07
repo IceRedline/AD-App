@@ -24,6 +24,10 @@
 		993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */; };
 		993F6F402C2C91B50071650D /* testtext.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 993F6F3F2C2C91B50071650D /* testtext.rtf */; };
 		993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F6F412C2C92410071650D /* TypingtestViewController.swift */; };
+		993F87972CAE08A900E31E8B /* QuizClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87922CAE08A900E31E8B /* QuizClasses.swift */; };
+		993F87982CAE08A900E31E8B /* QuizDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */; };
+		993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */; };
+		993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87952CAE08A900E31E8B /* QuizViewController.swift */; };
 		995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */; };
 		9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* SeventhViewController.swift */; };
 		996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */; };
@@ -74,6 +78,10 @@
 		993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysTwo.swift; sourceTree = "<group>"; };
 		993F6F3F2C2C91B50071650D /* testtext.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = testtext.rtf; sourceTree = "<group>"; };
 		993F6F412C2C92410071650D /* TypingtestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingtestViewController.swift; sourceTree = "<group>"; };
+		993F87922CAE08A900E31E8B /* QuizClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizClasses.swift; sourceTree = "<group>"; };
+		993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDescriptionViewController.swift; sourceTree = "<group>"; };
+		993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
+		993F87952CAE08A900E31E8B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTextPicker.swift; sourceTree = "<group>"; };
 		9957C4062B9E02980054D61C /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
 		996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Покиньте Зал.mp3"; sourceTree = "<group>"; };
@@ -158,13 +166,17 @@
 				99948A4D2BAD916400A4D34E /* TabViewController.swift */,
 				99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */,
 				99256C622BAF0BF8003B2550 /* LastViewController.swift */,
+				996539C72C1B2EF400602588 /* Sounds */,
+				993F87922CAE08A900E31E8B /* QuizClasses.swift */,
+				993F87952CAE08A900E31E8B /* QuizViewController.swift */,
+				993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */,
+				993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */,
 				9914AD812B94735C00202CAC /* Main.storyboard */,
 				9914AD842B94735E00202CAC /* Assets.xcassets */,
 				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
 				9914AD892B94735E00202CAC /* Info.plist */,
 				998245E12C1B55D600E13656 /* music.gif */,
 				993F6F3F2C2C91B50071650D /* testtext.rtf */,
-				996539C72C1B2EF400602588 /* Sounds */,
 			);
 			path = "My First App";
 			sourceTree = "<group>";
@@ -310,6 +322,10 @@
 				990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */,
 				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
 				993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */,
+				993F87972CAE08A900E31E8B /* QuizClasses.swift in Sources */,
+				993F87982CAE08A900E31E8B /* QuizDescriptionViewController.swift in Sources */,
+				993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */,
+				993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */,
 				9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */,
 				99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */,
 				993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */,
