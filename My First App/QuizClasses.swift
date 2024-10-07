@@ -10,27 +10,37 @@ import Foundation
 public class ChosenClass {
     var name: String
     var description: String
-    var questions: Dictionary<String, Array<String> >
-    //var answers: Array<String>
+    var questionsAndAnswers: Dictionary<String, Array<String> > // словарь с вопросами и ответами
+    var chosenThemeQuestionsArray: [String] { // массив с вопросами по выбранной теме
+        get {
+            var array = [String]()
+            questionsAndAnswers.forEach { (key: String, value: [String]) in
+                array.append(key)
+            }
+            return array
+        }
+        
+    }
     
-    init(name: String, description: String, questions: Dictionary<String, Array<String> >) {
+    init(name: String, description: String, questionsAndAnswers: Dictionary<String, Array<String> >) {
         self.name = name
         self.description = description
-        self.questions = questions
-        //self.answers = answers
+        self.questionsAndAnswers = questionsAndAnswers
     }
+    
 }
 
 
 public let chosenMusicTheme = ChosenClass(name: "Музыка",
                                           description: "В данной викторине вам предстоит угадывать исполнителей и названия песен.",
-                                          questions: ["Когда вышел трек бургер" : ["2017","2018","2016","2015"]] )
+                                          questionsAndAnswers: ["Когда вышел трек бургер" : ["2017","2018","2016","2015"],
+                                                      "Кто является автором песни бургер" : ["Face","MORGENSHTERN","Тимати","Егор Крид"]] )
 public let chosenTechTheme = ChosenClass(name: "Технологии",
                                          description: "В данной викторине вам предстоит отвечать на вопросы связанные с техникой.",
-                                         questions: ["Когда вышел первый айфон" : ["1","2","3","4"]] )
+                                         questionsAndAnswers: ["Когда вышел первый айфон" : ["1","2","3","4"]] )
 public let chosenHistoryTheme = ChosenClass(name: "История и культура",
                                             description: "В данной викторине вам предстоит показать себя с культурной стороны.",
-                                            questions: ["Когда моцарт написал лунную сонату" : ["1","2","3","4"]] )
+                                            questionsAndAnswers: ["Когда моцарт написал лунную сонату" : ["1","2","3","4"]] )
 public let chosenPoliticsTheme = ChosenClass(name: "Политика и бизнес",
                                              description: "В данной викторине вам предстоит доказать, что вы шарите в теме денег и грязи.",
-                                             questions: ["Когда Путин стал президентом РФ" : ["1","2","3","4"]] )
+                                             questionsAndAnswers: ["Когда Путин стал президентом РФ" : ["1","2","3","4"]] )
