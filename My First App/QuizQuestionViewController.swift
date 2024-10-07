@@ -11,6 +11,7 @@ var questionCount = 1
 var chosenAnswer = ""
 var timer: Timer!
 var progress: Float = 1.0
+var currentAnswers = [String]()
 
 class QuizQuestionViewController: UIViewController {
 
@@ -25,13 +26,16 @@ class QuizQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentAnswers = chosenTheme.answers.shuffled()
 
         themeName.text = chosenTheme.name
-        answer1.setTitle(chosenTheme.answers[0], for: .normal)
-        answer2.setTitle(chosenTheme.answers[1], for: .normal)
-        answer3.setTitle(chosenTheme.answers[2], for: .normal)
-        answer4.setTitle(chosenTheme.answers[3], for: .normal)
-        
+        let questionButtons = [answer1, answer2, answer3, answer4]
+        while !currentAnswers.isEmpty {
+            questionButtons.forEach() { button in
+                button?.setTitle(currentAnswers[0], for: .normal)
+                currentAnswers.remove(at: 0)
+            }
+        }
         question.text = chosenTheme.questions.keys.first
         questionNumber.text = "Вопрос №\(questionCount)"
         
@@ -87,6 +91,14 @@ class QuizQuestionViewController: UIViewController {
             question.textColor = UIColor.green
         } else { question.textColor = UIColor.red }
     }
+    
+    
+    
+    @IBAction func backButtonTapped() {
+        dismiss(animated: true)
+    }
+    
+    
     
 }
 
