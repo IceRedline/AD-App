@@ -11,7 +11,6 @@ var questionCount = 1
 var chosenAnswer = ""
 var timer: Timer!
 var progress: Float = 1.0
-var currentAnswers = [String]()
 
 class QuizQuestionViewController: UIViewController {
 
@@ -26,7 +25,9 @@ class QuizQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentAnswers = chosenTheme.answers.shuffled()
+        let currentQuestion = chosenTheme.questions.keys.first
+        question.text = currentQuestion
+        var currentAnswers = chosenTheme.questions[currentQuestion!]!.shuffled()
 
         themeName.text = chosenTheme.name
         let questionButtons = [answer1, answer2, answer3, answer4]
@@ -36,7 +37,7 @@ class QuizQuestionViewController: UIViewController {
                 currentAnswers.remove(at: 0)
             }
         }
-        question.text = chosenTheme.questions.keys.first
+        
         questionNumber.text = "Вопрос №\(questionCount)"
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
@@ -57,7 +58,7 @@ class QuizQuestionViewController: UIViewController {
         }
     
     func checkAnswer(_ answer: String) -> Bool {
-        if answer == chosenTheme.questions[chosenTheme.questions.keys.first!] {
+        if answer == chosenTheme.questions[chosenTheme.questions.keys.first!]?.first {
             return true
         }
         return false
