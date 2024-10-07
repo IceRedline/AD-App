@@ -7,11 +7,14 @@
 
 import UIKit
 
-var questionCount = 1
-var chosenAnswer = ""
-var timer: Timer!
-var progress: Float = 1.0
+ // массив с вопросами по выбранной теме
+var questionsToComplete = chosenThemeQuestionsArray.count
+var questionCount = 0
 var currentQuestion = ""
+var chosenAnswer = ""
+
+//var timer: Timer!
+//var progress: Float = 1.0
 
 class QuizQuestionViewController: UIViewController {
 
@@ -28,11 +31,11 @@ class QuizQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentQuestion = chosenTheme.chosenThemeQuestionsArray.shuffled()[0]
+        themeName.text = chosenTheme.name
+        currentQuestion = chosenThemeQuestionsArray[0]
         question.text = currentQuestion
         var currentAnswers = chosenTheme.questionsAndAnswers[currentQuestion]!.shuffled()
 
-        themeName.text = chosenTheme.name
         let questionButtons = [answer1, answer2, answer3, answer4]
         while !currentAnswers.isEmpty {
             questionButtons.forEach() { button in
@@ -41,13 +44,13 @@ class QuizQuestionViewController: UIViewController {
             }
         }
         
-        questionNumber.text = "Вопрос №\(questionCount)"
+        questionNumber.text = "Вопрос №\(questionCount + 1)"
         
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+        //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
     }
     
     
-    
+    /* ДОДЕЛАТЬ ПОСЛЕ ВСЕГО ОСТАЛЬНОГО
     @objc func updateProgress() {
             // Обновляем значение progress и проверяем завершение
             if progress > 0 {
@@ -61,6 +64,7 @@ class QuizQuestionViewController: UIViewController {
                 answer4.isEnabled = false
             }
         }
+     */
     
     func checkAnswer(_ answer: String) -> Bool {
         if answer == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
@@ -69,12 +73,27 @@ class QuizQuestionViewController: UIViewController {
         return false
     }
     
+    func editQuestionProcessFunc() {
+        if questionCount == questionsToComplete {
+            chosenThemeQuestionsArray.remove(at: 0)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
+            self.present(vc, animated: true)
+        } else {
+            chosenThemeQuestionsArray.remove(at: 0)
+            viewDidLoad()
+            questionNumber.text = "Вопрос №\(questionCount+1)"
+        }
+    }
+    
     
     @IBAction func answer1Chosen() {
         chosenAnswer = answer1.currentTitle!
         if checkAnswer(chosenAnswer) {
             question.textColor = UIColor.green
         } else { question.textColor = UIColor.red }
+        questionCount += 1
+        editQuestionProcessFunc()
     }
     
     @IBAction func answer2Chosen() {
@@ -82,6 +101,8 @@ class QuizQuestionViewController: UIViewController {
         if checkAnswer(chosenAnswer) {
             question.textColor = UIColor.green
         } else { question.textColor = UIColor.red }
+        questionCount += 1
+        editQuestionProcessFunc()
     }
     
     @IBAction func answer3Chosen() {
@@ -89,6 +110,8 @@ class QuizQuestionViewController: UIViewController {
         if checkAnswer(chosenAnswer) {
             question.textColor = UIColor.green
         } else { question.textColor = UIColor.red }
+        questionCount += 1
+        editQuestionProcessFunc()
     }
     
     @IBAction func answer4Chosen() {
@@ -96,12 +119,15 @@ class QuizQuestionViewController: UIViewController {
         if checkAnswer(chosenAnswer) {
             question.textColor = UIColor.green
         } else { question.textColor = UIColor.red }
+        questionCount += 1
+        editQuestionProcessFunc()
     }
     
     
     
     @IBAction func backButtonTapped() {
         dismiss(animated: true)
+        questionCount = 0
     }
     
     

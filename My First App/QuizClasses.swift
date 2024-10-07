@@ -7,20 +7,13 @@
 
 import Foundation
 
+public var chosenTheme: ChosenClass = chosenMusicTheme // переделать
+public var chosenThemeQuestionsArray: [String] = Array(chosenTheme.questionsAndAnswers.keys).shuffled()
+
 public class ChosenClass {
     var name: String
     var description: String
     var questionsAndAnswers: Dictionary<String, Array<String> > // словарь с вопросами и ответами
-    var chosenThemeQuestionsArray: [String] { // массив с вопросами по выбранной теме
-        get {
-            var array = [String]()
-            questionsAndAnswers.forEach { (key: String, value: [String]) in
-                array.append(key)
-            }
-            return array
-        }
-        
-    }
     
     init(name: String, description: String, questionsAndAnswers: Dictionary<String, Array<String> >) {
         self.name = name

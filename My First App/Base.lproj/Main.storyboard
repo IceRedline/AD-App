@@ -2619,7 +2619,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="themeName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zy-Ab-xPZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="themeName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zy-Ab-xPZ">
                                 <rect key="frame" x="75.000000000000014" y="119" width="243.33333333333337" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="243.33000000000001" id="CjE-RP-LOS"/>
@@ -2811,6 +2811,60 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3c-5I-d3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3261.8320610687019" y="1440.1408450704225"/>
+        </scene>
+        <!--Quiz Result View Controller-->
+        <scene sceneID="OCM-zn-lhH">
+            <objects>
+                <viewController storyboardIdentifier="QuizResultID" modalPresentationStyle="fullScreen" id="enC-Oh-ED3" customClass="QuizResultViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Nj-vE-7k0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-db-yI0">
+                                <rect key="frame" x="28.666666666666657" y="229" width="336" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="4Hb-Vu-WwL"/>
+                                    <constraint firstAttribute="width" constant="336" id="j0d-Yv-nJU"/>
+                                </constraints>
+                                <string key="text">Твой результат:
+-/-</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-eC-wZn">
+                                <rect key="frame" x="25" y="628" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6ah-pZ-kmO"/>
+                                    <constraint firstAttribute="width" constant="343" id="JaM-XQ-L4q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="enC-Oh-ED3" eventType="touchUpInside" id="Qil-aX-Ium"/>
+                                    <action selector="startButtonTapped" destination="NQz-9q-tib" eventType="touchUpInside" id="t1Z-M3-BHO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eUC-bw-SlC"/>
+                        <color key="backgroundColor" red="0.078431375319999996" green="0.1019607931" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NLx-eC-wZn" firstAttribute="centerX" secondItem="2Nj-vE-7k0" secondAttribute="centerX" id="0r1-OQ-HFt"/>
+                            <constraint firstItem="M2e-db-yI0" firstAttribute="centerX" secondItem="2Nj-vE-7k0" secondAttribute="centerX" id="hBa-Jq-9cJ"/>
+                            <constraint firstItem="eUC-bw-SlC" firstAttribute="bottom" secondItem="NLx-eC-wZn" secondAttribute="bottom" constant="140" id="l2t-gb-XWs"/>
+                            <constraint firstItem="M2e-db-yI0" firstAttribute="top" secondItem="eUC-bw-SlC" secondAttribute="top" constant="170" id="wNh-Rn-PqO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="M2e-db-yI0" id="a66-Vq-ay1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIh-sU-gbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3998" y="1440"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

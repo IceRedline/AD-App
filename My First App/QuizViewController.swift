@@ -7,14 +7,10 @@
 
 import UIKit
 
-public var chosenTheme: ChosenClass = chosenMusicTheme // переделать
-
 class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func musicThemeChosen() {
@@ -48,6 +44,8 @@ class QuizViewController: UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
         self.present(vc, animated: true)
     }
+    
+    
     
     @IBAction func backButtonTapped() {
         dismiss(animated: true)

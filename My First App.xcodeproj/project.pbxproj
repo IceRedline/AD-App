@@ -56,6 +56,7 @@
 		99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */; };
 		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
 		99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758BC2BA2F7250068F192 /* NinthViewController.swift */; };
+		99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F959992CB437C7001BF337 /* QuizResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthTableViewController.swift; sourceTree = "<group>"; };
 		99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		99F758BC2BA2F7250068F192 /* NinthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinthViewController.swift; sourceTree = "<group>"; };
+		99F959992CB437C7001BF337 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				993F87952CAE08A900E31E8B /* QuizViewController.swift */,
 				993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */,
 				993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */,
+				99F959992CB437C7001BF337 /* QuizResultViewController.swift */,
 				9914AD812B94735C00202CAC /* Main.storyboard */,
 				9914AD842B94735E00202CAC /* Assets.xcassets */,
 				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
@@ -342,6 +345,7 @@
 				9902892B2B9B3D180016D8C3 /* ThirdViewController.swift in Sources */,
 				99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */,
 				9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */,
+				99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */,
 				9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */,
 				99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */,
 				9900E1912B9C91FE002E372E /* FifthViewController.swift in Sources */,

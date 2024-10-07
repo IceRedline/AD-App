@@ -14,12 +14,13 @@ class QuizDescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         themeName.text = chosenTheme.name
         themeDescription.text = chosenTheme.description
     }
     
     @IBAction func startButtonTapped() {
+        chosenThemeQuestionsArray = Array(chosenTheme.questionsAndAnswers.keys).shuffled()
+        questionCount = 0
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizQuestionID")
         self.present(vc, animated: true)
