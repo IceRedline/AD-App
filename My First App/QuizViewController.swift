@@ -13,36 +13,30 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func musicThemeChosen() {
-        chosenTheme = chosenMusicTheme
-        
+    func showVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
         self.present(vc, animated: true)
+    }
+    
+    @IBAction func musicThemeChosen() {
+        chosenTheme = chosenMusicTheme
+        showVC()
     }
     
     @IBAction func techThemeChosen() {
         chosenTheme = chosenTechTheme
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
-        self.present(vc, animated: true)
+        showVC()
     }
     
     @IBAction func historyThemeChosen() {
         chosenTheme = chosenHistoryTheme
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
-        self.present(vc, animated: true)
+        showVC()
     }
     
     @IBAction func politicsThemeChosen() {
         chosenTheme = chosenPoliticsTheme
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
-        self.present(vc, animated: true)
+        showVC()
     }
     
     

@@ -20,7 +20,9 @@ class QuizDescriptionViewController: UIViewController {
     
     @IBAction func startButtonTapped() {
         chosenThemeQuestionsArray = Array(chosenTheme.questionsAndAnswers.keys).shuffled()
+        questionsToComplete = chosenThemeQuestionsArray.count
         questionCount = 0
+        correctAnswers = 0
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizQuestionID")
         self.present(vc, animated: true)

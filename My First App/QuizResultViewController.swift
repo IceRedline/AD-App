@@ -14,7 +14,7 @@ class QuizResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        resultLabel.text = "Твой результат: -/\(questionCount)"
+        resultLabel.text = "Твой результат: \(correctAnswers)/\(questionCount)"
     }
     
     @IBAction func backButtonTapped() {

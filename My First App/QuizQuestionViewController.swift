@@ -12,6 +12,7 @@ var questionsToComplete = chosenThemeQuestionsArray.count
 var questionCount = 0
 var currentQuestion = ""
 var chosenAnswer = ""
+public var correctAnswers = 0
 
 //var timer: Timer!
 //var progress: Float = 1.0
@@ -68,6 +69,7 @@ class QuizQuestionViewController: UIViewController {
     
     func checkAnswer(_ answer: String) -> Bool {
         if answer == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
+            correctAnswers += 1
             return true
         }
         return false
@@ -75,10 +77,10 @@ class QuizQuestionViewController: UIViewController {
     
     func editQuestionProcessFunc() {
         if questionCount == questionsToComplete {
-            chosenThemeQuestionsArray.remove(at: 0)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
             self.present(vc, animated: true)
+            chosenThemeQuestionsArray.remove(at: 0)
         } else {
             chosenThemeQuestionsArray.remove(at: 0)
             viewDidLoad()
