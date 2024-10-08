@@ -205,8 +205,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-E9-SkX">
-                                <rect key="frame" x="76.666666666666686" y="122.99999999999999" width="240" height="241.66666666666663"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-E9-SkX">
+                                <rect key="frame" x="76.666666666666686" y="123" width="240" height="277"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-td-tqs">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="40.333333333333336"/>
@@ -222,7 +222,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-m9-oRC">
-                                        <rect key="frame" x="0.0" y="50.333333333333343" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="47.333333333333343" width="240" height="40.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="VvT-BS-a5f"/>
                                         </constraints>
@@ -231,7 +231,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-xS-QG8">
-                                        <rect key="frame" x="0.0" y="100.66666666666666" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="94.666666666666657" width="240" height="40.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="WWc-OE-5bF"/>
                                         </constraints>
@@ -243,7 +243,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75c-WB-j6g">
-                                        <rect key="frame" x="0.0" y="151" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="142" width="240" height="40.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="goA-cz-m68"/>
                                         </constraints>
@@ -255,7 +255,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JS-6T-9LU">
-                                        <rect key="frame" x="0.0" y="201.33333333333331" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="189.33333333333331" width="240" height="40.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="K6C-ip-Fgw"/>
                                         </constraints>
@@ -266,10 +266,19 @@
                                             <segue destination="Fse-qQ-rrR" kind="show" id="jr4-p0-7wk"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-wV-wPa">
+                                        <rect key="frame" x="0.0" y="236.66666666666671" width="240" height="40.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="7dW-dl-cer"/>
+                                        </constraints>
+                                        <buttonConfiguration key="configuration" style="gray" title="Quizice 🎰">
+                                            <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YuD-Px-2Uk">
-                                <rect key="frame" x="76.666666666666686" y="404.66666666666663" width="240" height="392.66666666666663"/>
+                                <rect key="frame" x="76.666666666666686" y="420" width="240" height="392.66666666666674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQ4-S3-XyM">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="40.333333333333336"/>
@@ -306,7 +315,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOb-bi-oyo">
-                                        <rect key="frame" x="0.0" y="150.99999999999994" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="151" width="240" height="40.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Cookie Clicker 🍪">
                                             <directionalEdgeInsets key="contentInsets" top="10" leading="23" bottom="10" trailing="0.0"/>
@@ -316,7 +325,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-1y-siL">
-                                        <rect key="frame" x="0.0" y="201.33333333333331" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="201.33333333333337" width="240" height="40.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Контакты 📒">
                                             <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
@@ -326,7 +335,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-1d-jLG">
-                                        <rect key="frame" x="0.0" y="251.66666666666671" width="240" height="40.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="251.66666666666666" width="240" height="40.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Контакты 2.0 📓">
                                             <directionalEdgeInsets key="contentInsets" top="10" leading="25" bottom="10" trailing="0.0"/>
@@ -336,7 +345,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-cr-v7a">
-                                        <rect key="frame" x="0.0" y="301.99999999999994" width="240" height="40.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="302" width="240" height="40.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="ICE MUSIC 🎵">
                                             <directionalEdgeInsets key="contentInsets" top="10" leading="21" bottom="10" trailing="0.0"/>
@@ -346,7 +355,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihk-xQ-aad">
-                                        <rect key="frame" x="0.0" y="352.33333333333331" width="240" height="40.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="352.33333333333337" width="240" height="40.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray">
                                             <string key="title" base64-UTF8="YES">
@@ -365,7 +374,7 @@ QXBwbGUgU3RvcmUgAe+jvw
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="kKT-E9-SkX" firstAttribute="top" secondItem="oHe-4m-OdO" secondAttribute="top" constant="20" id="8Js-dS-6S3"/>
-                            <constraint firstItem="YuD-Px-2Uk" firstAttribute="top" secondItem="kKT-E9-SkX" secondAttribute="bottom" constant="40" id="Kr4-eW-6I6"/>
+                            <constraint firstItem="YuD-Px-2Uk" firstAttribute="top" secondItem="kKT-E9-SkX" secondAttribute="bottom" constant="20" id="Kr4-eW-6I6"/>
                             <constraint firstItem="YuD-Px-2Uk" firstAttribute="centerX" secondItem="GvD-jg-XPS" secondAttribute="centerX" id="dVd-0y-UVN"/>
                             <constraint firstItem="kKT-E9-SkX" firstAttribute="centerX" secondItem="GvD-jg-XPS" secondAttribute="centerX" id="xnv-l4-YlW"/>
                         </constraints>
@@ -2735,24 +2744,27 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Voh-np-NyQ">
-                                <rect key="frame" x="28.666666666666657" y="158.99999999999997" width="336" height="324.33333333333326"/>
+                                <rect key="frame" x="28.666666666666657" y="148.99999999999997" width="336" height="270.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-6C-NT9">
-                                        <rect key="frame" x="14" y="0.0" width="307.66666666666669" height="20.333333333333332"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gzP-6C-NT9">
+                                        <rect key="frame" x="18" y="0.0" width="300" height="20.333333333333332"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="themeName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rER-7P-Nec">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.33333333333333" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questionNumber" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUK-9I-UR3">
-                                                <rect key="frame" x="180.33333333333334" y="0.0" width="127.33333333333334" height="20.333333333333332"/>
+                                                <rect key="frame" x="170" y="0.0" width="130" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="8Mt-Tg-p9i"/>
+                                        </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQy-bp-8Wm">
                                         <rect key="frame" x="0.0" y="70.333333333333343" width="336" height="200.00000000000003"/>
@@ -2764,20 +2776,13 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1bQ-WI-rb7">
-                                        <rect key="frame" x="46.333333333333314" y="320.33333333333331" width="243" height="4"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="4" id="YXs-BO-Ktv"/>
-                                            <constraint firstAttribute="width" constant="243" id="cNw-oN-st3"/>
-                                        </constraints>
-                                    </progressView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pc-5B-14g">
-                                <rect key="frame" x="29.999999999999993" y="763" width="84.333333333333314" height="37"/>
+                                <rect key="frame" x="30.000000000000007" y="763" width="97.666666666666686" height="37"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title=" Back" titleAlignment="leading">
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title=" Назад" titleAlignment="leading">
                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="medium"/>
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="19"/>
                                 </buttonConfiguration>
@@ -2786,16 +2791,38 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                     <action selector="backButtonTapped" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="xKP-6d-0Pz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-su-css">
+                                <rect key="frame" x="266" y="763" width="98" height="37"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Далее " titleAlignment="leading">
+                                    <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="19"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonTapped" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="zIG-B8-cWk"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1bQ-WI-rb7">
+                                <rect key="frame" x="75" y="485" width="243" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="Kaw-4B-BVm"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8VU-dE-Olo"/>
                         <color key="backgroundColor" red="0.078431375319999996" green="0.1019607931" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Voh-np-NyQ" firstAttribute="top" secondItem="8VU-dE-Olo" secondAttribute="top" constant="100" id="EYG-Pn-ha2"/>
+                            <constraint firstItem="8VU-dE-Olo" firstAttribute="trailing" secondItem="xNi-su-css" secondAttribute="trailing" constant="29" id="7L3-RH-vyA"/>
+                            <constraint firstItem="Voh-np-NyQ" firstAttribute="top" secondItem="8VU-dE-Olo" secondAttribute="top" constant="90" id="EYG-Pn-ha2"/>
+                            <constraint firstItem="1bQ-WI-rb7" firstAttribute="centerX" secondItem="OqD-au-7em" secondAttribute="centerX" id="HFZ-rS-1rP"/>
+                            <constraint firstItem="o0v-io-69o" firstAttribute="top" secondItem="1bQ-WI-rb7" secondAttribute="bottom" constant="34" id="J2p-OF-XPO"/>
                             <constraint firstItem="Voh-np-NyQ" firstAttribute="centerX" secondItem="OqD-au-7em" secondAttribute="centerX" id="Lpo-jE-1g1"/>
                             <constraint firstItem="7Pc-5B-14g" firstAttribute="top" secondItem="o0v-io-69o" secondAttribute="bottom" constant="20" id="Rp7-mH-RlA"/>
                             <constraint firstItem="7Pc-5B-14g" firstAttribute="leading" secondItem="8VU-dE-Olo" secondAttribute="leading" constant="30" id="Xdq-L9-eIY"/>
                             <constraint firstItem="o0v-io-69o" firstAttribute="centerX" secondItem="OqD-au-7em" secondAttribute="centerX" id="bnm-zd-tyW"/>
                             <constraint firstItem="8VU-dE-Olo" firstAttribute="bottom" secondItem="o0v-io-69o" secondAttribute="bottom" constant="75" id="hlz-Mz-M3S"/>
+                            <constraint firstItem="xNi-su-css" firstAttribute="top" secondItem="o0v-io-69o" secondAttribute="bottom" constant="20" id="pBl-bC-28D"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2803,6 +2830,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                         <outlet property="answer2" destination="ZH9-lN-y1s" id="8AJ-zO-PD7"/>
                         <outlet property="answer3" destination="aJf-4u-deu" id="Bf3-kJ-qpL"/>
                         <outlet property="answer4" destination="R63-0R-1iU" id="qhs-Qg-hSU"/>
+                        <outlet property="nextButton" destination="xNi-su-css" id="cM5-Go-4iQ"/>
                         <outlet property="question" destination="xQy-bp-8Wm" id="64h-KP-nqZ"/>
                         <outlet property="questionNumber" destination="jUK-9I-UR3" id="ccc-E5-xi5"/>
                         <outlet property="themeName" destination="rER-7P-Nec" id="7ev-3x-Xlk"/>
@@ -2869,17 +2897,17 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FrP-yP-kSQ"/>
-        <segue reference="lx6-0k-JYL"/>
-        <segue reference="djd-ak-0TA"/>
-        <segue reference="mB4-LU-mta"/>
+        <segue reference="SeH-4i-1GB"/>
+        <segue reference="heY-fc-Px2"/>
+        <segue reference="jm8-1q-IqW"/>
+        <segue reference="jr4-p0-7wk"/>
         <segue reference="Qz3-Dm-1Iz"/>
         <segue reference="32b-o8-rnI"/>
-        <segue reference="m3v-1h-e25"/>
-        <segue reference="lce-Ym-IwY"/>
-        <segue reference="byC-Wv-Znh"/>
-        <segue reference="Pkb-dO-mdq"/>
-        <segue reference="h7f-HJ-rR5"/>
+        <segue reference="hzZ-l0-VRS"/>
+        <segue reference="T5t-Lk-a3X"/>
+        <segue reference="znN-Uv-W0i"/>
+        <segue reference="8I2-CE-EVn"/>
+        <segue reference="4Qu-IZ-b23"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AD" width="1024" height="1024"/>

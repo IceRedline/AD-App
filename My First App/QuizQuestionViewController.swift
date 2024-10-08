@@ -27,17 +27,21 @@ class QuizQuestionViewController: UIViewController {
     @IBOutlet weak var answer2: UIButton!
     @IBOutlet weak var answer3: UIButton!
     @IBOutlet weak var answer4: UIButton!
-    
+    @IBOutlet weak var nextButton: UIButton!
     
     
     override func viewDidLoad() {
+        let questionButtons = [answer1, answer2, answer3, answer4]
+        questionButtons.forEach() { button in button!.isEnabled = true }
+        
         super.viewDidLoad()
         themeName.text = chosenTheme.name
+        question.textColor = .white
         currentQuestion = chosenThemeQuestionsArray[0]
         question.text = currentQuestion
         var currentAnswers = chosenTheme.questionsAndAnswers[currentQuestion]!.shuffled()
 
-        let questionButtons = [answer1, answer2, answer3, answer4]
+        
         while !currentAnswers.isEmpty {
             questionButtons.forEach() { button in
                 button?.setTitle(currentAnswers[0], for: .normal)
@@ -46,6 +50,7 @@ class QuizQuestionViewController: UIViewController {
         }
         
         questionNumber.text = "Вопрос №\(questionCount + 1)"
+        nextButton.isEnabled = false
         
         //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
     }
@@ -67,15 +72,37 @@ class QuizQuestionViewController: UIViewController {
         }
      */
     
-    func checkAnswer(_ answer: String) -> Bool {
-        if answer == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
+    func checkAnswer(_ answer: UIButton) {
+        let questionButtons = [answer1, answer2, answer3, answer4]
+        questionButtons.forEach() { button in button!.isEnabled = false }
+        nextButton.isEnabled = true
+        questionCount += 1
+        if answer.currentTitle! == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
+            question.textColor = UIColor.green
             correctAnswers += 1
-            return true
+        } else {
+            question.textColor = UIColor.red
         }
-        return false
+        //goLastOrGoNext()
     }
     
-    func editQuestionProcessFunc() {
+    @IBAction func answer1Chosen() {
+        checkAnswer(answer1)
+    }
+    
+    @IBAction func answer2Chosen() {
+        checkAnswer(answer2)
+    }
+    
+    @IBAction func answer3Chosen() {
+        checkAnswer(answer3)
+    }
+    
+    @IBAction func answer4Chosen() {
+        checkAnswer(answer4)
+    }
+    
+    @IBAction func nextButtonTapped() {
         if questionCount == questionsToComplete {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
@@ -84,47 +111,9 @@ class QuizQuestionViewController: UIViewController {
         } else {
             chosenThemeQuestionsArray.remove(at: 0)
             viewDidLoad()
-            questionNumber.text = "Вопрос №\(questionCount+1)"
         }
+        
     }
-    
-    
-    @IBAction func answer1Chosen() {
-        chosenAnswer = answer1.currentTitle!
-        if checkAnswer(chosenAnswer) {
-            question.textColor = UIColor.green
-        } else { question.textColor = UIColor.red }
-        questionCount += 1
-        editQuestionProcessFunc()
-    }
-    
-    @IBAction func answer2Chosen() {
-        chosenAnswer = answer2.currentTitle!
-        if checkAnswer(chosenAnswer) {
-            question.textColor = UIColor.green
-        } else { question.textColor = UIColor.red }
-        questionCount += 1
-        editQuestionProcessFunc()
-    }
-    
-    @IBAction func answer3Chosen() {
-        chosenAnswer = answer3.currentTitle!
-        if checkAnswer(chosenAnswer) {
-            question.textColor = UIColor.green
-        } else { question.textColor = UIColor.red }
-        questionCount += 1
-        editQuestionProcessFunc()
-    }
-    
-    @IBAction func answer4Chosen() {
-        chosenAnswer = answer4.currentTitle!
-        if checkAnswer(chosenAnswer) {
-            question.textColor = UIColor.green
-        } else { question.textColor = UIColor.red }
-        questionCount += 1
-        editQuestionProcessFunc()
-    }
-    
     
     
     @IBAction func backButtonTapped() {
