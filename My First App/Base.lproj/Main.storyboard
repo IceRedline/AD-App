@@ -2676,30 +2676,42 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIi-06-wOW">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
+                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="NYP-Jb-2fQ"/>
                                                     <constraint firstAttribute="height" constant="100" id="fLY-z9-nJ8"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="answer1">
+                                                <buttonConfiguration key="configuration" style="plain" title="answer1">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answer1Chosen" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="nCl-cZ-hhG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-lN-y1s">
                                                 <rect key="frame" x="178" y="0.0" width="158" height="100"/>
+                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="SWp-06-PYW"/>
                                                     <constraint firstAttribute="height" constant="100" id="ij1-He-HkH"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="answer2">
+                                                <buttonConfiguration key="configuration" style="plain" title="answer2">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answer2Chosen" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="lQF-mS-NNj"/>
                                                 </connections>
@@ -2711,30 +2723,42 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-4u-deu">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
+                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="4ZB-ay-b41"/>
                                                     <constraint firstAttribute="height" constant="100" id="btV-wW-TGI"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="answer3">
+                                                <buttonConfiguration key="configuration" style="plain" title="answer3">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answer3Chosen" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="uDN-Cl-LBu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R63-0R-1iU">
                                                 <rect key="frame" x="178" y="0.0" width="158" height="100"/>
+                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="2ry-it-Gna"/>
                                                     <constraint firstAttribute="height" constant="100" id="XOW-6o-kZZ"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="answer4">
+                                                <buttonConfiguration key="configuration" style="plain" title="answer4">
                                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="answer4Chosen" destination="FJQ-jJ-tBn" eventType="touchUpInside" id="oLx-Kk-QyL"/>
                                                 </connections>
@@ -2849,18 +2873,33 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-db-yI0">
-                                <rect key="frame" x="28.666666666666657" y="229" width="336" height="126"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="126" id="4Hb-Vu-WwL"/>
-                                    <constraint firstAttribute="width" constant="336" id="j0d-Yv-nJU"/>
-                                </constraints>
-                                <string key="text">Твой результат:
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O6T-8n-D6g">
+                                <rect key="frame" x="28.666666666666657" y="229" width="336" height="252"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-db-yI0">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="126"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="126" id="4Hb-Vu-WwL"/>
+                                            <constraint firstAttribute="width" constant="336" id="j0d-Yv-nJU"/>
+                                        </constraints>
+                                        <string key="text">Твой результат:
 -/-</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="resultDescription" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-cr-eMg">
+                                        <rect key="frame" x="0.0" y="126" width="336" height="126"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="126" id="13f-Aa-viZ"/>
+                                            <constraint firstAttribute="width" constant="336" id="yoz-w2-0s1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLx-eC-wZn">
                                 <rect key="frame" x="25" y="628" width="343" height="50"/>
                                 <constraints>
@@ -2882,12 +2921,13 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                         <color key="backgroundColor" red="0.078431375319999996" green="0.1019607931" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NLx-eC-wZn" firstAttribute="centerX" secondItem="2Nj-vE-7k0" secondAttribute="centerX" id="0r1-OQ-HFt"/>
-                            <constraint firstItem="M2e-db-yI0" firstAttribute="centerX" secondItem="2Nj-vE-7k0" secondAttribute="centerX" id="hBa-Jq-9cJ"/>
+                            <constraint firstItem="O6T-8n-D6g" firstAttribute="centerX" secondItem="2Nj-vE-7k0" secondAttribute="centerX" id="1sJ-OM-cIi"/>
+                            <constraint firstItem="O6T-8n-D6g" firstAttribute="top" secondItem="eUC-bw-SlC" secondAttribute="top" constant="170" id="AV9-IY-2kl"/>
                             <constraint firstItem="eUC-bw-SlC" firstAttribute="bottom" secondItem="NLx-eC-wZn" secondAttribute="bottom" constant="140" id="l2t-gb-XWs"/>
-                            <constraint firstItem="M2e-db-yI0" firstAttribute="top" secondItem="eUC-bw-SlC" secondAttribute="top" constant="170" id="wNh-Rn-PqO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resultDescription" destination="Qup-cr-eMg" id="anN-fD-c3M"/>
                         <outlet property="resultLabel" destination="M2e-db-yI0" id="a66-Vq-ay1"/>
                     </connections>
                 </viewController>

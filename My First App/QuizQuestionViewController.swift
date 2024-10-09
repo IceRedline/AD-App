@@ -31,10 +31,15 @@ class QuizQuestionViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        let questionButtons = [answer1, answer2, answer3, answer4]
-        questionButtons.forEach() { button in button!.isEnabled = true }
-        
         super.viewDidLoad()
+        let questionButtons = [answer1, answer2, answer3, answer4]
+        questionButtons.forEach() { button in
+            button?.backgroundColor = UIColor(red: 31/255.0, green: 40/255.0, blue: 59/255.0, alpha: 1.0)
+            button!.setTitleColor(.gray, for: .disabled)
+            button!.isEnabled = true
+        }
+        timerBar.tintColor = .systemBlue
+        
         themeName.text = chosenTheme.name
         question.textColor = .white
         currentQuestion = chosenThemeQuestionsArray[0]
@@ -74,16 +79,24 @@ class QuizQuestionViewController: UIViewController {
     
     func checkAnswer(_ answer: UIButton) {
         let questionButtons = [answer1, answer2, answer3, answer4]
-        questionButtons.forEach() { button in button!.isEnabled = false }
+        questionButtons.forEach() { button in
+            button!.setTitleColor(.gray, for: .disabled)
+            button!.isEnabled = false
+            if button?.currentTitle == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
+                button!.setTitleColor(.white, for: .disabled)
+                button?.backgroundColor = UIColor(red: 36/255.0, green: 50/255.0, blue: 59/255.0, alpha: 1.0)
+            } else {
+                button?.backgroundColor = UIColor(red: 40/255.0, green: 32/255.0, blue: 58/255.0, alpha: 1.0)
+            }
+        }
         nextButton.isEnabled = true
         questionCount += 1
         if answer.currentTitle! == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
-            question.textColor = UIColor.green
+            timerBar.tintColor = UIColor(red: 90/255.0, green: 137/255.0, blue: 87/255.0, alpha: 1.0)
             correctAnswers += 1
         } else {
-            question.textColor = UIColor.red
+            timerBar.tintColor = UIColor(red: 78/255.0, green: 58/255.0, blue: 115/255.0, alpha: 1.0)
         }
-        //goLastOrGoNext()
     }
     
     @IBAction func answer1Chosen() {
