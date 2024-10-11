@@ -23,6 +23,7 @@ class QuizDescriptionViewController: UIViewController {
         questionsToComplete = chosenThemeQuestionsArray.count
         questionCount = 0
         correctAnswers = 0
+        currentProgress = 0.2
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizQuestionID")
         self.present(vc, animated: true)

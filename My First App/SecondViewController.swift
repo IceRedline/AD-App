@@ -17,6 +17,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    let hapticFeedback = UINotificationFeedbackGenerator()
+    
     var formattedDate = ""
     
     override func viewDidLoad() {
@@ -30,8 +32,15 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         nameTextField.autocapitalizationType = .none
     }
     
+    func returnTitle() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self.firstLabel.text = "Введите текущую дату:"
+        }
+    }
+    
     @IBAction func dateButtonTapped() {
         if dateTextField.text == formattedDate {
+            hapticFeedback.notificationOccurred(.success)
             firstLabel.text = "Верно!"
             dateButton.isEnabled = false
 
@@ -39,14 +48,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             dateTextField.isEnabled = false
             secondLabel.isEnabled = true
             nameTextField.isEnabled = true
-        } else if ((dateTextField.text?.isEmpty) != nil) {
-            firstLabel.text = "Где?"
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.firstLabel.text = "Введите текущую дату:"
-            }
         }
         else {
-            firstLabel.text = "Неверно"
+            if dateTextField.text == "" {
+                hapticFeedback.notificationOccurred(.error)
+                firstLabel.text = "Где?"
+                returnTitle()
+            } else {
+                hapticFeedback.notificationOccurred(.error)
+                firstLabel.text = "Неверно"
+                returnTitle()
+            }
         }
     }
     
@@ -69,10 +81,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         }
         
         if nameTextField.text == "Артем" || nameTextField.text == "Артём" {
+            hapticFeedback.notificationOccurred(.success)
             secondLabel.text = "Абсолютно точно!"
             nameTextField.resignFirstResponder()
             // сдвиг клавиатуры добавить
         } else if nameTextField.text == "артем" || nameTextField.text == "артём" {
+            hapticFeedback.notificationOccurred(.error)
             secondLabel.text = "С большой буквы ало"
         }
         if firstLabel.text == "Верно!" && secondLabel.text == "Абсолютно точно!" {

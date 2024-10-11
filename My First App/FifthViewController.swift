@@ -66,7 +66,8 @@ class FifthViewController: UIViewController {
     var fabricPrice = 1000
     var resultCookies1 = "no cookies"
     var name1 = "no name"
-    let generator = UIImpactFeedbackGenerator(style: .medium)
+    let hapticFeedback = UIImpactFeedbackGenerator(style: .medium)
+    let factoryHapticFeedback = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +75,7 @@ class FifthViewController: UIViewController {
 
     
     @IBAction func cookieButtonTouchDown() {
-        generator.impactOccurred()
+        hapticFeedback.impactOccurred()
         
         cookieButtonImage.isHidden = true
         numCookies += incrementCookies
@@ -109,7 +110,7 @@ class FifthViewController: UIViewController {
         fabricBuyButton.isEnabled = false
         fabricPrice *= 10
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            // self.activityindicator.stopAnimating()
+            self.factoryHapticFeedback.notificationOccurred(.success)
             self.fabricBuyButton.setTitle("Купить", for: .normal)
             self.fabricBuyButton.showsActivityIndicator = false
             self.fabricBuyLabel.text = "Фабрика куплена! Цена следующей - \(self.fabricPrice)"

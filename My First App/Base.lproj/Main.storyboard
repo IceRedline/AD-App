@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MRF-hf-pci">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <accessibilityOverrides/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -750,78 +750,6 @@ QXBwbGUgU3RvcmUgAe+jvw
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-dg-37T">
-                                <rect key="frame" x="58" y="600" width="79" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic1"/>
-                                <connections>
-                                    <action selector="haptic1touched" destination="vMd-Fg-qdi" eventType="touchDown" id="8KI-B7-pD0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-g1-m6W">
-                                <rect key="frame" x="160" y="600" width="81" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic2"/>
-                                <connections>
-                                    <action selector="haptic2touched" destination="vMd-Fg-qdi" eventType="touchDown" id="dIw-Yc-m0l"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtc-Ed-0HV">
-                                <rect key="frame" x="269" y="600" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic3"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchDown" id="5NH-8p-L9g"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-3U-Fxl">
-                                <rect key="frame" x="57" y="660" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic4"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="2ZL-ZG-hL7"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7q-6k-QMO">
-                                <rect key="frame" x="160" y="660" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic5"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="TwY-DK-ihr"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-tY-JAx">
-                                <rect key="frame" x="269" y="660" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic6"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="9yV-QP-QCR"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O68-UW-WZ1">
-                                <rect key="frame" x="57" y="722" width="80" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic7"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="kTm-lh-tMW"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B9-Dt-Mz9">
-                                <rect key="frame" x="160" y="722" width="82" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="haptic8"/>
-                                <connections>
-                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="Exh-mO-NsW"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Вибрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ll-nu-Xyo">
                                 <rect key="frame" x="16" y="243" width="361" height="50"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -871,6 +799,99 @@ QXBwbGUgU3RvcmUgAe+jvw
                                     <segue destination="rSy-mo-GZE" kind="show" id="byC-Wv-Znh"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-WZ-YI8">
+                                <rect key="frame" x="28" y="604.66666666666663" width="337" height="155"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="9s6-ki-0BI">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="155"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-dg-37T">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="haptic1"/>
+                                                <connections>
+                                                    <action selector="haptic1touched" destination="vMd-Fg-qdi" eventType="touchDown" id="8KI-B7-pD0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-g1-m6W">
+                                                <rect key="frame" x="0.0" y="60.333333333333371" width="81.333333333333329" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="haptic2"/>
+                                                <connections>
+                                                    <action selector="haptic2touched" destination="vMd-Fg-qdi" eventType="touchDown" id="dIw-Yc-m0l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtc-Ed-0HV">
+                                                <rect key="frame" x="0.0" y="120.66666666666673" width="81.333333333333329" height="34.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="haptic3"/>
+                                                <connections>
+                                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchDown" id="5NH-8p-L9g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="81.329999999999998" id="CR3-yR-pB3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="8ca-de-unY">
+                                        <rect key="frame" x="101.33333333333334" y="19.333333333333371" width="81.666666666666657" height="135.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O68-UW-WZ1">
+                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="74.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="hapticSelection"/>
+                                                <connections>
+                                                    <action selector="hapticSelectionTouched" destination="vMd-Fg-qdi" eventType="touchDown" id="uuH-NH-TQE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B9-Dt-Mz9">
+                                                <rect key="frame" x="0.0" y="101.33333333333337" width="81.666666666666671" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="haptic8"/>
+                                                <connections>
+                                                    <action selector="haptic3touched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="Exh-mO-NsW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="81.670000000000002" id="4mk-Fz-Ui2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dJb-5U-dhN">
+                                        <rect key="frame" x="203" y="0.0" width="134" height="155"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIF-3U-Fxl">
+                                                <rect key="frame" x="0.0" y="0.0" width="134" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="hapticSucess"/>
+                                                <connections>
+                                                    <action selector="hapticSuccessTouched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="ajB-3D-ZDP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7q-6k-QMO">
+                                                <rect key="frame" x="0.0" y="60.333333333333371" width="134" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="hapticError"/>
+                                                <connections>
+                                                    <action selector="hapticErrorTouched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="KUn-2C-df2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2k-tY-JAx">
+                                                <rect key="frame" x="0.0" y="120.66666666666673" width="134" height="34.333333333333329"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="hapticWarning"/>
+                                                <connections>
+                                                    <action selector="hapticWarningTouched" destination="vMd-Fg-qdi" eventType="touchUpInside" id="czu-yj-o0E"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="133.66999999999999" id="GUP-62-Fw4"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tOK-0D-JWu"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -879,6 +900,7 @@ QXBwbGUgU3RvcmUgAe+jvw
                             <constraint firstItem="rBB-VR-pPL" firstAttribute="top" secondItem="V2Q-Ma-DQB" secondAttribute="bottom" constant="30" id="611-Jv-gmg"/>
                             <constraint firstItem="diW-fl-3nv" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="7bk-UP-fMK"/>
                             <constraint firstItem="xG8-Rd-pie" firstAttribute="top" secondItem="tOK-0D-JWu" secondAttribute="top" constant="70" id="AdS-KG-wOe"/>
+                            <constraint firstItem="8N6-WZ-YI8" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="B13-Sa-uWQ"/>
                             <constraint firstItem="tOK-0D-JWu" firstAttribute="bottom" secondItem="1vd-sd-5TU" secondAttribute="bottom" id="DiP-n5-GPJ"/>
                             <constraint firstItem="NMN-4l-738" firstAttribute="top" secondItem="GCA-I0-MJH" secondAttribute="bottom" constant="10" id="F9r-rx-fdf"/>
                             <constraint firstItem="8ll-nu-Xyo" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="KOa-zI-1Jx"/>
@@ -893,6 +915,7 @@ QXBwbGUgU3RvcmUgAe+jvw
                             <constraint firstItem="NMN-4l-738" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="eDR-dL-HCx"/>
                             <constraint firstItem="V2Q-Ma-DQB" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="kbu-uI-beS"/>
                             <constraint firstItem="tOK-0D-JWu" firstAttribute="trailing" secondItem="1vd-sd-5TU" secondAttribute="trailing" constant="16" id="m7T-3U-mqO"/>
+                            <constraint firstItem="1vd-sd-5TU" firstAttribute="top" secondItem="8N6-WZ-YI8" secondAttribute="bottom" constant="24" id="pQk-V3-6Bi"/>
                             <constraint firstItem="GCA-I0-MJH" firstAttribute="centerY" secondItem="syy-lh-BvO" secondAttribute="centerY" id="pcC-kc-At4"/>
                             <constraint firstItem="rBB-VR-pPL" firstAttribute="centerX" secondItem="syy-lh-BvO" secondAttribute="centerX" id="qne-Rn-cPD"/>
                             <constraint firstItem="g46-p0-vDL" firstAttribute="top" secondItem="8ll-nu-Xyo" secondAttribute="bottom" constant="20" id="uAV-0F-ECe"/>
@@ -905,14 +928,14 @@ QXBwbGUgU3RvcmUgAe+jvw
                         <outlet property="haptic1" destination="2Oq-dg-37T" id="7er-4p-Dth"/>
                         <outlet property="haptic2" destination="dKl-g1-m6W" id="niG-Z4-4RD"/>
                         <outlet property="haptic3" destination="vtc-Ed-0HV" id="xZq-ON-0Zq"/>
-                        <outlet property="haptic4" destination="ZIF-3U-Fxl" id="3aP-uD-Uak"/>
-                        <outlet property="haptic5" destination="h7q-6k-QMO" id="3bI-dT-I3M"/>
-                        <outlet property="haptic6" destination="m2k-tY-JAx" id="pZ8-Qu-wVt"/>
-                        <outlet property="haptic7" destination="O68-UW-WZ1" id="372-gi-1UN"/>
                         <outlet property="haptic8" destination="0B9-Dt-Mz9" id="P3W-8q-0y2"/>
+                        <outlet property="hapticError" destination="h7q-6k-QMO" id="KBX-0U-eR1"/>
                         <outlet property="hapticLabel" destination="8ll-nu-Xyo" id="JIe-o0-L7j"/>
+                        <outlet property="hapticSelection" destination="O68-UW-WZ1" id="372-gi-1UN"/>
+                        <outlet property="hapticSuccess" destination="ZIF-3U-Fxl" id="TNv-gz-HMY"/>
                         <outlet property="hapticSwitch" destination="L6u-o4-end" id="C53-pB-d06"/>
                         <outlet property="hapticSymbol" destination="Fqg-Ye-G7F" id="9Ro-Oz-0Rq"/>
+                        <outlet property="hapticWarning" destination="m2k-tY-JAx" id="UPk-LY-5dr"/>
                         <outlet property="nextButton" destination="1vd-sd-5TU" id="5Qk-pT-u2D"/>
                         <outlet property="notificationsLabel" destination="diW-fl-3nv" id="eQn-U2-Vg0"/>
                         <outlet property="notificationsSwitch" destination="xG8-Rd-pie" id="Ubm-cg-RXh"/>
@@ -2945,7 +2968,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <segue reference="32b-o8-rnI"/>
         <segue reference="hzZ-l0-VRS"/>
         <segue reference="T5t-Lk-a3X"/>
-        <segue reference="znN-Uv-W0i"/>
+        <segue reference="byC-Wv-Znh"/>
         <segue reference="8I2-CE-EVn"/>
         <segue reference="4Qu-IZ-b23"/>
     </inferredMetricsTieBreakers>

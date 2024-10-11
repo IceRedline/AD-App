@@ -13,6 +13,7 @@ var questionCount = 0
 var currentQuestion = ""
 var chosenAnswer = ""
 public var correctAnswers = 0
+var currentProgress = 0.2
 
 //var timer: Timer!
 //var progress: Float = 1.0
@@ -29,6 +30,7 @@ class QuizQuestionViewController: UIViewController {
     @IBOutlet weak var answer4: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    let notificationFeedback = UINotificationFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +41,7 @@ class QuizQuestionViewController: UIViewController {
             button!.isEnabled = true
         }
         timerBar.tintColor = .systemBlue
+        timerBar.progress = Float(currentProgress)
         
         themeName.text = chosenTheme.name
         question.textColor = .white
@@ -91,10 +94,13 @@ class QuizQuestionViewController: UIViewController {
         }
         nextButton.isEnabled = true
         questionCount += 1
+        currentProgress += 0.2
         if answer.currentTitle! == chosenTheme.questionsAndAnswers[currentQuestion]?.first {
+            notificationFeedback.notificationOccurred(.success)
             timerBar.tintColor = UIColor(red: 90/255.0, green: 137/255.0, blue: 87/255.0, alpha: 1.0)
             correctAnswers += 1
         } else {
+            notificationFeedback.notificationOccurred(.error)
             timerBar.tintColor = UIColor(red: 78/255.0, green: 58/255.0, blue: 115/255.0, alpha: 1.0)
         }
     }

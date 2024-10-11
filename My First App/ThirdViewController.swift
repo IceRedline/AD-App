@@ -26,11 +26,14 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var haptic1: UIButton!
     @IBOutlet weak var haptic2: UIButton!
     @IBOutlet weak var haptic3: UIButton!
-    @IBOutlet weak var haptic4: UIButton!
-    @IBOutlet weak var haptic5: UIButton!
-    @IBOutlet weak var haptic6: UIButton!
-    @IBOutlet weak var haptic7: UIButton!
+    @IBOutlet weak var hapticSuccess: UIButton!
+    @IBOutlet weak var hapticError: UIButton!
+    @IBOutlet weak var hapticWarning: UIButton!
+    @IBOutlet weak var hapticSelection: UIButton!
     @IBOutlet weak var haptic8: UIButton!
+    
+    let hapticFeedback = UINotificationFeedbackGenerator()
+    let selectionFeedback = UISelectionFeedbackGenerator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,28 +121,19 @@ class ThirdViewController: UIViewController {
     }
     
     @IBAction func hapticSwitchChanged() {
+        let hapticButtons = [haptic1, haptic2, haptic3, hapticSuccess, hapticError, hapticWarning, hapticSelection, haptic8]
         if hapticSwitch.isOn == true {
             hapticSymbol.image = UIImage(systemName: "iphone.radiowaves.left.and.right")
             hapticSymbol.tintColor = UIColor.systemBlue
-            haptic1.isEnabled = true
-            haptic2.isEnabled = true
-            haptic3.isEnabled = true
-            haptic4.isEnabled = true
-            haptic5.isEnabled = true
-            haptic6.isEnabled = true
-            haptic7.isEnabled = true
-            haptic8.isEnabled = true
+            hapticButtons.forEach() { button in
+                button?.isEnabled = true
+            }
         } else {
             hapticSymbol.image = UIImage(systemName: "iphone.slash")
             hapticSymbol.tintColor = UIColor.systemGray
-            haptic1.isEnabled = false
-            haptic2.isEnabled = false
-            haptic3.isEnabled = false
-            haptic4.isEnabled = false
-            haptic5.isEnabled = false
-            haptic6.isEnabled = false
-            haptic7.isEnabled = false
-            haptic8.isEnabled = false
+            hapticButtons.forEach() { button in
+                button?.isEnabled = false
+            }
         }
     }
     
@@ -152,20 +146,20 @@ class ThirdViewController: UIViewController {
     @IBAction func haptic3touched() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
     }
-    @IBAction func haptic4touched() {
-        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+    @IBAction func hapticSuccessTouched() {
+        hapticFeedback.notificationOccurred(.success)
     }
-    @IBAction func haptic5touched() {
-        UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+    @IBAction func hapticErrorTouched() {
+        hapticFeedback.notificationOccurred(.error)
     }
-    @IBAction func haptic6touched() {
-        UINotificationFeedbackGenerator().notificationOccurred(.error)
+    @IBAction func hapticWarningTouched() {
+        hapticFeedback.notificationOccurred(.warning)
     }
-    @IBAction func haptic7touched() {
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    @IBAction func hapticSelectionTouched() {
+        selectionFeedback.selectionChanged()
     }
     @IBAction func haptic8touched() {
-        UINotificationFeedbackGenerator().notificationOccurred(.warning)
+        
     }
     
 }
