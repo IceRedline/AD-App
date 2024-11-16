@@ -105,20 +105,19 @@ class QuizQuestionViewController: UIViewController {
         }
     }
     
-    @IBAction func answer1Chosen() {
-        checkAnswer(answer1)
-    }
-    
-    @IBAction func answer2Chosen() {
-        checkAnswer(answer2)
-    }
-    
-    @IBAction func answer3Chosen() {
-        checkAnswer(answer3)
-    }
-    
-    @IBAction func answer4Chosen() {
-        checkAnswer(answer4)
+    @IBAction func answerChosen(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            checkAnswer(answer1)
+        case 2:
+            checkAnswer(answer2)
+        case 3:
+            checkAnswer(answer3)
+        case 4:
+            checkAnswer(answer4)
+        default:
+            break
+        }
     }
     
     @IBAction func nextButtonTapped() {

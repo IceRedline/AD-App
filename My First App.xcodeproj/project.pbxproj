@@ -31,6 +31,7 @@
 		995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */; };
 		9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* SeventhViewController.swift */; };
 		996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */; };
+		996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */; };
 		997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */; };
 		998245D42C1B42E300E13656 /* Тверская.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CD2C1B42DD00E13656 /* Тверская.mp3 */; };
 		998245D52C1B42E300E13656 /* Специфичный.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CE2C1B42DE00E13656 /* Специфичный.mp3 */; };
@@ -46,7 +47,6 @@
 		99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */; };
 		99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3B2BAC1EA800A4D34E /* PageViewController.swift */; };
 		99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */; };
-		99948A4C2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */; };
 		99948A4E2BAD916400A4D34E /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A4D2BAD916400A4D34E /* TabViewController.swift */; };
 		9998E1932C19D20D00A353FD /* ambient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9998E1922C19D20C00A353FD /* ambient.mp3 */; };
 		9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998E1962C19E99100A353FD /* DiceGameViewController.swift */; };
@@ -86,6 +86,7 @@
 		995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTextPicker.swift; sourceTree = "<group>"; };
 		9957C4062B9E02980054D61C /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
 		996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Покиньте Зал.mp3"; sourceTree = "<group>"; };
+		996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
 		998245CD2C1B42DD00E13656 /* Тверская.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Тверская.mp3"; sourceTree = "<group>"; };
 		998245CE2C1B42DE00E13656 /* Специфичный.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Специфичный.mp3"; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ninth(1)ViewController.swift"; sourceTree = "<group>"; };
 		99948A3B2BAC1EA800A4D34E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthViewController.swift; sourceTree = "<group>"; };
-		99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eleventh_1_ViewController.swift; sourceTree = "<group>"; };
 		99948A4D2BAD916400A4D34E /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		9998E1922C19D20C00A353FD /* ambient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ambient.mp3; sourceTree = "<group>"; };
 		9998E1962C19E99100A353FD /* DiceGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameViewController.swift; sourceTree = "<group>"; };
@@ -166,14 +166,10 @@
 				99948A3B2BAC1EA800A4D34E /* PageViewController.swift */,
 				99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */,
 				99948A4D2BAD916400A4D34E /* TabViewController.swift */,
-				99948A4B2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift */,
 				99256C622BAF0BF8003B2550 /* LastViewController.swift */,
 				996539C72C1B2EF400602588 /* Sounds */,
-				993F87922CAE08A900E31E8B /* QuizClasses.swift */,
-				993F87952CAE08A900E31E8B /* QuizViewController.swift */,
-				993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */,
-				993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */,
-				99F959992CB437C7001BF337 /* QuizResultViewController.swift */,
+				996F6B3D2CE65B7B00958E3C /* Quizice */,
+				996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */,
 				9914AD812B94735C00202CAC /* Main.storyboard */,
 				9914AD842B94735E00202CAC /* Assets.xcassets */,
 				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
@@ -229,6 +225,18 @@
 				998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		996F6B3D2CE65B7B00958E3C /* Quizice */ = {
+			isa = PBXGroup;
+			children = (
+				993F87922CAE08A900E31E8B /* QuizClasses.swift */,
+				993F87952CAE08A900E31E8B /* QuizViewController.swift */,
+				993F87932CAE08A900E31E8B /* QuizDescriptionViewController.swift */,
+				993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */,
+				99F959992CB437C7001BF337 /* QuizResultViewController.swift */,
+			);
+			path = Quizice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +337,7 @@
 				993F87982CAE08A900E31E8B /* QuizDescriptionViewController.swift in Sources */,
 				993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */,
 				993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */,
+				996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */,
 				9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */,
 				99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */,
 				993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */,
@@ -338,7 +347,6 @@
 				99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */,
 				99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */,
 				99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */,
-				99948A4C2BAD8B9B00A4D34E /* Eleventh_1_ViewController.swift in Sources */,
 				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
 				99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */,
 				997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */,

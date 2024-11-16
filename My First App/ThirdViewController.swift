@@ -136,30 +136,28 @@ class ThirdViewController: UIViewController {
             }
         }
     }
+
+    @IBAction func hapticButtonTouched(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        case 2:
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        case 3:
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        case 4:
+            hapticFeedback.notificationOccurred(.success)
+        case 5:
+            hapticFeedback.notificationOccurred(.error)
+        case 6:
+            hapticFeedback.notificationOccurred(.warning)
+        case 7:
+            selectionFeedback.selectionChanged()
+        case 8:
+            break
+        default:
+            break
+        }
     
-    @IBAction func haptic1touched() {
-        UIImpactFeedbackGenerator(style: .soft).impactOccurred()
     }
-    @IBAction func haptic2touched() {
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-    }
-    @IBAction func haptic3touched() {
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-    }
-    @IBAction func hapticSuccessTouched() {
-        hapticFeedback.notificationOccurred(.success)
-    }
-    @IBAction func hapticErrorTouched() {
-        hapticFeedback.notificationOccurred(.error)
-    }
-    @IBAction func hapticWarningTouched() {
-        hapticFeedback.notificationOccurred(.warning)
-    }
-    @IBAction func hapticSelectionTouched() {
-        selectionFeedback.selectionChanged()
-    }
-    @IBAction func haptic8touched() {
-        
-    }
-    
 }

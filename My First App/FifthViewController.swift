@@ -64,7 +64,7 @@ class FifthViewController: UIViewController {
     var numCookies = 0
     var incrementCookies = 1
     var fabricPrice = 1000
-    var resultCookies1 = "no cookies"
+    var resultCookies = "0"
     var name1 = "no name"
     let hapticFeedback = UIImpactFeedbackGenerator(style: .medium)
     let factoryHapticFeedback = UINotificationFeedbackGenerator()
@@ -127,13 +127,12 @@ class FifthViewController: UIViewController {
         }
         let action = UIAlertAction(title: "Да", style: .destructive) { _ in
             guard let name = alertController.textFields?.first?.text else { return }
-            let resultCookies = "\(self.numCookies)"
             self.name1 = name
-            self.resultCookies1 = resultCookies
+            self.resultCookies = "\(self.numCookies)"
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! SixthViewController
             vc6.name = self.name1 // переносим значения на следующий VC
-            vc6.cookies = self.resultCookies1
+            vc6.cookies = self.resultCookies
             self.navigationController?.pushViewController(vc6, animated: true) // переход с использованием первого Navigation Controller
         }
 

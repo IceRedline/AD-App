@@ -19,30 +19,26 @@ class QuizViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    @IBAction func musicThemeChosen() {
-        chosenTheme = chosenMusicTheme
+    @IBAction func themeChosen(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            chosenTheme = chosenMusicTheme
+        case 2:
+            chosenTheme = chosenTechTheme
+        case 3:
+            chosenTheme = chosenHistoryTheme
+        case 4:
+            chosenTheme = chosenPoliticsTheme
+        default:
+            break
+        }
         showVC()
     }
-    
-    @IBAction func techThemeChosen() {
-        chosenTheme = chosenTechTheme
-        showVC()
-    }
-    
-    @IBAction func historyThemeChosen() {
-        chosenTheme = chosenHistoryTheme
-        showVC()
-    }
-    
-    @IBAction func politicsThemeChosen() {
-        chosenTheme = chosenPoliticsTheme
-        showVC()
-    }
-    
-    
     
     @IBAction func backButtonTapped() {
-        dismiss(animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Navigation")
+        self.present(vc, animated: true)
     }
     
     
