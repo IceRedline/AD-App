@@ -7,12 +7,12 @@
 
 import UIKit
 
-class TenthViewController: UIViewController {
+class TextScrollViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    static func create(text: String) -> TenthViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC10SID") as! TenthViewController
+    static func create(text: String) -> TextScrollViewController {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC10SID") as! TextScrollViewController
         vc.text = text
         return vc
     }

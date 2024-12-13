@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SixthViewController: UIViewController {
+class CookieResultsViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     

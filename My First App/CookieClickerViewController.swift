@@ -50,7 +50,7 @@ extension UIButton {
     }
 }
 
-class FifthViewController: UIViewController {
+class CookieClickerViewController: UIViewController {
 
     
     @IBOutlet weak var cookieButtonImage: UIButton!
@@ -130,7 +130,7 @@ class FifthViewController: UIViewController {
             self.name1 = name
             self.resultCookies = "\(self.numCookies)"
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! SixthViewController
+            let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! CookieResultsViewController
             vc6.name = self.name1 // переносим значения на следующий VC
             vc6.cookies = self.resultCookies
             self.navigationController?.pushViewController(vc6, animated: true) // переход с использованием первого Navigation Controller

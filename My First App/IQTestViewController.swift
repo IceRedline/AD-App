@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class SecondViewController: UIViewController, UITextFieldDelegate {
+class IQTestViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!

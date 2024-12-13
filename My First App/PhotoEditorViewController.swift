@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FourthViewController: UIViewController {
+class PhotoEditorViewController: UIViewController {
 
     @IBOutlet weak var colorSegment: UISegmentedControl!
     @IBOutlet weak var alphaSlider: UISlider!

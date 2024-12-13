@@ -25,7 +25,7 @@ class Album {
     }
 }
 
-class NinthViewController: UIViewController, UICollectionViewDelegate {
+class MusicPlayerViewController: UIViewController, UICollectionViewDelegate {
 
     var albums: [Album] = [Album(name: "Risen From The Ashes", image: UIImage(named: "Risen From The Ashes обложка.jpg"), song:
                                 Bundle.main.url(forResource: "Покиньте Зал", withExtension: "mp3")),
@@ -88,7 +88,7 @@ class NinthViewController: UIViewController, UICollectionViewDelegate {
     }
 }
 
-extension NinthViewController: UICollectionViewDataSource {
+extension MusicPlayerViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return albums.count
     }

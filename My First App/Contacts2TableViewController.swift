@@ -22,7 +22,7 @@ var people: [Person] = [Person(name: "Артём", phoneNumber: "+7 (906) 093-22
                         Person(name: "Дмитрий", phoneNumber: "+7 (925) 380-18-59", image: UIImage(named: "Dima.jpg")),
                         Person(name: "Георгий", phoneNumber: "+7 (903) 397-14-31", image: UIImage(named: "george.jpg"))]
 
-class EighthTableViewController: UITableViewController {
+class Contacts2TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +78,7 @@ class EighthTableViewController: UITableViewController {
 
 
 
-extension EighthTableViewController {
+extension Contacts2TableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

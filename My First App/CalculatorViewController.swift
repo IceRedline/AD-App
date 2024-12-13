@@ -85,6 +85,8 @@ class CalculatorViewController: UIViewController {
             currentAction = "%"
             firstNumber = currentNumber
         case 12:
+            calculate()
+            changeColor(sender)
             currentAction = "/"
             firstNumber = currentNumber
         case 13:

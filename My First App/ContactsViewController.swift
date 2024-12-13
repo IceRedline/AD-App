@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeventhViewController: UIViewController {
+class ContactsViewController: UIViewController {
 
     var names = ["Artyom", "Yaroslav", "George"]
     
@@ -35,7 +35,7 @@ class SeventhViewController: UIViewController {
     }
 }
 
-extension SeventhViewController: UITableViewDataSource {
+extension ContactsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         names.count
     }
@@ -50,7 +50,7 @@ extension SeventhViewController: UITableViewDataSource {
     }
 }
 
-extension SeventhViewController: UITableViewDelegate {
+extension ContactsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }

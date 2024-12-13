@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9900E1892B9B8EB5002E372E /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1882B9B8EB5002E372E /* FourthViewController.swift */; };
-		9900E1912B9C91FE002E372E /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1902B9C91FE002E372E /* FifthViewController.swift */; };
-		9902892B2B9B3D180016D8C3 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */; };
+		9900E1892B9B8EB5002E372E /* PhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1882B9B8EB5002E372E /* PhotoEditorViewController.swift */; };
+		9900E1912B9C91FE002E372E /* CookieClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */; };
+		9902892B2B9B3D180016D8C3 /* SoundSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9902892A2B9B3D180016D8C3 /* SoundSettingsViewController.swift */; };
 		990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990EBBDC2C0794720059A612 /* RemindersController.swift */; };
 		991373B82C0F036A006D1A8D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991373B72C0F036A006D1A8D /* Model.swift */; };
 		9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7B2B94735C00202CAC /* AppDelegate.swift */; };
 		9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7D2B94735C00202CAC /* SceneDelegate.swift */; };
-		9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7F2B94735C00202CAC /* FirstViewController.swift */; };
+		9914AD802B94735C00202CAC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9914AD7F2B94735C00202CAC /* WelcomeViewController.swift */; };
 		9914AD832B94735C00202CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD812B94735C00202CAC /* Main.storyboard */; };
 		9914AD852B94735E00202CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD842B94735E00202CAC /* Assets.xcassets */; };
 		9914AD882B94735E00202CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD862B94735E00202CAC /* LaunchScreen.storyboard */; };
@@ -29,10 +29,10 @@
 		993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */; };
 		993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F87952CAE08A900E31E8B /* QuizViewController.swift */; };
 		995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */; };
-		9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* SeventhViewController.swift */; };
+		9957C4072B9E02980054D61C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* ContactsViewController.swift */; };
 		996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */; };
 		996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */; };
-		997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */; };
+		997D2DDD2B9CDA3F007E394A /* CookieResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */; };
 		998245D42C1B42E300E13656 /* Тверская.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CD2C1B42DD00E13656 /* Тверская.mp3 */; };
 		998245D52C1B42E300E13656 /* Специфичный.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CE2C1B42DE00E13656 /* Специфичный.mp3 */; };
 		998245D62C1B42E300E13656 /* Audi Quattro 2021.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245CF2C1B42DF00E13656 /* Audi Quattro 2021.mp3 */; };
@@ -44,31 +44,34 @@
 		998245DE2C1B431200E13656 /* Заключительная.wav in Resources */ = {isa = PBXBuildFile; fileRef = 998245DD2C1B431200E13656 /* Заключительная.wav */; };
 		998245E02C1B43C300E13656 /* 10 FAULTS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */; };
 		998245E22C1B55D600E13656 /* music.gif in Resources */ = {isa = PBXBuildFile; fileRef = 998245E12C1B55D600E13656 /* music.gif */; };
+		9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */; };
+		999342512D0C9DCA00C42687 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 999342502D0C9DCA00C42687 /* IQKeyboardManagerSwift */; };
+		999342572D0CB2B100C42687 /* RandomGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */; };
 		99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */; };
 		99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3B2BAC1EA800A4D34E /* PageViewController.swift */; };
-		99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */; };
+		99948A3E2BAC1EC500A4D34E /* TextScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A3D2BAC1EC500A4D34E /* TextScrollViewController.swift */; };
 		99948A4E2BAD916400A4D34E /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99948A4D2BAD916400A4D34E /* TabViewController.swift */; };
 		9998E1932C19D20D00A353FD /* ambient.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9998E1922C19D20C00A353FD /* ambient.mp3 */; };
 		9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998E1962C19E99100A353FD /* DiceGameViewController.swift */; };
 		99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */; };
 		99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */; };
-		99C507BB2B9A2A6F00076A8B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */; };
-		99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */; };
+		99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */; };
+		99F758A52BA1E30B0068F192 /* Contacts2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */; };
 		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
-		99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758BC2BA2F7250068F192 /* NinthViewController.swift */; };
+		99F758BD2BA2F7250068F192 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */; };
 		99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F959992CB437C7001BF337 /* QuizResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9900E1882B9B8EB5002E372E /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
-		9900E1902B9C91FE002E372E /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
-		9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		9900E1882B9B8EB5002E372E /* PhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditorViewController.swift; sourceTree = "<group>"; };
+		9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieClickerViewController.swift; sourceTree = "<group>"; };
+		9902892A2B9B3D180016D8C3 /* SoundSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSettingsViewController.swift; sourceTree = "<group>"; };
 		990EBBDC2C0794720059A612 /* RemindersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersController.swift; sourceTree = "<group>"; };
 		991373B72C0F036A006D1A8D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9914AD782B94735C00202CAC /* My First App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My First App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9914AD7B2B94735C00202CAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9914AD7D2B94735C00202CAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9914AD7F2B94735C00202CAC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		9914AD7F2B94735C00202CAC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9914AD822B94735C00202CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9914AD842B94735E00202CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9914AD872B94735E00202CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,10 +87,10 @@
 		993F87942CAE08A900E31E8B /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
 		993F87952CAE08A900E31E8B /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTextPicker.swift; sourceTree = "<group>"; };
-		9957C4062B9E02980054D61C /* SeventhViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventhViewController.swift; sourceTree = "<group>"; };
+		9957C4062B9E02980054D61C /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Покиньте Зал.mp3"; sourceTree = "<group>"; };
 		996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
-		997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixthViewController.swift; sourceTree = "<group>"; };
+		997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieResultsViewController.swift; sourceTree = "<group>"; };
 		998245CD2C1B42DD00E13656 /* Тверская.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Тверская.mp3"; sourceTree = "<group>"; };
 		998245CE2C1B42DE00E13656 /* Специфичный.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Специфичный.mp3"; sourceTree = "<group>"; };
 		998245CF2C1B42DF00E13656 /* Audi Quattro 2021.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Audi Quattro 2021.mp3"; sourceTree = "<group>"; };
@@ -99,18 +102,20 @@
 		998245DD2C1B431200E13656 /* Заключительная.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Заключительная.wav"; sourceTree = "<group>"; };
 		998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 FAULTS.mp3"; sourceTree = "<group>"; };
 		998245E12C1B55D600E13656 /* music.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = music.gif; sourceTree = "<group>"; };
+		9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestViewController.swift; sourceTree = "<group>"; };
+		999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGalleryViewController.swift; sourceTree = "<group>"; };
 		99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ninth(1)ViewController.swift"; sourceTree = "<group>"; };
 		99948A3B2BAC1EA800A4D34E /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenthViewController.swift; sourceTree = "<group>"; };
+		99948A3D2BAC1EC500A4D34E /* TextScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextScrollViewController.swift; sourceTree = "<group>"; };
 		99948A4D2BAD916400A4D34E /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		9998E1922C19D20C00A353FD /* ambient.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ambient.mp3; sourceTree = "<group>"; };
 		9998E1962C19E99100A353FD /* DiceGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceGameViewController.swift; sourceTree = "<group>"; };
 		99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompTwo.swift; sourceTree = "<group>"; };
 		99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompOne.swift; sourceTree = "<group>"; };
-		99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighthTableViewController.swift; sourceTree = "<group>"; };
+		99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQTestViewController.swift; sourceTree = "<group>"; };
+		99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts2TableViewController.swift; sourceTree = "<group>"; };
 		99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
-		99F758BC2BA2F7250068F192 /* NinthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinthViewController.swift; sourceTree = "<group>"; };
+		99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		99F959992CB437C7001BF337 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				999342512D0C9DCA00C42687 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,31 +152,33 @@
 			children = (
 				9914AD7B2B94735C00202CAC /* AppDelegate.swift */,
 				9914AD7D2B94735C00202CAC /* SceneDelegate.swift */,
-				9914AD7F2B94735C00202CAC /* FirstViewController.swift */,
+				9914AD7F2B94735C00202CAC /* WelcomeViewController.swift */,
+				9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */,
 				9936A6A92C00C4C8002813F2 /* NamesComp */,
 				9936A6A72C00C4B0002813F2 /* LifeDays */,
 				995182F42C0BAECD0064D136 /* Reminders */,
 				993F6F412C2C92410071650D /* TypingtestViewController.swift */,
 				9998E1962C19E99100A353FD /* DiceGameViewController.swift */,
-				99C507BA2B9A2A6F00076A8B /* SecondViewController.swift */,
-				9902892A2B9B3D180016D8C3 /* ThirdViewController.swift */,
-				9900E1882B9B8EB5002E372E /* FourthViewController.swift */,
-				9900E1902B9C91FE002E372E /* FifthViewController.swift */,
+				99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */,
+				9902892A2B9B3D180016D8C3 /* SoundSettingsViewController.swift */,
+				9900E1882B9B8EB5002E372E /* PhotoEditorViewController.swift */,
+				9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */,
 				99256C5E2BAE32FB003B2550 /* ImagePicker.swift */,
-				997D2DDC2B9CDA3F007E394A /* SixthViewController.swift */,
-				9957C4062B9E02980054D61C /* SeventhViewController.swift */,
+				997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */,
+				9957C4062B9E02980054D61C /* ContactsViewController.swift */,
 				99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */,
-				99F758A42BA1E30B0068F192 /* EighthTableViewController.swift */,
-				99F758BC2BA2F7250068F192 /* NinthViewController.swift */,
+				99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */,
+				99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */,
 				99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */,
 				99948A3B2BAC1EA800A4D34E /* PageViewController.swift */,
-				99948A3D2BAC1EC500A4D34E /* TenthViewController.swift */,
+				99948A3D2BAC1EC500A4D34E /* TextScrollViewController.swift */,
 				99948A4D2BAD916400A4D34E /* TabViewController.swift */,
 				99256C622BAF0BF8003B2550 /* LastViewController.swift */,
 				996539C72C1B2EF400602588 /* Sounds */,
 				996F6B3D2CE65B7B00958E3C /* Quizice */,
 				996F6B3A2CE65B5300958E3C /* CalculatorViewController.swift */,
 				9914AD812B94735C00202CAC /* Main.storyboard */,
+				999342562D0CB2B100C42687 /* Random Gallery */,
 				9914AD842B94735E00202CAC /* Assets.xcassets */,
 				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
 				9914AD892B94735E00202CAC /* Info.plist */,
@@ -239,6 +247,14 @@
 			path = Quizice;
 			sourceTree = "<group>";
 		};
+		999342562D0CB2B100C42687 /* Random Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */,
+			);
+			path = "Random Gallery";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,6 +299,9 @@
 				Base,
 			);
 			mainGroup = 9914AD6F2B94735C00202CAC;
+			packageReferences = (
+				9993424F2D0C9DCA00C42687 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 9914AD792B94735C00202CAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,38 +344,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				991373B82C0F036A006D1A8D /* Model.swift in Sources */,
-				9900E1892B9B8EB5002E372E /* FourthViewController.swift in Sources */,
+				9900E1892B9B8EB5002E372E /* PhotoEditorViewController.swift in Sources */,
 				995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */,
 				99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */,
-				99C507BB2B9A2A6F00076A8B /* SecondViewController.swift in Sources */,
-				9957C4072B9E02980054D61C /* SeventhViewController.swift in Sources */,
+				99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */,
+				9957C4072B9E02980054D61C /* ContactsViewController.swift in Sources */,
 				990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */,
 				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
 				993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */,
 				993F87972CAE08A900E31E8B /* QuizClasses.swift in Sources */,
 				993F87982CAE08A900E31E8B /* QuizDescriptionViewController.swift in Sources */,
+				9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */,
 				993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */,
 				993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */,
 				996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */,
-				9914AD802B94735C00202CAC /* FirstViewController.swift in Sources */,
+				9914AD802B94735C00202CAC /* WelcomeViewController.swift in Sources */,
 				99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */,
 				993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */,
 				99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */,
 				99948A4E2BAD916400A4D34E /* TabViewController.swift in Sources */,
 				993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */,
 				99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */,
-				99948A3E2BAC1EC500A4D34E /* TenthViewController.swift in Sources */,
+				99948A3E2BAC1EC500A4D34E /* TextScrollViewController.swift in Sources */,
 				99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */,
 				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
-				99F758BD2BA2F7250068F192 /* NinthViewController.swift in Sources */,
-				997D2DDD2B9CDA3F007E394A /* SixthViewController.swift in Sources */,
-				9902892B2B9B3D180016D8C3 /* ThirdViewController.swift in Sources */,
-				99F758A52BA1E30B0068F192 /* EighthTableViewController.swift in Sources */,
+				99F758BD2BA2F7250068F192 /* MusicPlayerViewController.swift in Sources */,
+				997D2DDD2B9CDA3F007E394A /* CookieResultsViewController.swift in Sources */,
+				9902892B2B9B3D180016D8C3 /* SoundSettingsViewController.swift in Sources */,
+				99F758A52BA1E30B0068F192 /* Contacts2TableViewController.swift in Sources */,
 				9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */,
 				99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */,
+				999342572D0CB2B100C42687 /* RandomGalleryViewController.swift in Sources */,
 				9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */,
 				99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */,
-				9900E1912B9C91FE002E372E /* FifthViewController.swift in Sources */,
+				9900E1912B9C91FE002E372E /* CookieClickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9993424F2D0C9DCA00C42687 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		999342502D0C9DCA00C42687 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9993424F2D0C9DCA00C42687 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9914AD702B94735C00202CAC /* Project object */;
 }

@@ -8,7 +8,7 @@
 import UIKit
 import AVKit
 
-class FirstViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var logo1: UIImageView!
     @IBOutlet weak var logo2: UIImageView!
@@ -55,11 +55,34 @@ class FirstViewController: UIViewController {
     @IBAction func quizBuutonTapped() {
         if musicplayer.isPlaying {
             musicplayer.stop()
-            }
+        }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizID")
         self.present(vc, animated: true)
+    }
+    
+    
+    
+    private func animateDown(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+    
+    private func animateUp(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+        })
+    }
+    
+    @IBAction func testButtonTapped(_ sender: UIButton) {
+        sender.layer.removeAllAnimations()
+        animateDown(sender)
+    }
+    
+    @IBAction func testButtonReleased(_ sender: UIButton) {
+        animateUp(sender)
     }
     
 }

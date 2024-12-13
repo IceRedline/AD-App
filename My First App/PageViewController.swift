@@ -9,7 +9,7 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    let viewControllerList: [TenthViewController] = [TenthViewController.create(text: "Привет! я текст, который можно скроллить! ->"), TenthViewController.create(text: "При следующем скролле вправо вы принимаете пользовательское соглашение ->"), TenthViewController.create(text: "Последний рубеж - вы хотите попасть в Apple Store?"), ]
+    let viewControllerList: [TextScrollViewController] = [TextScrollViewController.create(text: "Привет! я текст, который можно скроллить! ->"), TextScrollViewController.create(text: "При следующем скролле вправо вы принимаете пользовательское соглашение ->"), TextScrollViewController.create(text: "Последний рубеж - вы хотите попасть в Apple Store?"), ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

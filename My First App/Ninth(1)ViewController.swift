@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Ninth_1_ViewController: UIViewController {
+class AboutMeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

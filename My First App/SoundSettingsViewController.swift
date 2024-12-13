@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
-
+class SoundSettingsViewController: UIViewController {
+    
     @IBOutlet weak var notificationsSwitch: UISwitch!
     @IBOutlet weak var hapticSwitch: UISwitch!
     @IBOutlet weak var soundSwitch: UISwitch!
@@ -50,6 +50,13 @@ class ThirdViewController: UIViewController {
         soundLabel.traitOverrides.userInterfaceLevel = .elevated
     }
     
+    private func disableElements() {
+        let arrayToDisable = [hapticSwitch, soundSwitch, volumeSlider, nextButton]
+        arrayToDisable.forEach() { elem in
+            elem?.isEnabled = false
+        }
+    }
+    
     
     @IBAction func notificationsSwitchEnabled(_ sender: UISwitch) {
         notificationsSymbol.image = UIImage(systemName: "bell")
@@ -66,13 +73,10 @@ class ThirdViewController: UIViewController {
             notificationsSymbol.tintColor = UIColor.systemGray
             hapticSwitch.isOn = false
             soundSwitch.isOn = false
-            hapticSwitch.isEnabled = false
-            soundSwitch.isEnabled = false
-            volumeSlider.isEnabled = false
             volumeSlider.value = 0
             volumeLabel.text = "0"
             nextButton.tintColor = .gray
-            nextButton.isEnabled = false
+            disableElements()
         } else {
             hapticSwitch.isEnabled = true
             soundSwitch.isEnabled = true
@@ -107,7 +111,7 @@ class ThirdViewController: UIViewController {
         if volumeSlider.value > 33 && volumeSlider.value <= 66 {
             soundSymbol.image = UIImage(systemName: "speaker.wave.2")
         }
-        if volumeSlider.value > 66{
+        if volumeSlider.value > 66 {
             soundSymbol.image = UIImage(systemName: "speaker.wave.3")
         }
         
@@ -136,8 +140,21 @@ class ThirdViewController: UIViewController {
             }
         }
     }
-
+    
+    private func animateView(_ viewToAnimate: UIView) {
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }) { (_) in
+            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }
+    }
+    
     @IBAction func hapticButtonTouched(_ sender: UIButton) {
+        
+        self.animateView(sender)
+        
         switch sender.tag {
         case 1:
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
@@ -158,6 +175,6 @@ class ThirdViewController: UIViewController {
         default:
             break
         }
-    
+        
     }
 }
