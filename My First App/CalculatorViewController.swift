@@ -23,6 +23,8 @@ class CalculatorViewController: UIViewController {
     private var currentSender: UIButton?
     private var numberSwitched = false
     
+    let animationsEngine = Animations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,25 +51,25 @@ class CalculatorViewController: UIViewController {
             break
         }
         firstNumber = 0
+        /*
         if currentSender != nil {
-            changeColor(currentSender!)
+            changeNumberFlag(currentSender!)
         }
+         */
         currentAction = nil
     }
     
-    private func changeColor(_ sender: UIButton) {
+    private func changeNumberFlag(_ sender: UIButton) {
         numberSwitched = true
-        #warning ("переместить numberSwitched в другой метод")
-        
-        if currentAction == nil {
-            sender.backgroundColor = UIColor.systemGray6
-        } else {
-            sender.backgroundColor = UIColor.systemGray4
-        }
         currentSender = sender
     }
     
-    @IBAction func numberButtonTapped(_ sender: UIButton) {
+    @IBAction func numberButtonTouchedDown(_ sender: UIButton) {
+        animationsEngine.animateDownFloat(sender)
+    }
+    
+    @IBAction func numberButtonTouchedUp(_ sender: UIButton) {
+        animationsEngine.animateUpFloat(sender)
         if currentNumber == 0 || numberSwitched {
             currentNumber = sender.tag
         } else {
@@ -76,7 +78,7 @@ class CalculatorViewController: UIViewController {
         numberSwitched = false
     }
     
-    @IBAction func actionButtonTapped(_ sender: UIButton) {
+    @IBAction func actionButtonTouchedUp(_ sender: UIButton) {
         switch sender.tag {
         case 10:
             currentNumber = 0
@@ -86,27 +88,31 @@ class CalculatorViewController: UIViewController {
             firstNumber = currentNumber
         case 12:
             calculate()
-            changeColor(sender)
+            changeNumberFlag(sender)
+            animationsEngine.animateUpBackgroundColor(sender)
             currentAction = "/"
             firstNumber = currentNumber
         case 13:
             calculate()
-            changeColor(sender)
+            changeNumberFlag(sender)
+            animationsEngine.animateUpBackgroundColor(sender)
             currentAction = "*"
             firstNumber = currentNumber
         case 14:
             calculate()
-            changeColor(sender)
+            changeNumberFlag(sender)
+            animationsEngine.animateUpBackgroundColor(sender)
             currentAction = "-"
             firstNumber = currentNumber
         case 15:
             calculate()
-            changeColor(sender)
+            changeNumberFlag(sender)
+            animationsEngine.animateUpBackgroundColor(sender)
             currentAction = "+"
             firstNumber = currentNumber
         case 16:
-            if currentSender != nil  {
-                changeColor(currentSender!)
+            if currentSender != nil {
+                animationsEngine.animateUpBackgroundColor(currentSender!)
             }
             currentSender = nil
             calculate()

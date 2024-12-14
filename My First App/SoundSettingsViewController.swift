@@ -35,6 +35,8 @@ class SoundSettingsViewController: UIViewController {
     let hapticFeedback = UINotificationFeedbackGenerator()
     let selectionFeedback = UISelectionFeedbackGenerator()
     
+    let animationsEngine = Animations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -141,19 +143,9 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
-    private func animateView(_ viewToAnimate: UIView) {
-        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
-        }) { (_) in
-            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
-                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
-            })
-        }
-    }
-    
-    @IBAction func hapticButtonTouched(_ sender: UIButton) {
+    @IBAction func hapticButtonTouchedDown(_ sender: UIButton) {
         
-        self.animateView(sender)
+        animationsEngine.animateDownFloat(sender)
         
         switch sender.tag {
         case 1:
@@ -175,6 +167,10 @@ class SoundSettingsViewController: UIViewController {
         default:
             break
         }
-        
     }
+    
+    @IBAction func hapticButtonTouchedUp(_ sender: UIButton) {
+        animationsEngine.animateUpFloat(sender)
+    }
+    
 }

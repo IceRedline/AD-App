@@ -14,6 +14,7 @@ class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var blurSlider: UISlider!
     @IBOutlet weak var blurLabel: UILabel!
+    @IBOutlet weak var cornerRadiusLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
 
     var blurEffectView: UIVisualEffectView?
@@ -31,15 +32,20 @@ class PhotoEditorViewController: UIViewController {
             imageView.addSubview(blurEffectView!)
     }
 
-    @IBAction func alphaSliderChanged(_ sender: UISlider) {
-        imageView.alpha = CGFloat(alphaSlider.value)
-        alphaLabel.text = "\(round(alphaSlider.value * 10) / 10)"
-        colorSegment.isEnabled = alphaSlider.value == 1
+    @IBAction private func alphaSliderChanged(_ sender: UISlider) {
+        imageView.alpha = CGFloat(sender.value)
+        alphaLabel.text = "\(round(sender.value * 10) / 10)"
+        colorSegment.isEnabled = sender.value == 1
+    }
+    
+    @IBAction private func cornerRadiusSliderChanged(_ sender: UISlider) {
+        imageView.layer.cornerRadius = CGFloat(sender.value * 40)
+        cornerRadiusLabel.text = "\(Int(sender.value * 40))"
     }
 
-    @IBAction func blurSliderChanged(_ sender: UISlider) {
-        blurLabel.text = "\(Int(blurSlider.value * 10000) / 100)%"
-        let blurValue = CGFloat(blurSlider.value)
+    @IBAction private func blurSliderChanged(_ sender: UISlider) {
+        blurLabel.text = "\(Int(sender.value * 10000) / 100)%"
+        let blurValue = CGFloat(sender.value)
         
         // Если уже есть существующий blurEffectView, уберите его
         blurEffectView?.removeFromSuperview()
@@ -57,7 +63,7 @@ class PhotoEditorViewController: UIViewController {
         }
     }
 
-    @IBAction func colorSegmentChanged(_ sender: UISegmentedControl) {
+    @IBAction private func colorSegmentChanged(_ sender: UISegmentedControl) {
         switch colorSegment.selectedSegmentIndex {
         case 0:
             view.backgroundColor = UIColor.systemGray6

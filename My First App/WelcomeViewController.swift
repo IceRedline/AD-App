@@ -76,13 +76,18 @@ class WelcomeViewController: UIViewController {
         })
     }
     
-    @IBAction func testButtonTapped(_ sender: UIButton) {
-        sender.layer.removeAllAnimations()
+    @IBAction func animationsButtonTapped(_ sender: UIButton) {
         animateDown(sender)
     }
     
-    @IBAction func testButtonReleased(_ sender: UIButton) {
+    @IBAction func animationsButtonReleased(_ sender: UIButton) {
         animateUp(sender)
+    }
+    
+    @IBAction func galleryButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RandomGallery")
+        self.present(vc, animated: true)
     }
     
 }

@@ -19,9 +19,7 @@ class LifeDaysOne: UIViewController {
         super.viewDidLoad()
 
     }
-    @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue) {
-        
-    }
+    @IBAction func unwindSegue(unwindSegue:UIStoryboardSegue) { }
 
     @IBAction func fisrtDatePicker(_ sender: UIDatePicker) {
         firstdate = sender.date
