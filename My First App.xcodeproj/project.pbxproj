@@ -56,6 +56,7 @@
 		9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9998E1962C19E99100A353FD /* DiceGameViewController.swift */; };
 		99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */; };
 		99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */; };
+		99C44D002D0F2DC000A7A7C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99C44CFF2D0F2DC000A7A7C0 /* IQKeyboardManagerSwift */; };
 		99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */; };
 		99F758A52BA1E30B0068F192 /* Contacts2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */; };
 		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
@@ -127,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				999342512D0C9DCA00C42687 /* IQKeyboardManagerSwift in Frameworks */,
+				99C44D002D0F2DC000A7A7C0 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +545,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +580,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,6 +634,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		999342502D0C9DCA00C42687 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9993424F2D0C9DCA00C42687 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		99C44CFF2D0F2DC000A7A7C0 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9993424F2D0C9DCA00C42687 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;

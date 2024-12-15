@@ -36,9 +36,9 @@ class AnimationTestViewController: UIViewController {
         case 2:
             animationsEngine.animateUpFloat(sender)
         case 4:
-            animationsEngine.animateUpTintColor(sender)
+            animationsEngine.animateTintColor(sender)
         case 5:
-            animationsEngine.animateUpBackgroundColor(sender)
+            animationsEngine.animateBackgroundColor(sender, color: CGColor(red: 199/255, green: 198/255, blue: 205/255, alpha: 1))
         default: return
         }
     }

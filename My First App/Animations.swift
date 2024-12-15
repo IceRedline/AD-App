@@ -45,27 +45,15 @@ class Animations {
         }
     }
     
-    func animateUpTintColor(_ viewToAnimate: UIView) {
-        if viewToAnimate.tintColor == UIColor.white {
-            UIView.transition(with: viewToAnimate, duration: 1, options: .transitionCrossDissolve, animations: {
-                viewToAnimate.tintColor = UIColor.black
-            })
-        } else {
-            UIView.transition(with: viewToAnimate, duration: 1, options: .transitionCrossDissolve, animations: {
-                viewToAnimate.tintColor = UIColor.white
-            })
-        }
+    func animateTintColor(_ viewToAnimate: UIView, color: UIColor = UIColor.black, duration: Double = 1) {
+        UIView.transition(with: viewToAnimate, duration: duration, options: .transitionCrossDissolve, animations: {
+            viewToAnimate.tintColor = color
+        })
     }
     
-    func animateUpBackgroundColor(_ viewToAnimate: UIView) {
-        if viewToAnimate.layer.backgroundColor != CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1) {
+    func animateBackgroundColor(_ viewToAnimate: UIView, color: CGColor) {
             UIView.transition(with: viewToAnimate, duration: 0.2, options: .transitionCrossDissolve, animations: {
-                viewToAnimate.layer.backgroundColor = CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+                viewToAnimate.layer.backgroundColor = color
             })
-        } else {
-            UIView.transition(with: viewToAnimate, duration: 0.2, options: .transitionCrossDissolve, animations: {
-                viewToAnimate.layer.backgroundColor = CGColor(red: 199/255, green: 198/255, blue: 205/255, alpha: 1)
-            })
-        }
     }
 }
