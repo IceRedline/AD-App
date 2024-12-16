@@ -62,8 +62,8 @@
             filePath = "My First App/SoundSettingsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "notificationsSwitchEnabled(_:)"
             landmarkType = "7">
          </BreakpointContent>

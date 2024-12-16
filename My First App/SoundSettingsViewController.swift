@@ -19,9 +19,9 @@ class SoundSettingsViewController: UIViewController {
     @IBOutlet weak var hapticSymbol: UIImageView!
     @IBOutlet weak var speakerSymbol: UIImageView!
     
-    @IBOutlet weak var notificationsLabel: UILabel!
-    @IBOutlet weak var hapticLabel: UILabel!
-    @IBOutlet weak var soundLabel: UILabel!
+    @IBOutlet weak var notificationsView: UIView!
+    @IBOutlet weak var soundView: UIView!
+    @IBOutlet weak var hapticView: UIView!
     
     @IBOutlet weak var haptic1: UIButton!
     @IBOutlet weak var haptic2: UIButton!
@@ -39,13 +39,16 @@ class SoundSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let labelsArray = [notificationsLabel, hapticLabel, soundLabel]
-        labelsArray.forEach { elem in
+        let viewsArray = [notificationsView, soundView, hapticView]
+        viewsArray.forEach { elem in
             elem?.layer.masksToBounds = true
-            elem?.layer.cornerRadius = 15
             elem?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
         }
+        
+        hapticView.translatesAutoresizingMaskIntoConstraints = true
+        soundView.translatesAutoresizingMaskIntoConstraints = true
     }
+    
     
     private func disableElements() {
         let arrayToDisable = [hapticSwitch, soundSwitch, volumeSlider]
@@ -54,10 +57,19 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
+    private func disableHapticButtons() {
+        let hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
+        hapticButtons.forEach() { button in
+            UIView.animate(withDuration: 0.5) {
+                button?.isEnabled = false
+            }
+        }
+    }
+    
     private func disableSymbol(_ symbol: UIImageView) {
         
         switch symbol {
-    
+            
         case notificationsSymbol:
             notificationsSymbol.setSymbolImage(UIImage(systemName: "bell.slash")!, contentTransition: .replace)
             notificationsSymbol.tintColor = UIColor.systemGray
@@ -74,6 +86,14 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
+    private func resizeView(viewToResize: UIView, duration: Double, newheight: Float) {
+        UIView.animate(withDuration: duration) {
+            viewToResize.frame.size.height = CGFloat(newheight)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // MARK: - Notifications
     
     @IBAction func notificationsSwitchEnabled(_ sender: UISwitch) {
         
@@ -94,6 +114,9 @@ class SoundSettingsViewController: UIViewController {
             disableSymbol(notificationsSymbol)
             
             hapticSwitch.isOn = false
+            disableHapticButtons()
+            resizeView(viewToResize: hapticView, duration: 1, newheight: 60)
+            
             soundSwitch.isOn = false
             volumeSlider.value = 0
             volumeLabel.text = "0"
@@ -101,62 +124,7 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func hapticSwitchChanged() {
-        let hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
-        if hapticSwitch.isOn == true {
-            hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)
-            hapticSymbol.addSymbolEffect(.wiggle, options: .repeat(50))
-            #warning("Зациклить анимацию")
-            DispatchQueue.main.async {
-                for (index, button) in hapticButtons.enumerated() {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
-                        UIView.animate(withDuration: 0.5) {
-                            button?.isEnabled = true
-                        }
-                    }
-                }
-            }
-                        
-        } else {
-            disableSymbol(hapticSymbol)
-            
-            hapticButtons.forEach() { button in
-                UIView.animate(withDuration: 1) {
-                    button?.isEnabled = false
-                }
-            }
-        }
-    }
-    
-    @IBAction func hapticButtonTouchedDown(_ sender: UIButton) {
-        
-        animationsEngine.animateDownFloat(sender)
-        
-        switch sender.tag {
-        case 1:
-            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
-        case 2:
-            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        case 3:
-            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        case 4:
-            hapticFeedback.notificationOccurred(.success)
-        case 5:
-            hapticFeedback.notificationOccurred(.error)
-        case 6:
-            hapticFeedback.notificationOccurred(.warning)
-        case 7:
-            selectionFeedback.selectionChanged()
-        case 8:
-            break
-        default:
-            break
-        }
-    }
-    
-    @IBAction func hapticButtonTouchedUp(_ sender: UIButton) {
-        animationsEngine.animateUpFloat(sender)
-    }
+    // MARK: - Sounds
     
     @IBAction func soundSwitchEnabled(_ sender: UISwitch) {
         
@@ -168,6 +136,8 @@ class SoundSettingsViewController: UIViewController {
             
             volumeSlider.isEnabled = true
             
+            //resizeView(viewToResize: soundView, duration: 1, newheight: 150)
+            
         case false:
             speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.slash")!, contentTransition: .replace)
             speakerSymbol.tintColor = UIColor.systemGray
@@ -175,6 +145,8 @@ class SoundSettingsViewController: UIViewController {
             volumeSlider.isEnabled = false
             volumeSlider.value = 0
             volumeLabel.text = "0"
+            
+            //resizeView(viewToResize: soundView, duration: 1, newheight: 60)
         }
     }
     
@@ -228,6 +200,67 @@ class SoundSettingsViewController: UIViewController {
         if volume == 100 {
             nextButton.isEnabled = true
         }
+    }
+    
+    // MARK: - Haptics
+    
+    @IBAction func hapticSwitchChanged() {
+        let hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
+        if hapticSwitch.isOn == true {
+            
+            hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)
+            hapticSymbol.addSymbolEffect(.wiggle, options: .repeat(50))
+#warning("Зациклить анимацию")
+            
+            resizeView(viewToResize: hapticView, duration: 1, newheight: 225)
+            
+            DispatchQueue.main.async {
+                for (index, button) in hapticButtons.enumerated() {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
+                        UIView.animate(withDuration: 0.5) {
+                            button?.isEnabled = true
+                        }
+                    }
+                }
+            }
+            
+        } else {
+            disableSymbol(hapticSymbol)
+            
+            resizeView(viewToResize: hapticView, duration: 1, newheight: 60)
+            
+            disableHapticButtons()
+        }
+    }
+    
+    @IBAction func hapticButtonTouchedDown(_ sender: UIButton) {
+        
+        animationsEngine.animateDownFloat(sender)
+        
+        switch sender.tag {
+        case 1:
+            UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+        case 2:
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        case 3:
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        case 4:
+            hapticFeedback.notificationOccurred(.success)
+        case 5:
+            hapticFeedback.notificationOccurred(.error)
+        case 6:
+            hapticFeedback.notificationOccurred(.warning)
+        case 7:
+            selectionFeedback.selectionChanged()
+        case 8:
+            break
+        default:
+            break
+        }
+    }
+    
+    @IBAction func hapticButtonTouchedUp(_ sender: UIButton) {
+        animationsEngine.animateUpFloat(sender)
     }
     
 }

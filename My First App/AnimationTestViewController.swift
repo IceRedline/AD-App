@@ -10,6 +10,7 @@ import UIKit
 
 class AnimationTestViewController: UIViewController {
     
+    let defaultColor: CGColor = UIColor.secondary.cgColor
     let animationsEngine = Animations()
     
     override func viewDidLoad() {
@@ -36,9 +37,20 @@ class AnimationTestViewController: UIViewController {
         case 2:
             animationsEngine.animateUpFloat(sender)
         case 4:
-            animationsEngine.animateTintColor(sender)
+            switch sender.tintColor {
+            case .primary:
+                animationsEngine.animateTintColor(sender)
+            default:
+                animationsEngine.animateTintColor(sender, color: .primary)
+            }
         case 5:
-            animationsEngine.animateBackgroundColor(sender, color: CGColor(red: 199/255, green: 198/255, blue: 205/255, alpha: 1))
+            switch sender.layer.backgroundColor {
+            case defaultColor:
+                animationsEngine.animateBackgroundColor(sender, color: CGColor(red: 199/255, green: 198/255, blue: 240/255, alpha: 1))
+            default:
+                animationsEngine.animateBackgroundColor(sender, color: defaultColor)
+            }
+            
         default: return
         }
     }

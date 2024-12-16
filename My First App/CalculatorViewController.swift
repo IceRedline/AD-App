@@ -25,8 +25,8 @@ class CalculatorViewController: UIViewController {
     private var canStartAgain = true
     
     let animationsEngine = Animations()
-    let startColor = CGColor(red: 44/255, green: 44/255, blue: 46/255, alpha: 1)
-    let endColor = CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+    let startColor: CGColor = UIColor.calculatorGray.cgColor // CGColor(red: 44/255, green: 44/255, blue: 46/255, alpha: 1)
+    let endColor: CGColor = UIColor.calculatorGrayAccent.cgColor // CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()

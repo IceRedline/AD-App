@@ -9,13 +9,13 @@ import UIKit
 
 class PhotoEditorViewController: UIViewController {
 
-    @IBOutlet weak var colorSegment: UISegmentedControl!
-    @IBOutlet weak var alphaSlider: UISlider!
-    @IBOutlet weak var alphaLabel: UILabel!
-    @IBOutlet weak var blurSlider: UISlider!
-    @IBOutlet weak var blurLabel: UILabel!
-    @IBOutlet weak var cornerRadiusLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet private weak var colorSegment: UISegmentedControl!
+    @IBOutlet private weak var alphaSlider: UISlider!
+    @IBOutlet private weak var alphaLabel: UILabel!
+    @IBOutlet private weak var blurSlider: UISlider!
+    @IBOutlet private weak var blurLabel: UILabel!
+    @IBOutlet private weak var cornerRadiusLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
 
     var blurEffectView: UIVisualEffectView?
 
@@ -31,17 +31,19 @@ class PhotoEditorViewController: UIViewController {
             blurEffectView?.alpha = blurValue // Контролируем степень размытия через альфу
             imageView.addSubview(blurEffectView!)
     }
+    
 
     @IBAction private func alphaSliderChanged(_ sender: UISlider) {
         imageView.alpha = CGFloat(sender.value)
         alphaLabel.text = "\(round(sender.value * 10) / 10)"
-        colorSegment.isEnabled = sender.value == 1
     }
+    
     
     @IBAction private func cornerRadiusSliderChanged(_ sender: UISlider) {
         imageView.layer.cornerRadius = CGFloat(sender.value * 40)
         cornerRadiusLabel.text = "\(Int(sender.value * 40))"
     }
+    
 
     @IBAction private func blurSliderChanged(_ sender: UISlider) {
         blurLabel.text = "\(Int(sender.value * 10000) / 100)%"
@@ -62,17 +64,32 @@ class PhotoEditorViewController: UIViewController {
             imageView.addSubview(blurEffectView!)
         }
     }
+    
 
     @IBAction private func colorSegmentChanged(_ sender: UISegmentedControl) {
-        switch colorSegment.selectedSegmentIndex {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground() // Сбрасывает на базовые настройки
+
+        switch sender.selectedSegmentIndex {
         case 0:
-            view.backgroundColor = UIColor.systemGray6
+            overrideUserInterfaceStyle = .unspecified
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
+            appearance.backgroundColor = .systemBackground // Устанавливаем цвет фона
         case 1:
-            view.backgroundColor = UIColor.systemGray3
+            overrideUserInterfaceStyle = .dark
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.backgroundColor = .systemGray6.resolvedColor(with: UITraitCollection(userInterfaceStyle: .dark)) // Устанавливаем цвет фона
         case 2:
-            view.backgroundColor = UIColor.systemGray
+            overrideUserInterfaceStyle = .light
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            appearance.backgroundColor = .systemGray6.resolvedColor(with: UITraitCollection(userInterfaceStyle: .light)) // Устанавливаем цвет фона
         default:
             view.backgroundColor = UIColor.systemGray6
         }
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+
+        // Обновляем внешний вид
+        navigationController?.navigationBar.setNeedsLayout()
     }
 }

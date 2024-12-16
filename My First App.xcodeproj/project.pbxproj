@@ -44,7 +44,6 @@
 		998245DC2C1B42F100E13656 /* СИНИЙ AUDI.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */; };
 		998245DE2C1B431200E13656 /* Заключительная.wav in Resources */ = {isa = PBXBuildFile; fileRef = 998245DD2C1B431200E13656 /* Заключительная.wav */; };
 		998245E02C1B43C300E13656 /* 10 FAULTS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */; };
-		998245E22C1B55D600E13656 /* music.gif in Resources */ = {isa = PBXBuildFile; fileRef = 998245E12C1B55D600E13656 /* music.gif */; };
 		9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */; };
 		999342512D0C9DCA00C42687 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 999342502D0C9DCA00C42687 /* IQKeyboardManagerSwift */; };
 		999342572D0CB2B100C42687 /* RandomGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */; };
@@ -104,7 +103,6 @@
 		998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "СИНИЙ AUDI.mp3"; sourceTree = "<group>"; };
 		998245DD2C1B431200E13656 /* Заключительная.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Заключительная.wav"; sourceTree = "<group>"; };
 		998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 FAULTS.mp3"; sourceTree = "<group>"; };
-		998245E12C1B55D600E13656 /* music.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = music.gif; sourceTree = "<group>"; };
 		9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestViewController.swift; sourceTree = "<group>"; };
 		999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGalleryViewController.swift; sourceTree = "<group>"; };
 		99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ninth(1)ViewController.swift"; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				9914AD842B94735E00202CAC /* Assets.xcassets */,
 				9914AD862B94735E00202CAC /* LaunchScreen.storyboard */,
 				9914AD892B94735E00202CAC /* Info.plist */,
-				998245E12C1B55D600E13656 /* music.gif */,
 				993F6F3F2C2C91B50071650D /* testtext.rtf */,
 			);
 			path = "My First App";
@@ -336,7 +333,6 @@
 				998245D92C1B42E300E13656 /* Action.mp3 in Resources */,
 				998245DA2C1B42E300E13656 /* Audi Quattro.mp3 in Resources */,
 				993F6F402C2C91B50071650D /* testtext.rtf in Resources */,
-				998245E22C1B55D600E13656 /* music.gif in Resources */,
 				998245DE2C1B431200E13656 /* Заключительная.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
