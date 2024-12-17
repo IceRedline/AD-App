@@ -20,8 +20,11 @@ class LifeDaysTwo: UIViewController {
 
     @IBAction func datePicker(_ sender: UIDatePicker) {
         if sender.date <= Date.now {
+            if daysLabel.text == "Ты что, в будущем живешь?" {
+                daysLabel.text = "Ты наслаждаешься жизнью уже ... дней!"
+            }
             let range = sender.date..<Date.now
-            numberOfDays = range.formatted(.components(style: .wide, fields: [.day]))
+            numberOfDays = range.formatted(.components(style: .wide, fields: [.day]).locale(Locale(identifier: "ru")))
         }
         else {
             daysLabel.text = "Ты что, в будущем живешь?"

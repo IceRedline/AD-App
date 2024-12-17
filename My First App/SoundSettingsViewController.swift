@@ -14,7 +14,6 @@ class SoundSettingsViewController: UIViewController {
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
-    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var notificationsSymbol: UIImageView!
     @IBOutlet weak var hapticSymbol: UIImageView!
     @IBOutlet weak var speakerSymbol: UIImageView!
@@ -31,6 +30,8 @@ class SoundSettingsViewController: UIViewController {
     @IBOutlet weak var hapticError: UIButton!
     @IBOutlet weak var hapticWarning: UIButton!
     
+    var hapticButtons: Array<UIButton>?
+    
     let hapticFeedback = UINotificationFeedbackGenerator()
     let selectionFeedback = UISelectionFeedbackGenerator()
     
@@ -38,15 +39,14 @@ class SoundSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
         
         let viewsArray = [notificationsView, soundView, hapticView]
         viewsArray.forEach { elem in
             elem?.layer.masksToBounds = true
             elem?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
         }
-        
-        hapticView.translatesAutoresizingMaskIntoConstraints = true
-        soundView.translatesAutoresizingMaskIntoConstraints = true
     }
     
     
@@ -58,44 +58,49 @@ class SoundSettingsViewController: UIViewController {
     }
     
     private func disableHapticButtons() {
-        let hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
-        hapticButtons.forEach() { button in
+        hapticButtons?.forEach() { button in
             UIView.animate(withDuration: 0.5) {
-                button?.isEnabled = false
+                button.isEnabled = false
             }
         }
     }
     
     private func disableSymbol(_ symbol: UIImageView) {
-        
+        let symbolName: String
+
         switch symbol {
-            
         case notificationsSymbol:
-            notificationsSymbol.setSymbolImage(UIImage(systemName: "bell.slash")!, contentTransition: .replace)
-            notificationsSymbol.tintColor = UIColor.systemGray
-            
+            symbolName = "bell.slash"
         case hapticSymbol:
-            hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.slash")!, contentTransition: .replace)
-            hapticSymbol.removeAllSymbolEffects()
-            hapticSymbol.tintColor = UIColor.systemGray
-            
+            symbolName = "iphone.slash"
         case speakerSymbol:
-            speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.slash")!, contentTransition: .replace)
-            speakerSymbol.tintColor = UIColor.systemGray
-        default: return
+            symbolName = "speaker.slash"
+        default:
+            return
         }
+
+        symbol.setSymbolImage(UIImage(systemName: symbolName)!, contentTransition: .replace)
+        symbol.tintColor = UIColor.systemGray
+        symbol.removeAllSymbolEffects()
     }
     
-    private func resizeView(viewToResize: UIView, duration: Double, newheight: Float) {
+    private func resizeView(viewToResize: UIView, duration: Double, newHeight: CGFloat) {
+        // Находим существующий констрейнт высоты
+        guard let heightConstraint = viewToResize.constraints.first(where: { $0.firstAttribute == .height }) else {
+            print("Height constraint not found")
+            return
+        }
+
+        // Анимируем изменение высоты
         UIView.animate(withDuration: duration) {
-            viewToResize.frame.size.height = CGFloat(newheight)
-            self.view.layoutIfNeeded()
+            heightConstraint.constant = newHeight
+            self.view.layoutIfNeeded() // Применяем изменения layout
         }
     }
     
     // MARK: - Notifications
     
-    @IBAction func notificationsSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func notificationsSwitchEnabled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -109,24 +114,27 @@ class SoundSettingsViewController: UIViewController {
             
         case false:
             
-            disableSymbol(speakerSymbol)
-            disableSymbol(hapticSymbol)
-            disableSymbol(notificationsSymbol)
+            [speakerSymbol, hapticSymbol, notificationsSymbol].forEach() { x in
+                disableSymbol(x)
+            }
+            
+            disableElements()
+            
+            soundSwitch.isOn = false
+            resizeView(viewToResize: soundView, duration: 1, newHeight: 60)
+            volumeSlider.value = 0
+            volumeLabel.text = "0"
             
             hapticSwitch.isOn = false
             disableHapticButtons()
-            resizeView(viewToResize: hapticView, duration: 1, newheight: 60)
+            resizeView(viewToResize: hapticView, duration: 1, newHeight: 60)
             
-            soundSwitch.isOn = false
-            volumeSlider.value = 0
-            volumeLabel.text = "0"
-            disableElements()
         }
     }
     
     // MARK: - Sounds
     
-    @IBAction func soundSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func soundSwitchEnabled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -136,7 +144,7 @@ class SoundSettingsViewController: UIViewController {
             
             volumeSlider.isEnabled = true
             
-            //resizeView(viewToResize: soundView, duration: 1, newheight: 150)
+            resizeView(viewToResize: soundView, duration: 1, newHeight: 150)
             
         case false:
             speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.slash")!, contentTransition: .replace)
@@ -146,79 +154,58 @@ class SoundSettingsViewController: UIViewController {
             volumeSlider.value = 0
             volumeLabel.text = "0"
             
-            //resizeView(viewToResize: soundView, duration: 1, newheight: 60)
+            resizeView(viewToResize: soundView, duration: 1, newHeight: 60)
         }
     }
     
-    @IBAction func volumeSliderChanged(_ sender: UISlider) {
+    @IBAction private func volumeSliderChanged(_ sender: UISlider) {
         volumeLabel.text = "\(Int(sender.value)) %"
+    }
+    
+    private func animateSpeakerSymbol(symbolName: String) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.speakerSymbol.alpha = 0
+        }) { _ in
+            self.speakerSymbol.image = UIImage(systemName: symbolName)
+            UIView.animate(withDuration: 0.2) {
+                self.speakerSymbol.alpha = 1
+            }
+        }
     }
     
     @IBAction func volumeSliderTouchedUp(_ sender: UISlider) {
         
         let volume = sender.value
         if volume == 0 && speakerSymbol.image != UIImage(systemName: "speaker") {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.speakerSymbol.alpha = 0
-            }) { _ in
-                self.speakerSymbol.image = UIImage(systemName: "speaker")
-                UIView.animate(withDuration: 0.2) {
-                    self.speakerSymbol.alpha = 1
-                }
-            }
+            animateSpeakerSymbol(symbolName: "speaker")
         }
         if (1...33).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.1") {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.speakerSymbol.alpha = 0
-            }) { _ in
-                self.speakerSymbol.image = UIImage(systemName: "speaker.wave.1")
-                UIView.animate(withDuration: 0.2) {
-                    self.speakerSymbol.alpha = 1
-                }
-            }
+            animateSpeakerSymbol(symbolName: "speaker.wave.1")
         }
         if (34...66).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.2") {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.speakerSymbol.alpha = 0
-            }) { _ in
-                self.speakerSymbol.image = UIImage(systemName: "speaker.wave.2")
-                UIView.animate(withDuration: 0.2) {
-                    self.speakerSymbol.alpha = 1
-                }
-            }
+            animateSpeakerSymbol(symbolName: "speaker.wave.2")
         }
         if (67...100).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.3") {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.speakerSymbol.alpha = 0
-            }) { _ in
-                self.speakerSymbol.image = UIImage(systemName: "speaker.wave.3")
-                UIView.animate(withDuration: 0.2) {
-                    self.speakerSymbol.alpha = 1
-                }
-            }
-        }
-        if volume == 100 {
-            nextButton.isEnabled = true
+            animateSpeakerSymbol(symbolName: "speaker.wave.3")
         }
     }
     
     // MARK: - Haptics
     
     @IBAction func hapticSwitchChanged() {
-        let hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
         if hapticSwitch.isOn == true {
             
             hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)
-            hapticSymbol.addSymbolEffect(.wiggle, options: .repeat(50))
-#warning("Зациклить анимацию")
+            hapticSymbol.addSymbolEffect(.wiggle, options: .repeat(30))
+            #warning("Зациклить анимацию")
             
-            resizeView(viewToResize: hapticView, duration: 1, newheight: 225)
+            resizeView(viewToResize: hapticView, duration: 1, newHeight: 225)
             
             DispatchQueue.main.async {
-                for (index, button) in hapticButtons.enumerated() {
+                for (index, button) in self.hapticButtons!.enumerated() {
                     DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
                         UIView.animate(withDuration: 0.5) {
-                            button?.isEnabled = true
+                            button.isEnabled = true
                         }
                     }
                 }
@@ -227,7 +214,7 @@ class SoundSettingsViewController: UIViewController {
         } else {
             disableSymbol(hapticSymbol)
             
-            resizeView(viewToResize: hapticView, duration: 1, newheight: 60)
+            resizeView(viewToResize: hapticView, duration: 1, newHeight: 60)
             
             disableHapticButtons()
         }
@@ -264,3 +251,5 @@ class SoundSettingsViewController: UIViewController {
     }
     
 }
+
+// 271

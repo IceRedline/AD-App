@@ -20,6 +20,9 @@
 		9914AD882B94735E00202CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9914AD862B94735E00202CAC /* LaunchScreen.storyboard */; };
 		99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C5E2BAE32FB003B2550 /* ImagePicker.swift */; };
 		99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C622BAF0BF8003B2550 /* LastViewController.swift */; };
+		9925D88C2D11A8CD0097A325 /* Contacts2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */; };
+		9925D88E2D11A8F00097A325 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9925D88D2D11A8F00097A325 /* PersonModel.swift */; };
+		9925D8922D11AA1F0097A325 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9925D8912D11AA1F0097A325 /* ResultModel.swift */; };
 		993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EC2BB81E630020A2D4 /* LifeDaysOne.swift */; };
 		993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */; };
 		993F6F402C2C91B50071650D /* testtext.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 993F6F3F2C2C91B50071650D /* testtext.rtf */; };
@@ -57,7 +60,6 @@
 		99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */; };
 		99C44D002D0F2DC000A7A7C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99C44CFF2D0F2DC000A7A7C0 /* IQKeyboardManagerSwift */; };
 		99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */; };
-		99F758A52BA1E30B0068F192 /* Contacts2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */; };
 		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
 		99F758BD2BA2F7250068F192 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */; };
 		99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F959992CB437C7001BF337 /* QuizResultViewController.swift */; };
@@ -79,6 +81,9 @@
 		9914AD892B94735E00202CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99256C5E2BAE32FB003B2550 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		99256C622BAF0BF8003B2550 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
+		9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts2TableViewController.swift; sourceTree = "<group>"; };
+		9925D88D2D11A8F00097A325 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		9925D8912D11AA1F0097A325 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		993179EC2BB81E630020A2D4 /* LifeDaysOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysOne.swift; sourceTree = "<group>"; };
 		993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysTwo.swift; sourceTree = "<group>"; };
 		993F6F3F2C2C91B50071650D /* testtext.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = testtext.rtf; sourceTree = "<group>"; };
@@ -114,7 +119,6 @@
 		99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompTwo.swift; sourceTree = "<group>"; };
 		99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompOne.swift; sourceTree = "<group>"; };
 		99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQTestViewController.swift; sourceTree = "<group>"; };
-		99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts2TableViewController.swift; sourceTree = "<group>"; };
 		99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		99F959992CB437C7001BF337 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
@@ -154,8 +158,8 @@
 			children = (
 				9914AD7B2B94735C00202CAC /* AppDelegate.swift */,
 				9914AD7D2B94735C00202CAC /* SceneDelegate.swift */,
+				9925D88F2D11A9CC0097A325 /* Services */,
 				9914AD7F2B94735C00202CAC /* WelcomeViewController.swift */,
-				996E7A112D0D7EBC0065F873 /* Animations.swift */,
 				9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */,
 				9936A6A92C00C4C8002813F2 /* NamesComp */,
 				9936A6A72C00C4B0002813F2 /* LifeDays */,
@@ -165,12 +169,9 @@
 				99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */,
 				9902892A2B9B3D180016D8C3 /* SoundSettingsViewController.swift */,
 				9900E1882B9B8EB5002E372E /* PhotoEditorViewController.swift */,
-				9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */,
-				99256C5E2BAE32FB003B2550 /* ImagePicker.swift */,
-				997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */,
+				9925D8902D11AA0B0097A325 /* Cookie Clicker */,
 				9957C4062B9E02980054D61C /* ContactsViewController.swift */,
-				99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */,
-				99F758A42BA1E30B0068F192 /* Contacts2TableViewController.swift */,
+				9925D88B2D11A8CD0097A325 /* Contacts 2.0 */,
 				99F758BC2BA2F7250068F192 /* MusicPlayerViewController.swift */,
 				99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */,
 				99948A3B2BAC1EA800A4D34E /* PageViewController.swift */,
@@ -188,6 +189,35 @@
 				993F6F3F2C2C91B50071650D /* testtext.rtf */,
 			);
 			path = "My First App";
+			sourceTree = "<group>";
+		};
+		9925D88B2D11A8CD0097A325 /* Contacts 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				9925D88D2D11A8F00097A325 /* PersonModel.swift */,
+				9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */,
+				99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */,
+			);
+			path = "Contacts 2.0";
+			sourceTree = "<group>";
+		};
+		9925D88F2D11A9CC0097A325 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				996E7A112D0D7EBC0065F873 /* Animations.swift */,
+				99256C5E2BAE32FB003B2550 /* ImagePicker.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9925D8902D11AA0B0097A325 /* Cookie Clicker */ = {
+			isa = PBXGroup;
+			children = (
+				9925D8912D11AA1F0097A325 /* ResultModel.swift */,
+				9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */,
+				997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */,
+			);
+			path = "Cookie Clicker";
 			sourceTree = "<group>";
 		};
 		9936A6A72C00C4B0002813F2 /* LifeDays */ = {
@@ -349,6 +379,7 @@
 				995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */,
 				99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */,
 				99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */,
+				9925D88E2D11A8F00097A325 /* PersonModel.swift in Sources */,
 				9957C4072B9E02980054D61C /* ContactsViewController.swift in Sources */,
 				990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */,
 				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
@@ -357,6 +388,7 @@
 				993F87982CAE08A900E31E8B /* QuizDescriptionViewController.swift in Sources */,
 				9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */,
 				993F87992CAE08A900E31E8B /* QuizQuestionViewController.swift in Sources */,
+				9925D88C2D11A8CD0097A325 /* Contacts2TableViewController.swift in Sources */,
 				993F879A2CAE08A900E31E8B /* QuizViewController.swift in Sources */,
 				996E7A122D0D7EBC0065F873 /* Animations.swift in Sources */,
 				996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */,
@@ -372,8 +404,8 @@
 				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
 				99F758BD2BA2F7250068F192 /* MusicPlayerViewController.swift in Sources */,
 				997D2DDD2B9CDA3F007E394A /* CookieResultsViewController.swift in Sources */,
+				9925D8922D11AA1F0097A325 /* ResultModel.swift in Sources */,
 				9902892B2B9B3D180016D8C3 /* SoundSettingsViewController.swift in Sources */,
-				99F758A52BA1E30B0068F192 /* Contacts2TableViewController.swift in Sources */,
 				9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */,
 				99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */,
 				999342572D0CB2B100C42687 /* RandomGalleryViewController.swift in Sources */,

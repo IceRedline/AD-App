@@ -7,16 +7,6 @@
 
 import UIKit
 
-class Person {
-    var name: String = ""
-    var phoneNumber: String = ""
-    var image: UIImage?
-    init(name: String, phoneNumber: String, image: UIImage? = nil) {
-        self.name = name
-        self.phoneNumber = phoneNumber
-        self.image = image
-    }
-}
 var people: [Person] = [Person(name: "Артём", phoneNumber: "+7 (906) 093-22-50", image: UIImage(named: "Artyom.jpeg")),
                         Person(name: "Ярослав", phoneNumber: "+7 (963) 630-63-29", image: UIImage(named: "An.jpg")),
                         Person(name: "Дмитрий", phoneNumber: "+7 (925) 380-18-59", image: UIImage(named: "Dima.jpg")),

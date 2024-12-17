@@ -9,7 +9,6 @@ import UIKit
 
 class PhotoEditorViewController: UIViewController {
 
-    @IBOutlet private weak var colorSegment: UISegmentedControl!
     @IBOutlet private weak var alphaSlider: UISlider!
     @IBOutlet private weak var alphaLabel: UILabel!
     @IBOutlet private weak var blurSlider: UISlider!

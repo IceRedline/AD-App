@@ -61,26 +61,33 @@ class CookieClickerViewController: UIViewController {
     @IBOutlet weak var fabricBuyButton: UIButton!
     @IBOutlet weak var activityindicator: UIActivityIndicatorView!
     
-    var numCookies = 0
+    var cookiesCount = 0
     var incrementCookies = 1
     var fabricPrice = 1000
-    var resultCookies = "0"
-    var name1 = "no name"
+    
+    let storage = UserDefaults.standard
+    var result = ""
+    var results: Array<String>?
+    
     let hapticFeedback = UIImpactFeedbackGenerator(style: .medium)
     let factoryHapticFeedback = UINotificationFeedbackGenerator()
+    let animationsEngine = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        results = storage.stringArray(forKey: "cookieClickerResults")
     }
 
     
     @IBAction func cookieButtonTouchDown() {
         hapticFeedback.impactOccurred()
         
-        cookieButtonImage.isHidden = true
-        numCookies += incrementCookies
-        totalCookies.text = "\(numCookies)"
-        if numCookies >= fabricPrice {
+        animationsEngine.animateDownFloat(cookieButtonImage, duration: 0.2)
+        
+        cookiesCount += incrementCookies
+        totalCookies.text = "\(cookiesCount)"
+        if cookiesCount >= fabricPrice {
             fabricBuyButton.isEnabled = true
         } else {
             fabricBuyButton.isEnabled = false
@@ -88,11 +95,13 @@ class CookieClickerViewController: UIViewController {
     }
     
     @IBAction func cookieButtonTouchUpInside() {
-        cookieButtonImage.isHidden = false
+        //cookieButtonImage.isHidden = false
+        animationsEngine.animateUpFloat(cookieButtonImage, duration: 0.2)
     }
     
     @IBAction func cookieButtonTouchUpOutside() {
-        cookieButtonImage.isHidden = false
+        //cookieButtonImage.isHidden = false
+        animationsEngine.animateUpFloat(cookieButtonImage, duration: 0.2)
     }
     
     
@@ -102,8 +111,8 @@ class CookieClickerViewController: UIViewController {
     }
     
     @IBAction func fabricBought() {
-        numCookies -= fabricPrice
-        totalCookies.text = "\(numCookies)"
+        cookiesCount -= fabricPrice
+        totalCookies.text = "\(cookiesCount)"
         fabricBuyButton.showsActivityIndicator = true
         // activityindicator.startAnimating()
         fabricBuyLabel.text = "Везём фабрику с алиэкспресса..."
@@ -121,18 +130,24 @@ class CookieClickerViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Уходите?", message: "Вы действительно хотите покинуть эту прекрасную мини-игру?", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: "Уходите?",
+            message: "Вы действительно хотите покинуть эту прекрасную мини-игру?",
+            preferredStyle: .alert
+        )
         alertController.addTextField() { textField in
             textField.placeholder = "Введите свой ник"
         }
-        let action = UIAlertAction(title: "Да", style: .destructive) { _ in
+        let action = UIAlertAction(title: "Да", style: .destructive) { [self] _ in
             guard let name = alertController.textFields?.first?.text else { return }
-            self.name1 = name
-            self.resultCookies = "\(self.numCookies)"
+            result = "\(name): \(self.cookiesCount)"
+            storage.set(result, forKey: "cookieClickerLastResult")
+            results?.append(self.result)
+            storage.set(self.results, forKey: "cookieClickerResults")
+    
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! CookieResultsViewController
-            vc6.name = self.name1 // переносим значения на следующий VC
-            vc6.cookies = self.resultCookies
             self.navigationController?.pushViewController(vc6, animated: true) // переход с использованием первого Navigation Controller
         }
 
@@ -143,3 +158,5 @@ class CookieClickerViewController: UIViewController {
         present(alertController, animated: true)
     }
 }
+
+// .formatted(date: .numeric, time: .standard)

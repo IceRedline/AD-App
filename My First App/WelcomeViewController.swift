@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController {
     var musicplayer: AVAudioPlayer!
     
     override func viewDidLoad() {
-        UserDefaults.standard.set(true, forKey: "viewDidLoad")
         super.viewDidLoad()
         
         let url = Bundle.main.url(forResource: "ambient", withExtension: "mp3")

@@ -46,6 +46,8 @@ class DiceGameViewController: UIViewController {
     
     @IBAction func playButtonTapped(_ sender: Any) {
         
+        
+        
         textLabel.text = "Испытай свою удачу, бросив кубик против Айса!"
         resultOneLabel.text = "-"
         resultTwoLabel.text = "-"
