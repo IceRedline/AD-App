@@ -15,20 +15,63 @@ class PhotoEditorViewController: UIViewController {
     @IBOutlet private weak var blurLabel: UILabel!
     @IBOutlet private weak var cornerRadiusLabel: UILabel!
     @IBOutlet private weak var imageView: UIImageView!
-
+    @IBOutlet weak var buttonsStack: UIStackView!
+    @IBOutlet weak var cornerRadiusSlider: UISlider!
+    
+    let imagePicker = ImagePicker()
+    
     var blurEffectView: UIVisualEffectView?
+    var slidersArray: Array<UISlider>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let blurEffect = UIBlurEffect(style: .regular)
-        blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView?.frame = imageView.bounds
-        blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
-        let blurValue = CGFloat(blurSlider.value)
-            blurEffectView?.alpha = blurValue // Контролируем степень размытия через альфу
-            imageView.addSubview(blurEffectView!)
+        slidersArray = [alphaSlider, blurSlider, cornerRadiusSlider]
+    }
+    
+    
+    func openImagePicker(sourceType: UIImagePickerController.SourceType) {
+        // Открываем UIImagePickerController с указанным источником
+        imagePicker.showImagePicker(in: self, sourceType: sourceType) { image in
+            self.slidersArray?.forEach({ elem in
+                elem.isEnabled = true
+            })
+            self.buttonsStack.isHidden = true
+            self.imageView.image = image
+        }
+    }
+    
+    @IBAction private func choosePictureButtonTapped(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            // Создаем UIAlertController
+            let alertController = UIAlertController(title: "Выберите источник", message: nil, preferredStyle: .actionSheet)
+            
+            // Добавляем действие для открытия галереи
+            let galleryAction = UIAlertAction(title: "Галерея", style: .default) { _ in
+                self.openImagePicker(sourceType: .photoLibrary)
+            }
+            alertController.addAction(galleryAction)
+            
+            // Добавляем действие для открытия камеры
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                let cameraAction = UIAlertAction(title: "Камера", style: .default) { _ in
+                    self.openImagePicker(sourceType: .camera)
+                }
+                alertController.addAction(cameraAction)
+            }
+            
+            // Добавляем действие для отмены
+            let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            // Отображаем UIAlertController
+            present(alertController, animated: true, completion: nil)
+        case 2:
+            buttonsStack.isHidden = true
+            imageView.image = UIImage(named: "UIKit")
+        default: return
+        }
     }
     
 

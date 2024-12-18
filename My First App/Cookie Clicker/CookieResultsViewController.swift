@@ -12,38 +12,45 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var gameResults: Array<String>?
+    var gameResults: Array<GameResult>?
     
     @IBOutlet weak var surveyButton: UIButton!
-    @IBOutlet weak var EasterEggLabel: UILabel!
-    @IBOutlet weak var easterEggImage: UIImageView!
-    @IBOutlet weak var chooseImageButton: UIButton!
+    @IBOutlet weak var thankyouLabel: UILabel!
     
     let storage = UserDefaults.standard
     let imagePicker = ImagePicker()
     
     override func viewDidLoad() {
         
-        gameResults = storage.stringArray(forKey: "cookieClickerResults")
+        if let savedData = UserDefaults.standard.data(forKey: "cookieClickerResults"),
+           let decodedResults = try? JSONDecoder().decode([GameResult].self, from: savedData) {
+            gameResults = decodedResults.sorted(by: { $0.score > $1.score })
+            print("Результаты загружены: \(decodedResults)")
+        } else {
+            print("Не удалось загрузить результаты")
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        print(UserDefaults.standard.dictionaryRepresentation())
         let lastResult = storage.string(forKey: "cookieClickerLastResult")
         
-        resultLabel.text = "Игра завершена! Результат: \(lastResult ?? "resultNotLoaded")"
+        resultLabel.text = "Ваш результат: \(lastResult ?? "resultNotLoaded")"
         
         let action1 = UIAction(title: "Да!") {_ in
             print("\(lastResult ?? "resultNotLoaded") хорошо оценил игру")
+            self.thankyouLabel.isHidden = false
+            self.surveyButton.isEnabled = false
         }
         let action2 = UIAction(title: "Не очень") {_ in
             print("\(lastResult ?? "resultNotLoaded") плохо оценил игру")
+            self.thankyouLabel.isHidden = false
+            self.surveyButton.isEnabled = false
         }
         
         let surveyMenu = UIMenu(title: "Понравилась ли вам игра?", children: [action1, action2])
         surveyButton.menu = surveyMenu
-        
+        surveyButton.showsMenuAsPrimaryAction = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,42 +64,7 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
     
     
     @IBAction func surveyEasterEgg() {
-        [EasterEggLabel, easterEggImage, chooseImageButton].forEach() { x in
-            x.isHidden = false
-        }
-    }
-    
-    @IBAction func chooseImageButtonPressed() {
-        // Создаем UIAlertController
-        let alertController = UIAlertController(title: "Выберите источник", message: nil, preferredStyle: .actionSheet)
         
-        // Добавляем действие для открытия галереи
-        let galleryAction = UIAlertAction(title: "Галерея", style: .default) { _ in
-            self.openImagePicker(sourceType: .photoLibrary)
-        }
-        alertController.addAction(galleryAction)
-        
-        // Добавляем действие для открытия камеры
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let cameraAction = UIAlertAction(title: "Камера", style: .default) { _ in
-                self.openImagePicker(sourceType: .camera)
-            }
-            alertController.addAction(cameraAction)
-        }
-        
-        // Добавляем действие для отмены
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        
-        // Отображаем UIAlertController
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    func openImagePicker(sourceType: UIImagePickerController.SourceType) {
-        // Открываем UIImagePickerController с указанным источником
-        imagePicker.showImagePicker(in: self, sourceType: sourceType) { image in
-            self.easterEggImage.image = image
-        }
     }
 }
 
@@ -105,14 +77,14 @@ extension CookieResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var configuration = UIListContentConfiguration.cell()
-        configuration.text = gameResults?[indexPath.row]
+        configuration.text = "\(gameResults?[indexPath.row].date ?? "No Date") - \(gameResults?[indexPath.row].name ?? "No Name") - \(gameResults?[indexPath.row].score ?? 0)"
         cell.contentConfiguration = configuration
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        title = gameResults?[indexPath.row]
+        title = "\(gameResults?[indexPath.row].date ?? "No Date") - \(gameResults?[indexPath.row].name ?? "No Name") - \(gameResults?[indexPath.row].score ?? 0)"
     }
     
 }

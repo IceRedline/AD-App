@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Result: Codable {
+struct GameResult: Codable {
     let name: String
-    let score: String
-    let date: Date
+    let score: Int
+    let date: String
 }

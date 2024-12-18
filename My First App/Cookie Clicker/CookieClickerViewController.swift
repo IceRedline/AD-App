@@ -66,8 +66,8 @@ class CookieClickerViewController: UIViewController {
     var fabricPrice = 1000
     
     let storage = UserDefaults.standard
-    var result = ""
-    var results: Array<String>?
+    var result: GameResult?
+    var results: Array<GameResult>?
     
     let hapticFeedback = UIImpactFeedbackGenerator(style: .medium)
     let factoryHapticFeedback = UINotificationFeedbackGenerator()
@@ -76,7 +76,13 @@ class CookieClickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        results = storage.stringArray(forKey: "cookieClickerResults")
+        if let savedData = UserDefaults.standard.data(forKey: "cookieClickerResults"),
+           let decodedResults = try? JSONDecoder().decode([GameResult].self, from: savedData) {
+            results = decodedResults
+            print("Результаты загружены: \(decodedResults)")
+        } else {
+            print("Не удалось загрузить результаты")
+        }
     }
 
     
@@ -95,12 +101,10 @@ class CookieClickerViewController: UIViewController {
     }
     
     @IBAction func cookieButtonTouchUpInside() {
-        //cookieButtonImage.isHidden = false
         animationsEngine.animateUpFloat(cookieButtonImage, duration: 0.2)
     }
     
     @IBAction func cookieButtonTouchUpOutside() {
-        //cookieButtonImage.isHidden = false
         animationsEngine.animateUpFloat(cookieButtonImage, duration: 0.2)
     }
     
@@ -114,7 +118,6 @@ class CookieClickerViewController: UIViewController {
         cookiesCount -= fabricPrice
         totalCookies.text = "\(cookiesCount)"
         fabricBuyButton.showsActivityIndicator = true
-        // activityindicator.startAnimating()
         fabricBuyLabel.text = "Везём фабрику с алиэкспресса..."
         fabricBuyButton.isEnabled = false
         fabricPrice *= 10
@@ -140,10 +143,14 @@ class CookieClickerViewController: UIViewController {
         }
         let action = UIAlertAction(title: "Да", style: .destructive) { [self] _ in
             guard let name = alertController.textFields?.first?.text else { return }
-            result = "\(name): \(self.cookiesCount)"
-            storage.set(result, forKey: "cookieClickerLastResult")
-            results?.append(self.result)
-            storage.set(self.results, forKey: "cookieClickerResults")
+            result = GameResult(name: name, score: cookiesCount, date: Date().formatted(date: .numeric, time: .standard))
+            storage.set("\(name): \(cookiesCount)", forKey: "cookieClickerLastResult")
+            results?.append(self.result!)
+            
+            if let encoded = try? JSONEncoder().encode(results) {
+                UserDefaults.standard.set(encoded, forKey: "cookieClickerResults")
+                print("Результаты сохранены")
+            }
     
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -158,5 +165,3 @@ class CookieClickerViewController: UIViewController {
         present(alertController, animated: true)
     }
 }
-
-// .formatted(date: .numeric, time: .standard)
