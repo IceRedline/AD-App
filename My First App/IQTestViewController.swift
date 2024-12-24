@@ -10,6 +10,8 @@ import SwiftUI
 
 class IQTestViewController: UIViewController, UITextFieldDelegate {
     
+    // MARK: - @IBOutlet properties
+    
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var dateTextField: UITextField!
@@ -17,23 +19,57 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    let hapticFeedback = UINotificationFeedbackGenerator()
+    @IBOutlet weak var hintDate1: UILabel!
+    @IBOutlet weak var hintDate2: UILabel!
+    @IBOutlet weak var hintDate3: UILabel!
+    @IBOutlet weak var hintDate4: UILabel!
+    @IBOutlet weak var hintsStack: UIStackView!
     
+    // MARK: - Properties
+    
+    let hapticFeedback = UINotificationFeedbackGenerator()
     var formattedDate = ""
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
                 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
-        formattedDate = dateFormatter.string(from: Date.now) // загружаем текущую дату в переменную
+        formattedDate = dateFormatter.string(from: Date.now)
         
         dateTextField.delegate = self
         nameTextField.autocapitalizationType = .none
+        
+        hintDate1.text = Date().formatted(date: .numeric, time: .standard)
+        hintDate2.text = Date().formatted(date: .abbreviated, time: .shortened)
+        hintDate3.text = Date().formatted(date: .complete, time: .complete)
+        hintDate4.text = Date().formatted(date: .long, time: .omitted)
+        
+        updateMenu(showDatesEnabled: true)
+        dateButton.showsMenuAsPrimaryAction = false
+    }
+    
+    // MARK: - Methods
+    
+    private func updateMenu(showDatesEnabled: Bool) {
+        let showAction = UIAction(title: "Показать даты", attributes: showDatesEnabled ? [] : .disabled) { _ in
+            self.hintsStack.isHidden = false
+            self.updateMenu(showDatesEnabled: false)
+        }
+        
+        let hideAction = UIAction(title: "Скрыть даты", attributes: showDatesEnabled ? .disabled : []) { _ in
+            self.hintsStack.isHidden = true
+            self.updateMenu(showDatesEnabled: true)
+        }
+        
+        let menu = UIMenu(title: "Отображение дат", children: [showAction, hideAction])
+        dateButton.menu = menu
     }
     
     func returnTitle() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.firstLabel.text = "Введите текущую дату:"
         }
     }
@@ -62,9 +98,7 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     @IBAction func nameFieldChanged(_ sender: Any) {
-        print(nameTextField.text ?? "")
         if nameTextField.text?.count == 1 && (nameTextField.text![nameTextField.text!.startIndex] == "А" || nameTextField.text![nameTextField.text!.startIndex] == "а")
         {
             secondLabel.text = "Начало хорошее"
@@ -84,7 +118,6 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
             hapticFeedback.notificationOccurred(.success)
             secondLabel.text = "Абсолютно точно!"
             nameTextField.resignFirstResponder()
-            // сдвиг клавиатуры добавить
         } else if nameTextField.text == "артем" || nameTextField.text == "артём" {
             hapticFeedback.notificationOccurred(.error)
             secondLabel.text = "С большой буквы ало"

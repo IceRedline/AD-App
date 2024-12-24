@@ -201,7 +201,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l98-fE-Htf">
-                                        <rect key="frame" x="242" y="0.0" width="109" height="34.333333333333314"/>
+                                        <rect key="frame" x="242" y="0.0" width="109" height="34.333333333333336"/>
                                         <color key="tintColor" name="primary"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="results"/>
@@ -1299,23 +1299,59 @@ QXBwbGUgU3RvcmUgIAHvo78
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-yw-eRN">
+                                <rect key="frame" x="163.66666666666666" y="604.33333333333337" width="75" height="159.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hintDate1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lw2-sP-198">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hintDate2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0h-qX-M8W">
+                                        <rect key="frame" x="0.0" y="46.333333333333258" width="75" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hintDate3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-kb-4M0">
+                                        <rect key="frame" x="0.0" y="92.666666666666629" width="75" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hintDate4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-D3-v83">
+                                        <rect key="frame" x="0.0" y="139" width="75" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rju-58-TFN"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="cRS-X4-um8" firstAttribute="top" secondItem="rju-58-TFN" secondAttribute="top" constant="60" id="Qnw-xI-tca"/>
                             <constraint firstItem="rju-58-TFN" firstAttribute="trailing" secondItem="zWn-Qo-68U" secondAttribute="trailing" constant="16" id="Spa-Ba-ut8"/>
+                            <constraint firstItem="xXy-yw-eRN" firstAttribute="centerX" secondItem="d3k-nF-iSe" secondAttribute="centerX" id="cVk-YQ-M8s"/>
                             <constraint firstItem="BUW-nm-KzO" firstAttribute="top" secondItem="cRS-X4-um8" secondAttribute="bottom" constant="120" id="hTU-8S-sdz"/>
                             <constraint firstItem="cRS-X4-um8" firstAttribute="centerX" secondItem="d3k-nF-iSe" secondAttribute="centerX" id="iHZ-Xm-7YF"/>
                             <constraint firstItem="BUW-nm-KzO" firstAttribute="centerX" secondItem="d3k-nF-iSe" secondAttribute="centerX" id="nrX-0p-Yg8"/>
                             <constraint firstItem="rju-58-TFN" firstAttribute="bottom" secondItem="zWn-Qo-68U" secondAttribute="bottom" id="uMZ-kv-5En"/>
+                            <constraint firstItem="xXy-yw-eRN" firstAttribute="top" secondItem="BUW-nm-KzO" secondAttribute="bottom" constant="55" id="vbR-Nz-Boy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IQ Тест" id="eLL-Iz-9aa"/>
                     <connections>
-                        <outlet property="dateButton" destination="C0z-Hw-lgX" id="tbM-dM-OEd"/>
+                        <outlet property="dateButton" destination="C0z-Hw-lgX" id="SVx-z9-Lto"/>
                         <outlet property="dateTextField" destination="jzk-1J-z0F" id="2XI-Xn-W4u"/>
                         <outlet property="firstLabel" destination="cce-rQ-8z9" id="n4L-pM-1CK"/>
+                        <outlet property="hintDate1" destination="Lw2-sP-198" id="zdw-bM-7Fh"/>
+                        <outlet property="hintDate2" destination="Y0h-qX-M8W" id="Wjn-eE-iDH"/>
+                        <outlet property="hintDate3" destination="Dyp-kb-4M0" id="1Kd-dY-7XA"/>
+                        <outlet property="hintDate4" destination="pRN-D3-v83" id="GpS-Kx-als"/>
+                        <outlet property="hintsStack" destination="xXy-yw-eRN" id="HQR-Ms-Vte"/>
                         <outlet property="nameTextField" destination="n7y-Tb-rGQ" id="bhh-0W-Bjz"/>
                         <outlet property="nextButton" destination="zWn-Qo-68U" id="9B8-jf-9Ni"/>
                         <outlet property="secondLabel" destination="kGg-YP-OF4" id="PVq-UK-Gqf"/>
@@ -2105,10 +2141,9 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спасибо за оценку!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd8-p8-hW6">
-                                <rect key="frame" x="51" y="755.66666666666663" width="300" height="40"/>
+                                <rect key="frame" x="51" y="765.33333333333337" width="300" height="21.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="71t-s6-Uet"/>
-                                    <constraint firstAttribute="height" constant="40" id="AeZ-oC-mKy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -2121,6 +2156,37 @@ QXBwbGUgU3RvcmUgIAHvo78
                                     <constraint firstAttribute="height" constant="460" id="7Rq-Tx-QYC"/>
                                     <constraint firstAttribute="width" constant="402" id="WzU-I5-tvY"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultTableCell" textLabel="4t2-oY-aob" detailTextLabel="gsY-uy-ZUw" style="IBUITableViewCellStyleValue1" id="RCF-oH-M2l" customClass="ResultTableCell" customModule="My_First_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="402" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RCF-oH-M2l" id="dG5-LX-jCm">
+                                            <rect key="frame" x="0.0" y="0.0" width="402" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4t2-oY-aob">
+                                                    <rect key="frame" x="19.999999999999996" y="12.999999999999998" width="42.666666666666664" height="19.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Count" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gsY-uy-ZUw">
+                                                    <rect key="frame" x="338" y="12.999999999999998" width="44" height="19.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="countLabel" destination="gsY-uy-ZUw" id="xLv-lv-cCS"/>
+                                            <outlet property="nameLabel" destination="4t2-oY-aob" id="oNj-9z-cHS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-ek-jzf">
                                 <rect key="frame" x="133" y="706" width="136.33333333333337" height="34.333333333333371"/>
@@ -2144,13 +2210,13 @@ QXBwbGUgU3RvcmUgIAHvo78
                             <constraint firstItem="kzb-9X-f10" firstAttribute="leading" secondItem="uXL-vU-IpP" secondAttribute="leading" id="10Q-me-cMw"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="leading" secondItem="8je-In-fDW" secondAttribute="leading" id="1qd-Sz-Hcm"/>
                             <constraint firstItem="yd8-p8-hW6" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="4FK-TQ-8cn"/>
+                            <constraint firstItem="yd8-p8-hW6" firstAttribute="top" secondItem="fpN-ek-jzf" secondAttribute="bottom" constant="25" id="5Mu-1r-0Xr"/>
                             <constraint firstItem="Riw-xc-4wi" firstAttribute="top" secondItem="3Sq-13-DGN" secondAttribute="bottom" constant="15" id="8sz-FT-Qko"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="FDi-G6-DkD"/>
                             <constraint firstItem="3Sq-13-DGN" firstAttribute="top" secondItem="uXL-vU-IpP" secondAttribute="top" constant="30" id="MbT-4v-c4c"/>
                             <constraint firstItem="Riw-xc-4wi" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="TcP-PZ-q2c"/>
                             <constraint firstItem="uXL-vU-IpP" firstAttribute="bottom" secondItem="vcR-z2-y3C" secondAttribute="bottom" id="ajJ-Gp-f0o"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="top" secondItem="Riw-xc-4wi" secondAttribute="bottom" constant="15" id="bO3-PA-cC9"/>
-                            <constraint firstItem="vcR-z2-y3C" firstAttribute="top" secondItem="yd8-p8-hW6" secondAttribute="bottom" constant="10" id="bnk-Az-FBq"/>
                             <constraint firstItem="uXL-vU-IpP" firstAttribute="trailing" secondItem="vcR-z2-y3C" secondAttribute="trailing" constant="16" id="p0o-NA-bWa"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="trailing" secondItem="uXL-vU-IpP" secondAttribute="trailing" id="pA4-Ad-o7s"/>
                             <constraint firstItem="fpN-ek-jzf" firstAttribute="top" secondItem="kzb-9X-f10" secondAttribute="bottom" constant="20" id="ptY-bd-RCJ"/>
@@ -2671,7 +2737,7 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Этот простой тест поможет тебе проверить твою скорость печати, нажимай кнопку &quot;сгенерировать текст&quot; и вперед!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdB-Fi-OTw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Этот простой тест поможет тебе проверить твою скорость печати, нажимай кнопку &quot;сгенерировать текст&quot; и вперед!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdB-Fi-OTw">
                                 <rect key="frame" x="57" y="204.33333333333337" width="288" height="166"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="166" id="Irk-Rg-0x2"/>
@@ -2709,21 +2775,6 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPT-nZ-JY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4419" y="-1126"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ymh-Xc-TwH">
-            <objects>
-                <viewController id="jNM-ca-vp8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vuk-wH-oe7">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Yjz-3d-JCI"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vRG-CZ-ltU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5197.0149253731342" y="-648.05491990846679"/>
         </scene>
         <!--MacBook Air-->
         <scene sceneID="DgL-Z7-DRr">
@@ -3923,7 +3974,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <segue reference="m3v-1h-e25"/>
         <segue reference="ybc-Ov-phu"/>
         <segue reference="znN-Uv-W0i"/>
-        <segue reference="8I2-CE-EVn"/>
+        <segue reference="Pkb-dO-mdq"/>
         <segue reference="4Qu-IZ-b23"/>
     </inferredMetricsTieBreakers>
     <resources>

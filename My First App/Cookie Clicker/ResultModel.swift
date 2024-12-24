@@ -10,5 +10,5 @@ import Foundation
 struct GameResult: Codable {
     let name: String
     let score: Int
-    let date: String
+    let date: Date
 }

@@ -7,19 +7,19 @@
 
 import UIKit
 
-var text = ""
-var textArray = [String]()
-
 class TestViewController: UIViewController {
-    
-    var timer = Timer()
-    var startTime = Date()
     
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    
+    var text = ""
+    var textArray = [String]()
+    
+    var timer = Timer()
+    var startTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +29,18 @@ class TestViewController: UIViewController {
                 let attributedString = try NSAttributedString(url: fileURL, options: [.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
                 text = attributedString.string
                 textArray = text.components(separatedBy: "\n")
-                print(textArray[0])
             } catch {
                 print("Error reading RTF file: \(error.localizedDescription)")
             }
         } else {
             print("File not found.")
         }
-        
     }
     
     @IBAction func textGeneratorTapped() {
         textField.isEnabled = true
         generateButton.setTitle("Другой текст", for: .normal)
-        textLabel.text = textArray[Int.random(in: 0...8)]
+        textLabel.text = textArray[Int.random(in: 0..<textArray.count)]
     }
     
     @IBAction func editingBegan() {

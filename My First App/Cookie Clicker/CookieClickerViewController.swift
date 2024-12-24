@@ -143,19 +143,20 @@ class CookieClickerViewController: UIViewController {
         }
         let action = UIAlertAction(title: "Да", style: .destructive) { [self] _ in
             guard let name = alertController.textFields?.first?.text else { return }
-            result = GameResult(name: name, score: cookiesCount, date: Date().formatted(date: .numeric, time: .standard))
+            
+            result = GameResult(name: name, score: cookiesCount, date: Date())
             storage.set("\(name): \(cookiesCount)", forKey: "cookieClickerLastResult")
             results?.append(self.result!)
             
             if let encoded = try? JSONEncoder().encode(results) {
                 UserDefaults.standard.set(encoded, forKey: "cookieClickerResults")
-                print("Результаты сохранены")
+                print("Результаты сохранены: \(encoded)") 
             }
     
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! CookieResultsViewController
-            self.navigationController?.pushViewController(vc6, animated: true) // переход с использованием первого Navigation Controller
+            self.navigationController?.pushViewController(vc6, animated: true)
         }
 
         alertController.addAction(action)

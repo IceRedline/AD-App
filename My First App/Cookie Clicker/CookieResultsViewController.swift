@@ -12,7 +12,7 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var gameResults: Array<GameResult>?
+    var gameResultsArray: Array<GameResult>?
     
     @IBOutlet weak var surveyButton: UIButton!
     @IBOutlet weak var thankyouLabel: UILabel!
@@ -22,10 +22,14 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         
-        if let savedData = UserDefaults.standard.data(forKey: "cookieClickerResults"),
-           let decodedResults = try? JSONDecoder().decode([GameResult].self, from: savedData) {
-            gameResults = decodedResults.sorted(by: { $0.score > $1.score })
-            print("Результаты загружены: \(decodedResults)")
+        if let savedData = UserDefaults.standard.data(forKey: "cookieClickerResults") {
+            do {
+                let decodedResults = try JSONDecoder().decode([GameResult].self, from: savedData)
+                gameResultsArray = decodedResults.sorted(by: { $0.score > $1.score })
+                print("Результаты загружены: \(decodedResults)")
+            } catch {
+                print("Ошибка при декодировании: \(error.localizedDescription)")
+            }
         } else {
             print("Не удалось загрузить результаты")
         }
@@ -51,6 +55,9 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
         let surveyMenu = UIMenu(title: "Понравилась ли вам игра?", children: [action1, action2])
         surveyButton.menu = surveyMenu
         surveyButton.showsMenuAsPrimaryAction = true
+        
+        tableView.layoutMargins = .init(top: 0.0, left: 25, bottom: 0.0, right: 25)
+        //tableView.separatorInset = tableView.layoutMargins
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,29 +69,38 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
         present(avc, animated: true)
     }
     
-    
-    @IBAction func surveyEasterEgg() {
-        
-    }
 }
 
+// MARK: -
 
 extension CookieResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        gameResults?.count ?? 0
+        gameResultsArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        var configuration = UIListContentConfiguration.cell()
-        configuration.text = "\(gameResults?[indexPath.row].date ?? "No Date") - \(gameResults?[indexPath.row].name ?? "No Name") - \(gameResults?[indexPath.row].score ?? 0)"
-        cell.contentConfiguration = configuration
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ResultTableCell.reuseIDentifier,
+            for: indexPath
+        ) as? ResultTableCell else {
+            return UITableViewCell()
+        }
+        cell.nameLabel.text = gameResultsArray?[indexPath.row].name
+        cell.countLabel.text = "\(gameResultsArray?[indexPath.row].score ?? 404)"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        title = "\(gameResults?[indexPath.row].date ?? "No Date") - \(gameResults?[indexPath.row].name ?? "No Name") - \(gameResults?[indexPath.row].score ?? 0)"
+        
+        let alert = UIAlertController(
+            title: "\(gameResultsArray?[indexPath.row].name ?? "No Name")",
+            message: "\(gameResultsArray?[indexPath.row].date.formatted(date: .numeric, time: .standard) ?? "No Date") \n  Результат: \(gameResultsArray?[indexPath.row].score ?? 0)",
+            preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: "ОК", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
     
 }

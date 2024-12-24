@@ -47,6 +47,7 @@
 		998245DC2C1B42F100E13656 /* СИНИЙ AUDI.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */; };
 		998245DE2C1B431200E13656 /* Заключительная.wav in Resources */ = {isa = PBXBuildFile; fileRef = 998245DD2C1B431200E13656 /* Заключительная.wav */; };
 		998245E02C1B43C300E13656 /* 10 FAULTS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */; };
+		9985A7342D1B22F500C82783 /* ResultTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9985A7332D1B22F500C82783 /* ResultTableCell.swift */; };
 		9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */; };
 		999342512D0C9DCA00C42687 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 999342502D0C9DCA00C42687 /* IQKeyboardManagerSwift */; };
 		999342572D0CB2B100C42687 /* RandomGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */; };
@@ -109,6 +110,7 @@
 		998245DB2C1B42F100E13656 /* СИНИЙ AUDI.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "СИНИЙ AUDI.mp3"; sourceTree = "<group>"; };
 		998245DD2C1B431200E13656 /* Заключительная.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Заключительная.wav"; sourceTree = "<group>"; };
 		998245DF2C1B43C300E13656 /* 10 FAULTS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "10 FAULTS.mp3"; sourceTree = "<group>"; };
+		9985A7332D1B22F500C82783 /* ResultTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableCell.swift; sourceTree = "<group>"; };
 		9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTestViewController.swift; sourceTree = "<group>"; };
 		999342552D0CB2B100C42687 /* RandomGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGalleryViewController.swift; sourceTree = "<group>"; };
 		99948A392BAB327200A4D34E /* Ninth(1)ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ninth(1)ViewController.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				9925D8912D11AA1F0097A325 /* ResultModel.swift */,
 				9900E1902B9C91FE002E372E /* CookieClickerViewController.swift */,
+				9985A7332D1B22F500C82783 /* ResultTableCell.swift */,
 				997D2DDC2B9CDA3F007E394A /* CookieResultsViewController.swift */,
 			);
 			path = "Cookie Clicker";
@@ -408,6 +411,7 @@
 				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
 				99F758BD2BA2F7250068F192 /* MusicPlayerViewController.swift in Sources */,
 				997D2DDD2B9CDA3F007E394A /* CookieResultsViewController.swift in Sources */,
+				9985A7342D1B22F500C82783 /* ResultTableCell.swift in Sources */,
 				9925D8922D11AA1F0097A325 /* ResultModel.swift in Sources */,
 				9902892B2B9B3D180016D8C3 /* SoundSettingsViewController.swift in Sources */,
 				9914AD7C2B94735C00202CAC /* AppDelegate.swift in Sources */,
