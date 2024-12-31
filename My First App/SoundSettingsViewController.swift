@@ -9,38 +9,42 @@ import UIKit
 
 class SoundSettingsViewController: UIViewController {
     
-    @IBOutlet weak var notificationsSwitch: UISwitch!
-    @IBOutlet weak var hapticSwitch: UISwitch!
-    @IBOutlet weak var soundSwitch: UISwitch!
-    @IBOutlet weak var volumeLabel: UILabel!
-    @IBOutlet weak var volumeSlider: UISlider!
-    @IBOutlet weak var notificationsSymbol: UIImageView!
-    @IBOutlet weak var hapticSymbol: UIImageView!
-    @IBOutlet weak var speakerSymbol: UIImageView!
+    // MARK: - @IBOutlet properties
     
-    @IBOutlet weak var notificationsView: UIView!
-    @IBOutlet weak var soundView: UIView!
-    @IBOutlet weak var hapticView: UIView!
+    @IBOutlet private weak var notificationsView: UIView!
+    @IBOutlet private weak var soundView: UIView!
+    @IBOutlet private weak var hapticView: UIView!
     
-    @IBOutlet weak var haptic1: UIButton!
-    @IBOutlet weak var haptic2: UIButton!
-    @IBOutlet weak var haptic3: UIButton!
-    @IBOutlet weak var hapticSelection: UIButton!
-    @IBOutlet weak var hapticSuccess: UIButton!
-    @IBOutlet weak var hapticError: UIButton!
-    @IBOutlet weak var hapticWarning: UIButton!
+    @IBOutlet private weak var notificationsSwitch: UISwitch!
+    @IBOutlet private weak var hapticSwitch: UISwitch!
+    @IBOutlet private weak var soundSwitch: UISwitch!
+    @IBOutlet private weak var volumeLabel: UILabel!
+    @IBOutlet private weak var volumeSlider: UISlider!
+    @IBOutlet private weak var notificationsSymbol: UIImageView!
+    @IBOutlet private weak var hapticSymbol: UIImageView!
+    @IBOutlet private weak var speakerSymbol: UIImageView!
     
-    var hapticButtons: Array<UIButton>?
+    @IBOutlet private weak var hapticButton1: UIButton!
+    @IBOutlet private weak var hapticButton2: UIButton!
+    @IBOutlet private weak var hapticButton3: UIButton!
+    @IBOutlet private weak var hapticSelectionButton: UIButton!
+    @IBOutlet private weak var hapticSuccessButton: UIButton!
+    @IBOutlet private weak var hapticErrorButton: UIButton!
+    @IBOutlet private weak var hapticWarningButton: UIButton!
     
-    let hapticFeedback = UINotificationFeedbackGenerator()
-    let selectionFeedback = UISelectionFeedbackGenerator()
+    // MARK: - Properties
     
-    let animationsEngine = Animations()
+    private var hapticButtons: Array<UIButton>?
+    private let hapticFeedback = UINotificationFeedbackGenerator()
+    private let selectionFeedback = UISelectionFeedbackGenerator()
+    private let animationsEngine = Animations()
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        hapticButtons = [haptic1, haptic2, haptic3, hapticSelection, hapticSuccess, hapticError, hapticWarning]
+        hapticButtons = [hapticButton1, hapticButton2, hapticButton3, hapticSelectionButton, hapticSuccessButton, hapticErrorButton, hapticWarningButton]
         
         let viewsArray = [notificationsView, soundView, hapticView]
         viewsArray.forEach { elem in
@@ -49,6 +53,7 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
+    // MARK: - Methods
     
     private func disableElements() {
         let arrayToDisable = [hapticSwitch, soundSwitch, volumeSlider]
@@ -173,7 +178,7 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func volumeSliderTouchedUp(_ sender: UISlider) {
+    @IBAction private func volumeSliderTouchedUp(_ sender: UISlider) {
         
         let volume = sender.value
         if volume == 0 && speakerSymbol.image != UIImage(systemName: "speaker") {
@@ -192,7 +197,7 @@ class SoundSettingsViewController: UIViewController {
     
     // MARK: - Haptics
     
-    @IBAction func hapticSwitchChanged() {
+    @IBAction private func hapticSwitchChanged() {
         if hapticSwitch.isOn == true {
             
             hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)
@@ -220,7 +225,7 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func hapticButtonTouchedDown(_ sender: UIButton) {
+    @IBAction private func hapticButtonTouchedDown(_ sender: UIButton) {
         
         animationsEngine.animateDownFloat(sender)
         
@@ -246,10 +251,8 @@ class SoundSettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func hapticButtonTouchedUp(_ sender: UIButton) {
+    @IBAction private func hapticButtonTouchedUp(_ sender: UIButton) {
         animationsEngine.animateUpFloat(sender)
     }
     
 }
-
-// 271

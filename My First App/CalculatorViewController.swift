@@ -10,6 +10,8 @@ import UIKit
 class CalculatorViewController: UIViewController {
     
     @IBOutlet private weak var numberLabel: UILabel!
+    @IBOutlet private weak var copiedLabel: UILabel!
+    
     private var currentNumber: Int {
         get {
             return Int(numberLabel.text ?? "") ?? 0
@@ -24,12 +26,13 @@ class CalculatorViewController: UIViewController {
     private var numberSwitched = false
     private var canStartAgain = true
     
-    let animationsEngine = Animations()
-    let startColor: CGColor = UIColor.calculatorGray.cgColor // CGColor(red: 44/255, green: 44/255, blue: 46/255, alpha: 1)
-    let endColor: CGColor = UIColor.calculatorGrayAccent.cgColor // CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+    private let animationsEngine = Animations()
+    private let startColor: CGColor = UIColor.calculatorGray.cgColor // CGColor(red: 44/255, green: 44/255, blue: 46/255, alpha: 1)
+    private let endColor: CGColor = UIColor.calculatorGrayAccent.cgColor // CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        copiedLabel.layer.masksToBounds = true
     }
     
     private func calculate() {
@@ -53,11 +56,11 @@ class CalculatorViewController: UIViewController {
         currentAction = nil
     }
     
-    @IBAction func numberButtonTouchedDown(_ sender: UIButton) {
+    @IBAction private func numberButtonTouchedDown(_ sender: UIButton) {
         animationsEngine.animateDownFloat(sender, duration: 0.1)
     }
     
-    @IBAction func numberButtonTouchedUp(_ sender: UIButton) {
+    @IBAction private func numberButtonTouchedUp(_ sender: UIButton) {
         animationsEngine.animateUpFloat(sender, duration: 0.1)
         if currentNumber == 0 || numberSwitched || canStartAgain {
             currentNumber = sender.tag
@@ -68,13 +71,13 @@ class CalculatorViewController: UIViewController {
         numberSwitched = false
     }
     
-    @IBAction func actionButtonTouchedDown(_ sender: UIButton) {
+    @IBAction private func actionButtonTouchedDown(_ sender: UIButton) {
         if ![10, 16].contains(sender.tag) {
             animationsEngine.animateBackgroundColor(sender, color: endColor)
         }
     }
     
-    @IBAction func actionButtonTouchedUp(_ sender: UIButton) {
+    @IBAction private func actionButtonTouchedUp(_ sender: UIButton) {
         if ![10, 16].contains(sender.tag) {
             animationsEngine.animateBackgroundColor(sender, color: endColor)
             currentSender = sender
@@ -130,4 +133,13 @@ class CalculatorViewController: UIViewController {
             break
         }
     }
+    
+    @IBAction private func copyButtonTapped() {
+        UIPasteboard.general.string = numberLabel.text
+        copiedLabel.fadeIn(0.3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.copiedLabel.fadeOut(0.3)
+        }
+    }
+    
 }

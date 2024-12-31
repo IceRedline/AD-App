@@ -9,8 +9,8 @@ import UIKit
 
 class LifeDaysTwo: UIViewController {
     
-    @IBOutlet weak var daysLabel: UILabel!
-    @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet private weak var daysLabel: UILabel!
+    @IBOutlet private weak var resultButton: UIButton!
     private var numberOfDays = ""
     
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class LifeDaysTwo: UIViewController {
         resultButton.layer.cornerRadius = 12
     }
 
-    @IBAction func datePicker(_ sender: UIDatePicker) {
+    @IBAction private func datePicker(_ sender: UIDatePicker) {
         if sender.date <= Date.now {
             if daysLabel.text == "Ты что, в будущем живешь?" {
                 daysLabel.text = "Ты наслаждаешься жизнью уже ... дней!"
@@ -30,7 +30,7 @@ class LifeDaysTwo: UIViewController {
             daysLabel.text = "Ты что, в будущем живешь?"
         }
     }
-    @IBAction func resultButtonTapped() {
+    @IBAction private func resultButtonTapped() {
             daysLabel.text = "Ты наслаждаешься жизнью уже \(numberOfDays)!"
     }
     

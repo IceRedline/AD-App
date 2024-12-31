@@ -18,8 +18,8 @@ class PhotoEditorViewController: UIViewController {
     @IBOutlet weak var buttonsStack: UIStackView!
     @IBOutlet weak var cornerRadiusSlider: UISlider!
     
-    let imagePicker = ImagePicker()
     
+    let imagePicker = ImagePicker()
     var blurEffectView: UIVisualEffectView?
     var slidersArray: Array<UISlider>?
 

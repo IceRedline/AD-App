@@ -7,13 +7,8 @@
 
 import UIKit
 
-class Person {
+struct Person {
     var name: String = ""
     var phoneNumber: String = ""
     var image: UIImage?
-    init(name: String, phoneNumber: String, image: UIImage? = nil) {
-        self.name = name
-        self.phoneNumber = phoneNumber
-        self.image = image
-    }
 }

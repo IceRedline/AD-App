@@ -9,16 +9,16 @@ import UIKit
 
 class CookieResultsViewController: UIViewController, UITableViewDelegate {
     
-    @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var surveyButton: UIButton!
+    @IBOutlet private weak var thankyouLabel: UILabel!
     
-    var gameResultsArray: Array<GameResult>?
+    private var gameResultsArray: Array<GameResult>?
+    private let storage = UserDefaults.standard
+    private let imagePicker = ImagePicker()
     
-    @IBOutlet weak var surveyButton: UIButton!
-    @IBOutlet weak var thankyouLabel: UILabel!
-    
-    let storage = UserDefaults.standard
-    let imagePicker = ImagePicker()
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         
@@ -44,12 +44,12 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
         let action1 = UIAction(title: "Да!") {_ in
             print("\(lastResult ?? "resultNotLoaded") хорошо оценил игру")
             self.thankyouLabel.isHidden = false
-            self.surveyButton.isEnabled = false
+            self.surveyButton.isHidden = true
         }
         let action2 = UIAction(title: "Не очень") {_ in
             print("\(lastResult ?? "resultNotLoaded") плохо оценил игру")
             self.thankyouLabel.isHidden = false
-            self.surveyButton.isEnabled = false
+            self.surveyButton.isHidden = true
         }
         
         let surveyMenu = UIMenu(title: "Понравилась ли вам игра?", children: [action1, action2])
@@ -60,18 +60,20 @@ class CookieResultsViewController: UIViewController, UITableViewDelegate {
         //tableView.separatorInset = tableView.layoutMargins
     }
     
+    // MARK: - Methods
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    @IBAction func shareButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction private func shareButtonPressed(_ sender: UIBarButtonItem) {
         let avc = UIActivityViewController(activityItems: [resultLabel.text as Any], applicationActivities: nil)
         present(avc, animated: true)
     }
     
 }
 
-// MARK: -
+// MARK: - Extensions
 
 extension CookieResultsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,7 +97,7 @@ extension CookieResultsViewController: UITableViewDataSource {
         
         let alert = UIAlertController(
             title: "\(gameResultsArray?[indexPath.row].name ?? "No Name")",
-            message: "\(gameResultsArray?[indexPath.row].date.formatted(date: .numeric, time: .standard) ?? "No Date") \n  Результат: \(gameResultsArray?[indexPath.row].score ?? 0)",
+            message: "\(gameResultsArray?[indexPath.row].date.formatted(date: .numeric, time: .standard) ?? "No Date") \n Время игры: \(gameResultsArray?[indexPath.row].time ?? "No time") \n  Результат: \(gameResultsArray?[indexPath.row].score ?? 0)",
             preferredStyle: .alert
         )
         let action = UIAlertAction(title: "ОК", style: .default)

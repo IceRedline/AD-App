@@ -11,4 +11,5 @@ struct GameResult: Codable {
     let name: String
     let score: Int
     let date: Date
+    let time: String
 }

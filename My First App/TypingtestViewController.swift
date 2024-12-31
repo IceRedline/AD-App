@@ -9,17 +9,15 @@ import UIKit
 
 class TestViewController: UIViewController {
     
-    @IBOutlet weak var generateButton: UIButton!
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var generateButton: UIButton!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
-    var text = ""
-    var textArray = [String]()
-    
-    var timer = Timer()
-    var startTime = Date()
+    private var text = ""
+    private var textArray = [String]()
+    private var startTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +35,17 @@ class TestViewController: UIViewController {
         }
     }
     
-    @IBAction func textGeneratorTapped() {
+    @IBAction private func textGeneratorTapped() {
         textField.isEnabled = true
         generateButton.setTitle("Другой текст", for: .normal)
         textLabel.text = textArray[Int.random(in: 0..<textArray.count)]
     }
     
-    @IBAction func editingBegan() {
+    @IBAction private func editingBegan() {
         startTime = Date()
     }
     
-    @IBAction func textFieldChanged() {
+    @IBAction private func textFieldChanged() {
         if textLabel.text!.contains(textField.text!) {
             errorLabel.text = "Typing test"
             textLabel.textColor = UIColor.label

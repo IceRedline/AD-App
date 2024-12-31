@@ -10,15 +10,14 @@ import UIKit
 
 class AnimationTestViewController: UIViewController {
     
-    let defaultColor: CGColor = UIColor.secondary.cgColor
-    let animationsEngine = Animations()
+    private let defaultColor: CGColor = UIColor.secondary.cgColor
+    private let animationsEngine = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    @IBAction func testButtonTouchedDown(_ sender: UIButton) {
+    @IBAction private func testButtonTouchedDown(_ sender: UIButton) {
         switch sender.tag {
         case 1:
             animationsEngine.animateDownSpring(sender)
@@ -30,7 +29,7 @@ class AnimationTestViewController: UIViewController {
         }
     }
     
-    @IBAction func testButtonReleased(_ sender: UIButton) {
+    @IBAction private func testButtonReleased(_ sender: UIButton) {
         switch sender.tag {
         case 1:
             animationsEngine.animateUpSpring(sender)

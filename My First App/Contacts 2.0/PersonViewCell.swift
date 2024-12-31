@@ -13,7 +13,6 @@ class PersonViewCell: UITableViewCell {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelPhone: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

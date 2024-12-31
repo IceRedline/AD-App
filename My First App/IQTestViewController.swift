@@ -12,18 +12,18 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - @IBOutlet properties
     
-    @IBOutlet weak var firstLabel: UILabel!
-    @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var dateButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet private weak var firstLabel: UILabel!
+    @IBOutlet private weak var secondLabel: UILabel!
+    @IBOutlet private weak var dateTextField: UITextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var dateButton: UIButton!
+    @IBOutlet private weak var nextButton: UIButton!
     
-    @IBOutlet weak var hintDate1: UILabel!
-    @IBOutlet weak var hintDate2: UILabel!
-    @IBOutlet weak var hintDate3: UILabel!
-    @IBOutlet weak var hintDate4: UILabel!
-    @IBOutlet weak var hintsStack: UIStackView!
+    @IBOutlet private weak var hintDate1: UILabel!
+    @IBOutlet private weak var hintDate2: UILabel!
+    @IBOutlet private weak var hintDate3: UILabel!
+    @IBOutlet private weak var hintDate4: UILabel!
+    @IBOutlet private weak var hintsStack: UIStackView!
     
     // MARK: - Properties
     
@@ -53,6 +53,12 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Methods
     
+    private func returnTitle() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.firstLabel.text = "Введите текущую дату:"
+        }
+    }
+    
     private func updateMenu(showDatesEnabled: Bool) {
         let showAction = UIAction(title: "Показать даты", attributes: showDatesEnabled ? [] : .disabled) { _ in
             self.hintsStack.isHidden = false
@@ -68,13 +74,9 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
         dateButton.menu = menu
     }
     
-    func returnTitle() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.firstLabel.text = "Введите текущую дату:"
-        }
-    }
     
-    @IBAction func dateButtonTapped() {
+    
+    @IBAction private func dateButtonTapped() {
         if dateTextField.text == formattedDate {
             hapticFeedback.notificationOccurred(.success)
             firstLabel.text = "Верно!"
@@ -98,7 +100,7 @@ class IQTestViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func nameFieldChanged(_ sender: Any) {
+    @IBAction private func nameFieldChanged(_ sender: Any) {
         if nameTextField.text?.count == 1 && (nameTextField.text![nameTextField.text!.startIndex] == "А" || nameTextField.text![nameTextField.text!.startIndex] == "а")
         {
             secondLabel.text = "Начало хорошее"

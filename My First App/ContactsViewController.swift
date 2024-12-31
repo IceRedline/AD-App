@@ -9,9 +9,9 @@ import UIKit
 
 class ContactsViewController: UIViewController {
 
-    var names = ["Artyom", "Yaroslav", "George"]
+    private var names = ["Artyom", "Yaroslav", "George"]
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ContactsViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    @IBAction private func addButtonPressed(_ sender: UIBarButtonItem) {
         let alertController = UIAlertController(title: "Введите имя", message: "Введите имя контакта, который хотите добавить", preferredStyle: .alert)
         alertController.addTextField() { textField in
             textField.placeholder = "Имя"
@@ -35,11 +35,13 @@ class ContactsViewController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension ContactsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         names.count
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
@@ -51,6 +53,7 @@ extension ContactsViewController: UITableViewDataSource {
 }
 
 extension ContactsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -72,16 +75,17 @@ extension ContactsViewController: UITableViewDelegate {
             //tableView.moveSection(indexPath.row, toSection: indexPath.row + 1)
             self.names[indexPath.row] += " ⚜️"
             self.tableView.reloadData()
-            print("leading 1 - \(self.names[indexPath.row])")
+            print("Повышение - \(self.names[indexPath.row])")
             completion(true)
         }
         let action2 = UIContextualAction(style: .normal, title: "Понизить") { _, _, completion in
             if self.names[indexPath.row].last == "⚜️"{
-                self.names[indexPath.row] = String(self.names[indexPath.row].dropLast())
-                self.names[indexPath.row] = String(self.names[indexPath.row].dropLast())
+                for _ in (1...2) {
+                    self.names[indexPath.row] = String(self.names[indexPath.row].dropLast())
+                }
                 self.tableView.reloadData()
             }
-            print("leading 2 - \(self.names[indexPath.row])")
+            print("Понижение - \(self.names[indexPath.row])")
             completion(true)
         }
         

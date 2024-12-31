@@ -10,13 +10,14 @@ import AVKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet weak var logo1: UIImageView!
-    @IBOutlet weak var logo2: UIImageView!
-    @IBOutlet weak var welcomeButton: UIButton!
-    @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var musicButton: UIButton!
+    @IBOutlet private weak var logo1: UIImageView!
+    @IBOutlet private weak var logo2: UIImageView!
+    @IBOutlet private weak var welcomeButton: UIButton!
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var musicButton: UIButton!
     
     var musicplayer: AVAudioPlayer!
+    let animationsEngine = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class WelcomeViewController: UIViewController {
         // player.numberOfLoops = -1
     }
     
-    @IBAction func welcomeButtonTapped() {
+    @IBAction private func welcomeButtonTapped() {
         welcomeLabel.text = "Welcome"
         welcomeButton.isEnabled = false
         musicplayer.play()
@@ -51,7 +52,7 @@ class WelcomeViewController: UIViewController {
     }
     
     
-    @IBAction func quizBuutonTapped() {
+    @IBAction private func quizButtonTapped() {
         if musicplayer.isPlaying {
             musicplayer.stop()
         }
@@ -61,29 +62,15 @@ class WelcomeViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    
-    
-    private func animateDown(_ viewToAnimate: UIView) {
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-        })
+    @IBAction private func animationsButtonTapped(_ sender: UIButton) {
+        animationsEngine.animateDownFloat(sender)
     }
     
-    private func animateUp(_ viewToAnimate: UIView) {
-        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 10, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
-        })
+    @IBAction private func animationsButtonReleased(_ sender: UIButton) {
+        animationsEngine.animateUpFloat(sender)
     }
     
-    @IBAction func animationsButtonTapped(_ sender: UIButton) {
-        animateDown(sender)
-    }
-    
-    @IBAction func animationsButtonReleased(_ sender: UIButton) {
-        animateUp(sender)
-    }
-    
-    @IBAction func galleryButtonTapped() {
+    @IBAction private func galleryButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RandomGallery")
         self.present(vc, animated: true)

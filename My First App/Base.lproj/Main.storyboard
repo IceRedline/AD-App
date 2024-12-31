@@ -123,7 +123,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="questionmark.square" catalog="system" title=" Quizice"/>
                                                 <connections>
-                                                    <action selector="quizBuutonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="vG3-H2-sNY"/>
+                                                    <action selector="quizButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="vG3-H2-sNY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJm-gt-Cry">
@@ -177,7 +177,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-ZK-jyA">
-                                <rect key="frame" x="25.666666666666657" y="266" width="351" height="34.333333333333314"/>
+                                <rect key="frame" x="86" y="266" width="230" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-DX-ih9">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="34.333333333333336"/>
@@ -198,15 +198,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
                                         <connections>
                                             <action selector="galleryButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="Bd3-j8-Scj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l98-fE-Htf">
-                                        <rect key="frame" x="242" y="0.0" width="109" height="34.333333333333336"/>
-                                        <color key="tintColor" name="primary"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="results"/>
-                                        <connections>
-                                            <segue destination="68c-uk-8l6" kind="show" id="Msc-GI-jmq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -419,37 +410,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VXb-sm-bcb">
-                                <rect key="frame" x="66" y="111" width="270" height="737"/>
+                                <rect key="frame" x="66" y="136" width="270" height="686.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YuD-Px-2Uk">
-                                        <rect key="frame" x="0.0" y="0.0" width="270" height="392.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="342.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQ4-S3-XyM">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQ4-S3-XyM">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="40.333333333333336"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="IQ тест 📚">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="hl8-LX-FPP" kind="show" id="4Qu-IZ-b23"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="qTw-sy-wAt"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2Q-1L-xwT">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2Q-1L-xwT">
                                                 <rect key="frame" x="0.0" y="50.333333333333343" width="270" height="40.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Настройки звука  🔉">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="vMd-Fg-qdi" kind="show" id="8I2-CE-EVn"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="4wa-zn-hDV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-5v-ziE">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-5v-ziE">
                                                 <rect key="frame" x="0.0" y="100.66666666666666" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Photoshop  🎨">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="rSy-mo-GZE" kind="show" id="znN-Uv-W0i"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="y3M-C0-RKR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOb-bi-oyo">
@@ -462,38 +453,28 @@
                                                     <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="aSk-1V-n7K"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-1y-siL">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-1d-jLG">
                                                 <rect key="frame" x="0.0" y="201.33333333333331" width="270" height="40.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Контакты  📒">
-                                                    <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="FCa-l1-xak" kind="show" id="hzZ-l0-VRS"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cW-1d-jLG">
-                                                <rect key="frame" x="0.0" y="251.66666666666671" width="270" height="40.333333333333343"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Контакты 2.0  📓">
+                                                <buttonConfiguration key="configuration" style="gray" title="Контакты  📓">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="25" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="3HM-Hd-Yf2" kind="show" id="32b-o8-rnI"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="0I3-j8-ssO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-cr-v7a">
-                                                <rect key="frame" x="0.0" y="302" width="270" height="40.333333333333314"/>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-cr-v7a">
+                                                <rect key="frame" x="0.0" y="251.66666666666671" width="270" height="40.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="ICE MUSIC  🎵">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="21" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="G0Q-5W-Ia2" kind="show" id="Qz3-Dm-1Iz"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="LVA-f9-hnv"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihk-xQ-aad">
-                                                <rect key="frame" x="0.0" y="352.33333333333331" width="270" height="40.333333333333314"/>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihk-xQ-aad">
+                                                <rect key="frame" x="0.0" y="302" width="270" height="40.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray">
                                                     <string key="title" base64-UTF8="YES">
@@ -502,7 +483,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="10" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="rf7-jX-ReX" kind="show" id="LFf-VP-xmp"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="YPY-lm-9kF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -512,67 +493,70 @@ QXBwbGUgU3RvcmUgIAHvo78
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-E9-SkX">
-                                        <rect key="frame" x="0.0" y="412.66666666666663" width="270" height="324.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="362.33333333333337" width="270" height="324.33333333333337"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-td-tqs">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-td-tqs">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="40.333333333333336"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="LifeDays  💚">
                                                     <backgroundConfiguration key="background"/>
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="BpN-3m-g5k" kind="show" id="jm8-1q-IqW"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="WZ6-zw-Stn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-m9-oRC">
-                                                <rect key="frame" x="0.0" y="47.333333333333371" width="270" height="40.333333333333343"/>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-m9-oRC">
+                                                <rect key="frame" x="0.0" y="47.333333333333314" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Names  👫">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="Cxj-Qo-8Pm" kind="show" id="QwF-RP-gvV"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="b9g-bk-TcN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-xS-QG8">
-                                                <rect key="frame" x="0.0" y="94.666666666666742" width="270" height="40.333333333333343"/>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuK-xS-QG8">
+                                                <rect key="frame" x="0.0" y="94.666666666666686" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Напоминания  📋">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="Ota-Ge-bu2" kind="show" id="heY-fc-Px2"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="jKI-s6-qnc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75c-WB-j6g">
-                                                <rect key="frame" x="0.0" y="142" width="270" height="40.333333333333343"/>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75c-WB-j6g">
+                                                <rect key="frame" x="0.0" y="142.00000000000006" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Dice  🎲">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="ksI-Kh-8DS" kind="show" id="SeH-4i-1GB"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="3D8-KQ-67M"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JS-6T-9LU">
-                                                <rect key="frame" x="0.0" y="189.33333333333337" width="270" height="40.333333333333343"/>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JS-6T-9LU">
+                                                <rect key="frame" x="0.0" y="189.33333333333331" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Typing Test  ⌨️">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="Fse-qQ-rrR" kind="show" id="jr4-p0-7wk"/>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="1ie-Y6-RVI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-wV-wPa">
-                                                <rect key="frame" x="0.0" y="236.66666666666677" width="270" height="40.333333333333343"/>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-wV-wPa">
+                                                <rect key="frame" x="0.0" y="236.66666666666671" width="270" height="40.333333333333343"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Quizice  🎰">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="hZD-6w-EIV" eventType="touchUpInside" id="2DN-It-DT8"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-vE-Ren">
-                                                <rect key="frame" x="0.0" y="284" width="270" height="40.333333333333314"/>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-vE-Ren">
+                                                <rect key="frame" x="0.0" y="284.00000000000006" width="270" height="40.333333333333314"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Калькулятор  ➕">
                                                     <directionalEdgeInsets key="contentInsets" top="10" leading="20" bottom="10" trailing="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="dO2-2R-i7Z" kind="show" id="reB-Qu-yHC"/>
+                                                    <segue destination="dO2-2R-i7Z" kind="show" id="qS7-g1-3Nv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -587,12 +571,13 @@ QXBwbGUgU3RvcmUgIAHvo78
                         <viewLayoutGuide key="safeArea" id="oHe-4m-OdO"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="VXb-sm-bcb" firstAttribute="top" secondItem="oHe-4m-OdO" secondAttribute="top" constant="5" id="DL1-PT-VB8"/>
+                            <constraint firstItem="VXb-sm-bcb" firstAttribute="top" secondItem="oHe-4m-OdO" secondAttribute="top" constant="30" id="nmh-jF-g73"/>
                             <constraint firstItem="VXb-sm-bcb" firstAttribute="centerX" secondItem="GvD-jg-XPS" secondAttribute="centerX" id="qav-c7-Lgq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Навигация" id="QeW-pa-gNj"/>
                     <connections>
+                        <outlet property="contactsButton" destination="1cW-1d-jLG" id="3SF-Dp-HCj"/>
                         <outlet property="cookieClickerButton" destination="BOb-bi-oyo" id="YzW-rh-ciT"/>
                     </connections>
                 </viewController>
@@ -603,7 +588,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--AirDev Calculator-->
         <scene sceneID="99O-zw-Tn3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="dO2-2R-i7Z" customClass="CalculatorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calculator" modalPresentationStyle="fullScreen" id="dO2-2R-i7Z" customClass="CalculatorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N5y-ET-Xqu">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -980,6 +965,9 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="document.on.document" catalog="system"/>
+                                <connections>
+                                    <action selector="copyButtonTapped" destination="dO2-2R-i7Z" eventType="touchUpInside" id="kXk-bh-t59"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="YYG-js-8Lb">
                                 <rect key="frame" x="38" y="402.66666666666669" width="297" height="59"/>
@@ -991,6 +979,22 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скопировано в буфер обмена!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fE-eF-LWP">
+                                <rect key="frame" x="56" y="121" width="290" height="40"/>
+                                <color key="backgroundColor" name="DEDEDE"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kl1-Ih-hie"/>
+                                    <constraint firstAttribute="width" constant="290" id="OQa-r8-c9U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DTM-99-pXC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1000,20 +1004,70 @@ QXBwbGUgU3RvcmUgIAHvo78
                             <constraint firstItem="qru-xr-ksu" firstAttribute="leading" secondItem="YYG-js-8Lb" secondAttribute="trailing" constant="0.67000000000000004" id="6Yq-sB-rka"/>
                             <constraint firstItem="DTM-99-pXC" firstAttribute="trailing" secondItem="qru-xr-ksu" secondAttribute="trailing" constant="15" id="Nga-u4-EcT"/>
                             <constraint firstItem="DTM-99-pXC" firstAttribute="bottom" secondItem="aie-VE-QKj" secondAttribute="bottom" id="WSq-9i-aIk"/>
+                            <constraint firstItem="9fE-eF-LWP" firstAttribute="top" secondItem="DTM-99-pXC" secondAttribute="top" constant="15" id="Xop-BT-W3X"/>
                             <constraint firstItem="DTM-99-pXC" firstAttribute="trailing" secondItem="aie-VE-QKj" secondAttribute="trailing" constant="20" id="epM-6l-4yg"/>
+                            <constraint firstItem="9fE-eF-LWP" firstAttribute="centerX" secondItem="N5y-ET-Xqu" secondAttribute="centerX" id="gl5-RA-U4c"/>
                             <constraint firstItem="aie-VE-QKj" firstAttribute="leading" secondItem="DTM-99-pXC" secondAttribute="leading" constant="20" id="mlN-1O-LiD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AirDev Calculator" id="zOJ-bl-ajp">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="79n-ub-9a1"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="79n-ub-9a1">
+                            <connections>
+                                <segue destination="BeT-za-hqD" kind="show" id="cAP-oi-Ks3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="copiedLabel" destination="9fE-eF-LWP" id="jzO-6J-0N8"/>
                         <outlet property="numberLabel" destination="YYG-js-8Lb" id="huC-AO-YBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BrS-nZ-QpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797" y="1738"/>
+            <point key="canvasLocation" x="797" y="1642"/>
+        </scene>
+        <!-- Настройки-->
+        <scene sceneID="XuS-dF-6ZP">
+            <objects>
+                <viewController id="BeT-za-hqD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Udo-Sm-kPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настроек калькулятора пока нет..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-Tj-Q2P">
+                                <rect key="frame" x="51" y="299" width="300" height="57.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="rgv-PV-L6E"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😦" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSm-ae-qga">
+                                <rect key="frame" x="136" y="476.33333333333326" width="130" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Yfy-qe-ypt"/>
+                                    <constraint firstAttribute="height" constant="142" id="bNt-ra-ATB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="127"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kkc-0E-g2w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rSm-ae-qga" firstAttribute="top" secondItem="kVd-Tj-Q2P" secondAttribute="bottom" constant="120" id="4yu-bD-KED"/>
+                            <constraint firstItem="rSm-ae-qga" firstAttribute="centerX" secondItem="Udo-Sm-kPQ" secondAttribute="centerX" id="u1r-Ih-CSY"/>
+                            <constraint firstItem="kVd-Tj-Q2P" firstAttribute="centerX" secondItem="Udo-Sm-kPQ" secondAttribute="centerX" id="yQz-M5-5aW"/>
+                            <constraint firstItem="kVd-Tj-Q2P" firstAttribute="top" secondItem="kkc-0E-g2w" secondAttribute="top" constant="193" id="z4a-kE-dCl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=" Настройки" id="YTX-6g-F6I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUF-vC-9qS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="2361"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="RNF-X1-FZQ">
@@ -1201,12 +1255,12 @@ QXBwbGUgU3RvcmUgIAHvo78
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAB-vq-oaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849.6183206106869" y="1440.1408450704225"/>
+            <point key="canvasLocation" x="1897" y="1260"/>
         </scene>
         <!--IQ Тест-->
         <scene sceneID="Jfv-Ht-Qvf">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="hl8-LX-FPP" customClass="IQTestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="iqtest" modalPresentationStyle="fullScreen" id="hl8-LX-FPP" customClass="IQTestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d3k-nF-iSe">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1364,7 +1418,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Настройки звука-->
         <scene sceneID="0sV-jl-qtk">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vMd-Fg-qdi" customClass="SoundSettingsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sound" modalPresentationStyle="fullScreen" id="vMd-Fg-qdi" customClass="SoundSettingsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="syy-lh-BvO">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1729,16 +1783,16 @@ QXBwbGUgU3RvcmUgIAHvo78
                     </view>
                     <navigationItem key="navigationItem" title="Настройки звука" id="nxj-C3-Wxa"/>
                     <connections>
-                        <outlet property="haptic1" destination="2Oq-dg-37T" id="7er-4p-Dth"/>
-                        <outlet property="haptic2" destination="dKl-g1-m6W" id="niG-Z4-4RD"/>
-                        <outlet property="haptic3" destination="vtc-Ed-0HV" id="xZq-ON-0Zq"/>
-                        <outlet property="hapticError" destination="h7q-6k-QMO" id="KBX-0U-eR1"/>
-                        <outlet property="hapticSelection" destination="O68-UW-WZ1" id="372-gi-1UN"/>
-                        <outlet property="hapticSuccess" destination="ZIF-3U-Fxl" id="TNv-gz-HMY"/>
+                        <outlet property="hapticButton1" destination="2Oq-dg-37T" id="7er-4p-Dth"/>
+                        <outlet property="hapticButton2" destination="dKl-g1-m6W" id="niG-Z4-4RD"/>
+                        <outlet property="hapticButton3" destination="vtc-Ed-0HV" id="xZq-ON-0Zq"/>
+                        <outlet property="hapticErrorButton" destination="h7q-6k-QMO" id="KBX-0U-eR1"/>
+                        <outlet property="hapticSelectionButton" destination="O68-UW-WZ1" id="372-gi-1UN"/>
+                        <outlet property="hapticSuccessButton" destination="ZIF-3U-Fxl" id="TNv-gz-HMY"/>
                         <outlet property="hapticSwitch" destination="L6u-o4-end" id="C53-pB-d06"/>
                         <outlet property="hapticSymbol" destination="Fqg-Ye-G7F" id="9Ro-Oz-0Rq"/>
                         <outlet property="hapticView" destination="Q8v-6a-EPb" id="dDL-Hd-bNe"/>
-                        <outlet property="hapticWarning" destination="m2k-tY-JAx" id="UPk-LY-5dr"/>
+                        <outlet property="hapticWarningButton" destination="m2k-tY-JAx" id="UPk-LY-5dr"/>
                         <outlet property="notificationsSwitch" destination="xG8-Rd-pie" id="Ubm-cg-RXh"/>
                         <outlet property="notificationsSymbol" destination="4Qf-Vc-Tpf" id="7W7-Cb-SaS"/>
                         <outlet property="notificationsView" destination="V0z-HH-SQX" id="ERj-HL-zJo"/>
@@ -1756,7 +1810,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Photoshop-->
         <scene sceneID="BTL-90-k0d">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="rSy-mo-GZE" customClass="PhotoEditorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photoshop" modalPresentationStyle="fullScreen" id="rSy-mo-GZE" customClass="PhotoEditorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2A-ht-pJv">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2120,7 +2174,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш результат: lastResult " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Riw-xc-4wi">
-                                <rect key="frame" x="26" y="189.33333333333334" width="350" height="21.666666666666657"/>
+                                <rect key="frame" x="26" y="169.33333333333334" width="350" height="21.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="3LI-Fj-rec"/>
                                 </constraints>
@@ -2141,19 +2195,20 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Спасибо за оценку!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yd8-p8-hW6">
-                                <rect key="frame" x="51" y="765.33333333333337" width="300" height="21.666666666666629"/>
+                                <rect key="frame" x="51" y="766" width="300" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="71t-s6-Uet"/>
+                                    <constraint firstAttribute="height" constant="30" id="x7z-lF-PzC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kzb-9X-f10">
-                                <rect key="frame" x="0.0" y="226" width="402" height="460"/>
+                                <rect key="frame" x="0.0" y="206" width="402" height="530"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="460" id="7Rq-Tx-QYC"/>
+                                    <constraint firstAttribute="height" constant="530" id="7Rq-Tx-QYC"/>
                                     <constraint firstAttribute="width" constant="402" id="WzU-I5-tvY"/>
                                 </constraints>
                                 <prototypes>
@@ -2189,7 +2244,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-ek-jzf">
-                                <rect key="frame" x="133" y="706" width="136.33333333333337" height="34.333333333333371"/>
+                                <rect key="frame" x="133" y="766" width="136.33333333333337" height="34.333333333333371"/>
                                 <color key="tintColor" name="primary"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Как вам игра?"/>
@@ -2198,7 +2253,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таблица рекордов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sq-13-DGN">
-                                <rect key="frame" x="56" y="136" width="290.33333333333331" height="38.333333333333343"/>
+                                <rect key="frame" x="56" y="115.99999999999999" width="290.33333333333331" height="38.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2210,16 +2265,16 @@ QXBwbGUgU3RvcmUgIAHvo78
                             <constraint firstItem="kzb-9X-f10" firstAttribute="leading" secondItem="uXL-vU-IpP" secondAttribute="leading" id="10Q-me-cMw"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="leading" secondItem="8je-In-fDW" secondAttribute="leading" id="1qd-Sz-Hcm"/>
                             <constraint firstItem="yd8-p8-hW6" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="4FK-TQ-8cn"/>
-                            <constraint firstItem="yd8-p8-hW6" firstAttribute="top" secondItem="fpN-ek-jzf" secondAttribute="bottom" constant="25" id="5Mu-1r-0Xr"/>
                             <constraint firstItem="Riw-xc-4wi" firstAttribute="top" secondItem="3Sq-13-DGN" secondAttribute="bottom" constant="15" id="8sz-FT-Qko"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="FDi-G6-DkD"/>
-                            <constraint firstItem="3Sq-13-DGN" firstAttribute="top" secondItem="uXL-vU-IpP" secondAttribute="top" constant="30" id="MbT-4v-c4c"/>
+                            <constraint firstItem="3Sq-13-DGN" firstAttribute="top" secondItem="uXL-vU-IpP" secondAttribute="top" constant="10" id="MbT-4v-c4c"/>
+                            <constraint firstItem="yd8-p8-hW6" firstAttribute="top" secondItem="kzb-9X-f10" secondAttribute="bottom" constant="30" id="Mw6-sr-2DE"/>
                             <constraint firstItem="Riw-xc-4wi" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="TcP-PZ-q2c"/>
                             <constraint firstItem="uXL-vU-IpP" firstAttribute="bottom" secondItem="vcR-z2-y3C" secondAttribute="bottom" id="ajJ-Gp-f0o"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="top" secondItem="Riw-xc-4wi" secondAttribute="bottom" constant="15" id="bO3-PA-cC9"/>
                             <constraint firstItem="uXL-vU-IpP" firstAttribute="trailing" secondItem="vcR-z2-y3C" secondAttribute="trailing" constant="16" id="p0o-NA-bWa"/>
                             <constraint firstItem="kzb-9X-f10" firstAttribute="trailing" secondItem="uXL-vU-IpP" secondAttribute="trailing" id="pA4-Ad-o7s"/>
-                            <constraint firstItem="fpN-ek-jzf" firstAttribute="top" secondItem="kzb-9X-f10" secondAttribute="bottom" constant="20" id="ptY-bd-RCJ"/>
+                            <constraint firstItem="fpN-ek-jzf" firstAttribute="top" secondItem="kzb-9X-f10" secondAttribute="bottom" constant="30" id="ptY-bd-RCJ"/>
                             <constraint firstItem="fpN-ek-jzf" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="wRH-uh-X5A"/>
                             <constraint firstItem="3Sq-13-DGN" firstAttribute="centerX" secondItem="8je-In-fDW" secondAttribute="centerX" id="xJX-FT-4hx"/>
                         </constraints>
@@ -2245,7 +2300,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Конаткты-->
         <scene sceneID="tnf-qO-njd">
             <objects>
-                <viewController id="FCa-l1-xak" customClass="ContactsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contacts" id="FCa-l1-xak" customClass="ContactsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHG-BB-Edt">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2289,7 +2344,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Контакты 2.0-->
         <scene sceneID="Bjt-H7-nna">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="3HM-Hd-Yf2" customClass="Contacts2TableViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="contacts2" modalPresentationStyle="fullScreen" id="3HM-Hd-Yf2" customClass="Contacts2TableViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-7o-MaC">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2344,7 +2399,6 @@ QXBwbGUgU3RvcmUgIAHvo78
                         <rightBarButtonItems>
                             <barButtonItem title="Далее" id="J07-gR-7jA">
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="3HM-Hd-Yf2" id="y1t-OB-egd"/>
                                     <segue destination="G0Q-5W-Ia2" kind="show" id="4OJ-QC-O0e"/>
                                 </connections>
                             </barButtonItem>
@@ -2363,7 +2417,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--ICE MUSIC-->
         <scene sceneID="kbb-oO-oaW">
             <objects>
-                <viewController id="G0Q-5W-Ia2" customClass="MusicPlayerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="icemusic" id="G0Q-5W-Ia2" customClass="MusicPlayerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZL-Jj-dlS">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2464,13 +2518,18 @@ QXBwbGUgU3RvcmUgIAHvo78
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3U-5U-iUm">
-                                <rect key="frame" x="134" y="618" width="125" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K3U-5U-iUm">
+                                <rect key="frame" x="126" y="617.66666666666663" width="150" height="40"/>
                                 <color key="backgroundColor" name="secondary"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="PoQ-dm-lQM"/>
+                                    <constraint firstAttribute="height" constant="40" id="iyc-PL-Kos"/>
+                                </constraints>
                                 <color key="tintColor" name="primary"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Продолжить"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Продолжить">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
@@ -2480,16 +2539,26 @@ QXBwbGUgU3RvcmUgIAHvo78
                                     <action selector="nextButtonTapped" destination="Pmv-Sp-srA" eventType="touchUpInside" id="l3z-kx-xBN"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Привет! Я текст, который можно скроллить -&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-Lz-qWi">
-                                <rect key="frame" x="70" y="366" width="253" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет! Я текст, который можно скроллить -&gt;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM9-Lz-qWi">
+                                <rect key="frame" x="46" y="341.66666666666669" width="310" height="191.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="8HR-Rf-RjU"/>
+                                    <constraint firstAttribute="width" constant="310" id="WCq-JY-hwC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OmS-B8-byi"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="K3U-5U-iUm" firstAttribute="top" secondItem="GM9-Lz-qWi" secondAttribute="bottom" constant="85.329999999999998" id="AOC-Gu-FFa"/>
+                            <constraint firstItem="GM9-Lz-qWi" firstAttribute="centerY" secondItem="Sn8-RI-qES" secondAttribute="centerY" id="BWK-dT-9dv"/>
+                            <constraint firstItem="K3U-5U-iUm" firstAttribute="centerX" secondItem="Sn8-RI-qES" secondAttribute="centerX" id="PBb-3P-REm"/>
+                            <constraint firstItem="GM9-Lz-qWi" firstAttribute="centerX" secondItem="Sn8-RI-qES" secondAttribute="centerX" id="XMp-Jb-F9P"/>
+                            <constraint firstItem="GM9-Lz-qWi" firstAttribute="centerX" secondItem="Sn8-RI-qES" secondAttribute="centerX" id="yPN-FA-K7o"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gUv-4P-emy"/>
                     <connections>
@@ -2499,9 +2568,9 @@ QXBwbGUgU3RvcmUgIAHvo78
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEk-1p-5uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8744.2748091603044" y="0.0"/>
+            <point key="canvasLocation" x="8743.2835820895525" y="0.0"/>
         </scene>
-        <!--iPhone 15 Pro-->
+        <!--iPhone 16 Pro-->
         <scene sceneID="6FZ-CW-Jy1">
             <objects>
                 <viewController storyboardIdentifier="iphone15SID" id="ah8-LR-4E8" customClass="Eleventh_1_ViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -2510,25 +2579,25 @@ QXBwbGUgU3RvcmUgIAHvo78
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3uC-l1-Nqy">
-                                <rect key="frame" x="0.0" y="62" width="393" height="705"/>
+                                <rect key="frame" x="0.0" y="92" width="393" height="675"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lU-D1-91c">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="850"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="970"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Dmr-dx-d76">
-                                                <rect key="frame" x="16" y="30" width="361" height="807"/>
+                                                <rect key="frame" x="16" y="0.0" width="361" height="907"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 15 Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stj-Ie-gct">
-                                                        <rect key="frame" x="54" y="0.0" width="253" height="48"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 16 Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stj-Ie-gct">
+                                                        <rect key="frame" x="53" y="0.0" width="255" height="48"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="253" id="2Kv-lb-SGx"/>
+                                                            <constraint firstAttribute="width" constant="255" id="2Kv-lb-SGx"/>
                                                             <constraint firstAttribute="height" constant="48" id="lnL-Ue-tuG"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone15pro" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-gL-Y3Z">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone16pro" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-gL-Y3Z">
                                                         <rect key="frame" x="49.666666666666686" y="78" width="262" height="299"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="299" id="eDU-Am-s7b"/>
@@ -2536,16 +2605,20 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xe-eF-cAX">
-                                                        <rect key="frame" x="0.0" y="407" width="361" height="400"/>
+                                                        <rect key="frame" x="0.0" y="407" width="361" height="500"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="361" id="AfC-jw-x3O"/>
-                                                            <constraint firstAttribute="height" constant="400" id="Fxr-gP-fYL"/>
+                                                            <constraint firstAttribute="height" constant="500" id="Fxr-gP-fYL"/>
                                                         </constraints>
-                                                        <string key="text">Аппаратной основой Apple iPhone 15 Pro стал 3-нанометровый чипсет A17 Pro с 6-ядерным GPU и поддержкой трассировки лучей. Чип выдает высочайшую производительность в играх. Также имеется 16-ядерный Neural Engine, который обрабатывает 35 миллионов операций в секунду.
-Корпус смартфона изготовлен из титана 5-го класса (такой, например, используется в космическом ровере NASA). Титан прочнее, легче и долговечнее, чем алюминий и сталь. У iPhone 15 Pro нет физического переключателя для перехода в бесшумный режим. На его месте расположена программируемая кнопка, которая реагирует на силу нажатия. С ее помощью можно, например, включить камеру или фонарик.
-У iPhone 15 Pro 6,1-дюймовый OLED-дисплей с разрешением 2556 × 1179 пикселей, кадровой частотой 120 Гц и пиковой яркостью 2000 нит.
-Основная камера состоит из трех сенсоров. Главный на 48 Мп. Пользователь может выбрать фокусное расстояние — 24, 28 или 35 мм. Также у смартфона ширик и телевик с 3-кратным оптическим зумом на 12 Мп.
-iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и скоростью передачи данных до 10 Гбит/с.</string>
+                                                        <string key="text">Аппаратной основой Apple iPhone 16 Pro стал 3-нанометровый чипсет A18 Pro с 6-ядерным GPU, обеспечивающий высокую производительность в играх и приложениях. 16-ядерный Neural Engine способен обрабатывать до 35 триллионов операций в секунду, ускоряя работу AI-функций. ￼
+
+Корпус смартфона выполнен из титана, что обеспечивает прочность и легкость устройства. Вместо физического переключателя для бесшумного режима используется программируемая кнопка, реагирующая на силу нажатия; с ее помощью можно, например, включить камеру или фонарик. ￼
+
+iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с разрешением 2622×1206 пикселей, частотой обновления 1–120 Гц и пиковой яркостью 2000 нит, обеспечивая отличную видимость даже при ярком освещении. ￼
+
+Основная камера состоит из трех модулей: главный сенсор на 48 Мп с оптической стабилизацией, сверхширокоугольный объектив на 48 Мп и телеобъектив на 12 Мп с 5-кратным оптическим зумом, позволяющим снимать удаленные объекты с высоким качеством. ￼
+
+Смартфон оснащен портом USB-C с поддержкой высокоскоростной передачи данных, что делает iPhone 16 Pro еще более удобным для профессионального использования. ￼</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2556,8 +2629,8 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstItem="Dmr-dx-d76" firstAttribute="centerX" secondItem="8lU-D1-91c" secondAttribute="centerX" id="fx6-Ab-IyE"/>
-                                            <constraint firstAttribute="height" constant="850" id="k4v-2z-evQ"/>
-                                            <constraint firstItem="Dmr-dx-d76" firstAttribute="top" secondItem="8lU-D1-91c" secondAttribute="top" constant="30" id="kky-Ui-qO5"/>
+                                            <constraint firstAttribute="height" constant="970" id="k4v-2z-evQ"/>
+                                            <constraint firstItem="Dmr-dx-d76" firstAttribute="top" secondItem="8lU-D1-91c" secondAttribute="top" id="kky-Ui-qO5"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -2573,19 +2646,18 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="3uC-l1-Nqy" firstAttribute="leading" secondItem="XeP-X4-PBo" secondAttribute="leading" id="I8f-Mk-RyF"/>
-                            <constraint firstItem="3uC-l1-Nqy" firstAttribute="top" secondItem="XeP-X4-PBo" secondAttribute="top" id="Mx3-HN-fkC"/>
-                            <constraint firstItem="8lU-D1-91c" firstAttribute="height" secondItem="Hbm-mN-PaG" secondAttribute="height" id="TTZ-6f-q2A"/>
+                            <constraint firstItem="3uC-l1-Nqy" firstAttribute="top" secondItem="XeP-X4-PBo" secondAttribute="top" constant="30" id="Vif-Kb-t9c"/>
                             <constraint firstItem="8lU-D1-91c" firstAttribute="width" secondItem="Hbm-mN-PaG" secondAttribute="width" id="XGq-7D-4hI"/>
                             <constraint firstItem="3uC-l1-Nqy" firstAttribute="bottom" secondItem="XeP-X4-PBo" secondAttribute="bottom" id="bg9-Tl-S7N"/>
                             <constraint firstItem="3uC-l1-Nqy" firstAttribute="trailing" secondItem="XeP-X4-PBo" secondAttribute="trailing" id="cRw-XG-uOh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="iPhone 15 Pro" image="iphone" catalog="system" id="ASq-MX-QzF"/>
+                    <tabBarItem key="tabBarItem" title="iPhone 16 Pro" image="iphone" catalog="system" id="ASq-MX-QzF"/>
                     <size key="freeformSize" width="393" height="850"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGf-2V-aFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10541" y="-678"/>
+            <point key="canvasLocation" x="10537" y="-781"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="feC-VL-k0r">
@@ -2694,7 +2766,7 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
         <!--Typing Test-->
         <scene sceneID="g36-Gh-99v">
             <objects>
-                <viewController id="Fse-qQ-rrR" customClass="TestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="typingtest" id="Fse-qQ-rrR" customClass="TestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6t-xT-LbZ">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2784,53 +2856,89 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M7V-pA-mZg">
-                                <rect key="frame" x="20.666666666666657" y="92" width="361" height="649"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-Ue-Cms">
+                                <rect key="frame" x="0.0" y="62" width="402" height="729"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MacBook Air" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-ds-zie">
-                                        <rect key="frame" x="54" y="0.0" width="253" height="48"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-iF-ug9">
+                                        <rect key="frame" x="0.0" y="0.0" width="402" height="1060"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M7V-pA-mZg">
+                                                <rect key="frame" x="20.666666666666657" y="30" width="361" height="999"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MacBook Air" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-ds-zie">
+                                                        <rect key="frame" x="54" y="0.0" width="253" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="253" id="loZ-iq-bNl"/>
+                                                            <constraint firstAttribute="height" constant="48" id="s4R-Yv-A2h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbookair" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-KH-xbY">
+                                                        <rect key="frame" x="30" y="78" width="301" height="241"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="241" id="Nu1-Uj-wp1"/>
+                                                            <constraint firstAttribute="width" constant="301" id="ruK-5A-qv7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-sH-cTz">
+                                                        <rect key="frame" x="0.0" y="349" width="361" height="650"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="361" id="pk5-RL-0Rz"/>
+                                                            <constraint firstAttribute="height" constant="650" id="qf5-3t-oQk"/>
+                                                        </constraints>
+                                                        <string key="text">MacBook Air 15” на чипе M2 представляет собой тонкий, мощный и энергоэффективный ноутбук для работы и творчества. Его аппаратной основой служит чип Apple M2, оснащенный 8-ядерным CPU и 10-ядерным GPU, который обеспечивает превосходную производительность как в повседневных задачах, так и при работе с графикой, кодом или мультимедийными проектами. Neural Engine с 16 ядрами ускоряет работу функций машинного обучения, таких как обработка изображений и аудио.
+
+У MacBook Air 15” впечатляющий Liquid Retina дисплей с диагональю 15,3 дюйма, разрешением 2880 × 1864 пикселя, яркостью до 500 нит и поддержкой технологии True Tone, что делает картинку яркой и насыщенной, а глаза — менее уставшими.
+
+Корпус устройства выполнен из переработанного алюминия, что делает его не только прочным и легким (вес всего 1,5 кг), но и экологичным. Толщина ноутбука составляет всего 11,5 мм, что делает его самым тонким в своей категории.
+
+Благодаря активному охлаждению и энергоэффективности чипа M2 ноутбук работает практически бесшумно и обеспечивает до 18 часов автономной работы, что идеально подходит для длительных сессий работы или путешествий.
+
+MacBook Air 15” оснащен портами MagSafe для безопасной зарядки, двумя разъемами Thunderbolt/USB 4 и разъемом для наушников 3,5 мм. Улучшенная FaceTime HD камера с разрешением 1080p и высококачественные динамики с поддержкой пространственного звука обеспечивают превосходный опыт видеозвонков и мультимедиа.
+
+Этот ноутбук идеально подходит для студентов, профессионалов и всех, кто ценит портативность, производительность и стильный дизайн.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="253" id="loZ-iq-bNl"/>
-                                            <constraint firstAttribute="height" constant="48" id="s4R-Yv-A2h"/>
+                                            <constraint firstAttribute="height" constant="1060" id="06s-8W-bB4"/>
+                                            <constraint firstItem="M7V-pA-mZg" firstAttribute="centerX" secondItem="MFJ-iF-ug9" secondAttribute="centerX" id="B9R-Tx-Nyu"/>
+                                            <constraint firstItem="M7V-pA-mZg" firstAttribute="top" secondItem="MFJ-iF-ug9" secondAttribute="top" constant="30" id="V1w-sA-fcn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbookair" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-KH-xbY">
-                                        <rect key="frame" x="30" y="78" width="301" height="241"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="241" id="Nu1-Uj-wp1"/>
-                                            <constraint firstAttribute="width" constant="301" id="ruK-5A-qv7"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-sH-cTz">
-                                        <rect key="frame" x="0.0" y="349" width="361" height="300"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="361" id="pk5-RL-0Rz"/>
-                                            <constraint firstAttribute="height" constant="300" id="qf5-3t-oQk"/>
-                                        </constraints>
-                                        <string key="text">Большой MacBook Air построен на мощной, и в то же время энергоэффективной однокристальной системе M2 с 8-ядерным CPU и 10-ядерным GPU. За счёт этого обеспечивается и приличная автономность (18 часов). Ноутбук выполнен в ультратонком металлическом корпусе. Вы сможете брать его с собой повсюду и эффективно справляться с различными задачами. На экране IPS 15.3 дюймов отображается детализированная картинка с реалистичной передачей цветовой палитры.
-Для удобства управления в Apple MacBook Air установлены эргономичная клавиатура с подсветкой и тачпад. Акустическая система со стереодинамиками воспроизводит чистый насыщенный звук. Клавиатура с эргономичной раскладкой и белой подсветкой LED гарантирует комфортную работу в разное время суток.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="MFJ-iF-ug9" secondAttribute="trailing" id="NPL-5s-eh8"/>
+                                    <constraint firstItem="MFJ-iF-ug9" firstAttribute="top" secondItem="Gv3-Ue-Cms" secondAttribute="top" id="ha8-d0-CiI"/>
+                                    <constraint firstItem="MFJ-iF-ug9" firstAttribute="leading" secondItem="Gv3-Ue-Cms" secondAttribute="leading" id="oSs-8Z-5PB"/>
+                                    <constraint firstAttribute="bottom" secondItem="MFJ-iF-ug9" secondAttribute="bottom" id="yZp-kd-fCE"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a8O-us-ZBq"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="M7V-pA-mZg" firstAttribute="centerX" secondItem="oFv-TD-z8q" secondAttribute="centerX" id="5IU-4I-PkZ"/>
-                            <constraint firstItem="M7V-pA-mZg" firstAttribute="top" secondItem="a8O-us-ZBq" secondAttribute="top" constant="30" id="cfK-zF-0lj"/>
+                            <constraint firstItem="Gv3-Ue-Cms" firstAttribute="top" secondItem="a8O-us-ZBq" secondAttribute="top" id="HYl-z1-vCx"/>
+                            <constraint firstItem="Gv3-Ue-Cms" firstAttribute="leading" secondItem="a8O-us-ZBq" secondAttribute="leading" id="IvG-Cp-6jc"/>
+                            <constraint firstItem="Gv3-Ue-Cms" firstAttribute="bottom" secondItem="a8O-us-ZBq" secondAttribute="bottom" id="LHs-QG-2NQ"/>
+                            <constraint firstItem="Gv3-Ue-Cms" firstAttribute="top" secondItem="a8O-us-ZBq" secondAttribute="top" id="Ul7-X6-eyI"/>
+                            <constraint firstItem="MFJ-iF-ug9" firstAttribute="width" secondItem="oFv-TD-z8q" secondAttribute="width" id="bY7-oL-gcF"/>
+                            <constraint firstItem="a8O-us-ZBq" firstAttribute="trailing" secondItem="Gv3-Ue-Cms" secondAttribute="trailing" id="ur1-CS-ceb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="MacBook Air" image="macbook.gen2" catalog="system" id="T3a-5w-Up3"/>
+                    <size key="freeformSize" width="402" height="874"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1Z-oN-lXX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10540" y="-15"/>
+            <point key="canvasLocation" x="10538.805970149253" y="-15.102974828375284"/>
         </scene>
         <!--Last View Controller-->
         <scene sceneID="Tbz-Hq-x9L">
@@ -2847,8 +2955,12 @@ iPhone 15 Pro получил порт USB-C с поддержкой USB 3 и с�
                                     <constraint firstAttribute="width" constant="196" id="pgt-k6-8eX"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87N-tU-VUu">
-                                <rect key="frame" x="16" y="771" width="361" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87N-tU-VUu">
+                                <rect key="frame" x="41" y="771" width="320" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="rHl-es-uMy"/>
+                                    <constraint firstAttribute="width" constant="320" id="zfk-yc-oys"/>
+                                </constraints>
                                 <string key="text">Code, Design and Music author - Ice 
 AirDevelopment first App, 2024</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2868,12 +2980,12 @@ AirDevelopment first App, 2024</string>
                         <viewLayoutGuide key="safeArea" id="Pbr-ig-ro1"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
+                            <constraint firstItem="87N-tU-VUu" firstAttribute="centerX" secondItem="NPI-BE-n4h" secondAttribute="centerX" id="0A8-QR-PCG"/>
                             <constraint firstItem="Kiz-7k-vUa" firstAttribute="top" secondItem="QKE-xs-0zD" secondAttribute="bottom" constant="75.329999999999998" id="28g-zf-8s2"/>
-                            <constraint firstItem="87N-tU-VUu" firstAttribute="centerX" secondItem="NPI-BE-n4h" secondAttribute="centerX" id="Ojg-zn-mdp"/>
+                            <constraint firstItem="Pbr-ig-ro1" firstAttribute="bottom" secondItem="87N-tU-VUu" secondAttribute="bottom" constant="22" id="EP1-2r-CPK"/>
                             <constraint firstItem="QKE-xs-0zD" firstAttribute="centerX" secondItem="NPI-BE-n4h" secondAttribute="centerX" id="Y2o-9r-tFR"/>
                             <constraint firstItem="QKE-xs-0zD" firstAttribute="centerY" secondItem="NPI-BE-n4h" secondAttribute="centerY" id="x46-GJ-FRS"/>
                             <constraint firstItem="Kiz-7k-vUa" firstAttribute="centerX" secondItem="NPI-BE-n4h" secondAttribute="centerX" id="x7K-Pd-bg4"/>
-                            <constraint firstItem="87N-tU-VUu" firstAttribute="bottom" secondItem="Pbr-ig-ro1" secondAttribute="bottom" id="yDp-DA-sDr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -2893,10 +3005,10 @@ AirDevelopment first App, 2024</string>
                                 <rect key="frame" x="0.0" y="62" width="393" height="745"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-Ar-qBG">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="890"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rz9-wR-0AR">
-                                                <rect key="frame" x="16" y="30" width="361" height="818"/>
+                                                <rect key="frame" x="16" y="30" width="361" height="1098"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yle-lo-uvp">
                                                         <rect key="frame" x="54" y="0.0" width="253" height="48"/>
@@ -2916,15 +3028,22 @@ AirDevelopment first App, 2024</string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdm-Bw-E18">
-                                                        <rect key="frame" x="0.0" y="398" width="361" height="420"/>
+                                                        <rect key="frame" x="0.0" y="398" width="361" height="700"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="361" id="0gq-jd-lJ3"/>
-                                                            <constraint firstAttribute="height" constant="420" id="ZJF-PB-5XW"/>
+                                                            <constraint firstAttribute="height" constant="700" id="ZJF-PB-5XW"/>
                                                         </constraints>
-                                                        <string key="text">Особенность этой серии iPad Pro — уникальный чип M1, который также используется в MacBook Pro и Air, Mac mini и iMac. Уникальные технологии чипа обеспечивают высочайшую производительность, а его энергоэффективность позволяет целый день работать без подзарядки. С восьмиядерным центральным процессором можно создавать сложные модели с дополненной реальностью и играть в игры с графикой консольного уровня и высокой частотой обновления кадров.
-Дисплей Liquid Retina передаёт каждую деталь с большой реалистичностью. Он отлично подойдёт для работы с фото и видео или для просмотра любимых фильмов и сериалов, поддерживает самые передовые технологии, такие как широкий цветовой охват, True Tone и ProMotion.
-iPad Pro 11 оснащён сверхширокоугольной камерой с матрицей на 12 Мп и углом обзора в 122 градуса. Новая функция «В центре внимания» позволяет снимать выразительные селфи в портретном режиме и идеально подходит для звонков по FaceTime. Теперь, передвигаясь по комнате во время звонка, вы всегда остаётесь в центре кадра.
-Ещё одна особенность iPad Pro 11 — это Thunderbolt, самый быстрый и универсальный порт. Он поддерживает разъём USB C и позволяет подключать множество высокопроизводительных аксессуаров.</string>
+                                                        <string key="text">iPad Pro с чипом M1 — это мощный планшет, который предлагает производительность уровня настольных компьютеров. Чип Apple M1, оснащенный 8-ядерным CPU и 8-ядерным GPU, обеспечивает невероятную скорость работы приложений и обработку графики, идеально подходя для работы с видео, 3D-моделирования и игр. 16-ядерный Neural Engine ускоряет функции машинного обучения, что особенно полезно для фото- и видеомонтажа, а также профессиональных приложений.
+
+iPad Pro доступен в двух размерах: с диагональю экрана 11” и 12,9”. 11-дюймовая модель оснащена Liquid Retina дисплеем с разрешением 2388 × 1668 пикселей, яркостью 600 нит и поддержкой ProMotion, True Tone и P3. Модель с диагональю 12,9” дополнительно предлагает Liquid Retina XDR дисплей с мини-светодиодной подсветкой, контрастностью 1 000 000:1 и яркостью до 1600 нит для HDR-контента.
+
+Корпус iPad Pro выполнен из переработанного алюминия, что делает его прочным, легким и экологичным. Он весит от 466 до 682 граммов в зависимости от размера, а толщина всего 5,9 мм.
+
+Камеры на iPad Pro включают 12-Мп широкоугольный сенсор и 10-Мп ультраширокий, а также фронтальную TrueDepth камеру с поддержкой функции Center Stage, которая автоматически удерживает пользователя в кадре во время видеозвонков.
+
+iPad Pro поддерживает аксессуары Apple Pencil 2-го поколения, Magic Keyboard и Smart Keyboard Folio, превращая его в универсальный инструмент для работы и творчества.
+
+Он оснащен портом USB-C с поддержкой Thunderbolt и USB 4, что позволяет подключать внешний дисплей, хранилища и другие устройства. Автономность устройства составляет до 10 часов работы в интернете или воспроизведения видео.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2935,7 +3054,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstItem="rz9-wR-0AR" firstAttribute="centerX" secondItem="Ogv-Ar-qBG" secondAttribute="centerX" id="HfC-CM-GuV"/>
-                                            <constraint firstAttribute="height" constant="890" id="Jmw-te-dIk"/>
+                                            <constraint firstAttribute="height" constant="1150" id="Jmw-te-dIk"/>
                                             <constraint firstItem="rz9-wR-0AR" firstAttribute="top" secondItem="Ogv-Ar-qBG" secondAttribute="top" constant="30" id="udh-81-UFf"/>
                                         </constraints>
                                     </view>
@@ -2952,7 +3071,6 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="gb4-VI-hlf" firstAttribute="top" secondItem="GfE-sr-dK6" secondAttribute="top" id="3DQ-cz-uEE"/>
-                            <constraint firstItem="Ogv-Ar-qBG" firstAttribute="height" secondItem="bu9-NO-Cf5" secondAttribute="height" id="DCC-WF-3uV"/>
                             <constraint firstItem="gb4-VI-hlf" firstAttribute="leading" secondItem="GfE-sr-dK6" secondAttribute="leading" id="Hg4-af-MOT"/>
                             <constraint firstItem="gb4-VI-hlf" firstAttribute="bottom" secondItem="GfE-sr-dK6" secondAttribute="bottom" id="xR0-tb-NKB"/>
                             <constraint firstItem="gb4-VI-hlf" firstAttribute="trailing" secondItem="GfE-sr-dK6" secondAttribute="trailing" id="yVG-4z-9R9"/>
@@ -2964,83 +3082,12 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FR-Je-4BM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10538" y="687"/>
-        </scene>
-        <!--Random Gallery View Controller-->
-        <scene sceneID="gPz-ec-kMd">
-            <objects>
-                <viewController storyboardIdentifier="RandomGallery" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="iwg-JD-0L1" customClass="RandomGalleryViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nJZ-ij-1xD">
-                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrV-8W-27A">
-                                <rect key="frame" x="54.333333333333343" y="142" width="293.66666666666663" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oWC-6C-E2B">
-                                <rect key="frame" x="41" y="277" width="320" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="BiU-S7-Xca"/>
-                                    <constraint firstAttribute="height" constant="320" id="qo5-3U-mpL"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YG-h4-7tC">
-                                <rect key="frame" x="100" y="785" width="203" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Создать изображение"/>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGg-yY-4ka">
-                                <rect key="frame" x="63" y="605" width="276" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL9-aZ-e7e">
-                                <rect key="frame" x="81" y="401.33333333333331" width="240" height="71.666666666666686"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="AKt-9f-BM5"/>
-                                </constraints>
-                                <string key="text">Пустовато тут...
-Попробуй выбрать тему и создать картинку!</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xN1-vL-wVO">
-                                <rect key="frame" x="182.66666666666666" y="418.66666666666669" width="37" height="37"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ycy-9L-HAP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="wrV-8W-27A" firstAttribute="top" secondItem="ycy-9L-HAP" secondAttribute="top" constant="80" id="1Hm-oN-czD"/>
-                            <constraint firstItem="xN1-vL-wVO" firstAttribute="centerY" secondItem="nJZ-ij-1xD" secondAttribute="centerY" id="84x-EH-WQi"/>
-                            <constraint firstItem="oWC-6C-E2B" firstAttribute="centerX" secondItem="nJZ-ij-1xD" secondAttribute="centerX" id="9bI-mb-2xY"/>
-                            <constraint firstItem="wrV-8W-27A" firstAttribute="centerX" secondItem="nJZ-ij-1xD" secondAttribute="centerX" id="Arn-37-NEd"/>
-                            <constraint firstItem="DL9-aZ-e7e" firstAttribute="centerX" secondItem="nJZ-ij-1xD" secondAttribute="centerX" id="OnJ-cu-vO5"/>
-                            <constraint firstItem="oWC-6C-E2B" firstAttribute="centerY" secondItem="nJZ-ij-1xD" secondAttribute="centerY" id="feX-4A-LD9"/>
-                            <constraint firstItem="DL9-aZ-e7e" firstAttribute="centerY" secondItem="nJZ-ij-1xD" secondAttribute="centerY" id="mIU-0B-Whw"/>
-                            <constraint firstItem="xN1-vL-wVO" firstAttribute="centerX" secondItem="nJZ-ij-1xD" secondAttribute="centerX" id="tEZ-Oy-1iI"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="jkG-Wh-9yl"/>
-                    <connections>
-                        <outlet property="imageView" destination="oWC-6C-E2B" id="Rdk-nH-5bl"/>
-                        <outlet property="loadingIndicator" destination="xN1-vL-wVO" id="OBF-7N-aNl"/>
-                        <outlet property="startTextLabel" destination="DL9-aZ-e7e" id="1LL-Qz-Nje"/>
-                        <outlet property="themePicker" destination="kGg-yY-4ka" id="x9M-jV-aNi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8yF-3k-7Zh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-310" y="-1098"/>
+            <point key="canvasLocation" x="10546" y="785"/>
         </scene>
         <!--LifeDays-->
         <scene sceneID="w7Q-UD-Raw">
             <objects>
-                <viewController id="BpN-3m-g5k" customClass="LifeDaysOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lifedays" id="BpN-3m-g5k" customClass="LifeDaysOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tv4-wo-Him">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3259,7 +3306,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <!-- Напоминания-->
         <scene sceneID="IDT-bM-j0f">
             <objects>
-                <tableViewController id="Ota-Ge-bu2" customClass="RemindersController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="reminders" id="Ota-Ge-bu2" customClass="RemindersController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7fq-pV-AT2">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3284,13 +3331,13 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <!--Names Comp One-->
         <scene sceneID="C9g-IP-zJi">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Cxj-Qo-8Pm" customClass="NamesCompOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="names" modalPresentationStyle="fullScreen" id="Cxj-Qo-8Pm" customClass="NamesCompOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGm-Cs-R4U">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MU5-Xq-Qfu">
-                                <rect key="frame" x="30" y="294" width="342" height="98"/>
+                                <rect key="frame" x="30" y="250" width="342" height="98"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-Uj-c6j">
                                         <rect key="frame" x="0.0" y="0.0" width="161" height="98"/>
@@ -3333,13 +3380,13 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Names Compatibility" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvo-Bg-ksA">
-                                <rect key="frame" x="72" y="206" width="258" height="48"/>
+                                <rect key="frame" x="72" y="162" width="258" height="48"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQg-4E-Ppg">
-                                <rect key="frame" x="131" y="432" width="140" height="40"/>
+                                <rect key="frame" x="131" y="388" width="140" height="40"/>
                                 <color key="backgroundColor" red="0.71170816589999997" green="0.58286859069999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZO1-87-REl"/>
@@ -3360,7 +3407,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previously compared: none" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEt-DN-JoQ">
-                                <rect key="frame" x="98.000000000000014" y="532" width="206.33333333333337" height="20.333333333333371"/>
+                                <rect key="frame" x="98.000000000000014" y="488" width="206.33333333333337" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -3403,7 +3450,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="r4n-Ko-WZu">
-                                <rect key="frame" x="51" y="206" width="300" height="254"/>
+                                <rect key="frame" x="51" y="100" width="300" height="254"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compatibility of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJe-7a-wUl">
                                         <rect key="frame" x="51.333333333333329" y="0.0" width="197.33333333333337" height="48"/>
@@ -3418,7 +3465,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1dy-Ea-dGU">
-                                        <rect key="frame" x="0.0" y="129.66666666666669" width="300" height="4"/>
+                                        <rect key="frame" x="0.0" y="129.66666666666666" width="300" height="4"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="0M6-w6-GFF"/>
                                         </constraints>
@@ -3476,7 +3523,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <!--Dice-->
         <scene sceneID="1kd-6N-ck9">
             <objects>
-                <viewController id="ksI-Kh-8DS" customClass="DiceGameViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dice" id="ksI-Kh-8DS" customClass="DiceGameViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBX-Ip-ekB">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3686,7 +3733,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLE-9V-Sdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.3282442748091" y="1440.1408450704225"/>
+            <point key="canvasLocation" x="2594" y="1260"/>
         </scene>
         <!--Quiz Question View Controller-->
         <scene sceneID="S0b-Pb-GcK">
@@ -3891,7 +3938,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3c-5I-d3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3261.8320610687019" y="1440.1408450704225"/>
+            <point key="canvasLocation" x="3309" y="1260"/>
         </scene>
         <!--Quiz Result View Controller-->
         <scene sceneID="OCM-zn-lhH">
@@ -3961,22 +4008,9 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIh-sU-gbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3998" y="1440"/>
+            <point key="canvasLocation" x="4045" y="1260"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="SeH-4i-1GB"/>
-        <segue reference="heY-fc-Px2"/>
-        <segue reference="jm8-1q-IqW"/>
-        <segue reference="jr4-p0-7wk"/>
-        <segue reference="Qz3-Dm-1Iz"/>
-        <segue reference="dTw-ut-Yot"/>
-        <segue reference="m3v-1h-e25"/>
-        <segue reference="ybc-Ov-phu"/>
-        <segue reference="znN-Uv-W0i"/>
-        <segue reference="Pkb-dO-mdq"/>
-        <segue reference="4Qu-IZ-b23"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="AD" width="1024" height="1024"/>
         <image name="AD Fade" width="1144" height="1144"/>
@@ -4001,7 +4035,7 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <image name="ipadpro" width="780" height="881"/>
         <image name="iphone" catalog="system" width="112" height="128"/>
         <image name="iphone.slash" catalog="system" width="112" height="128"/>
-        <image name="iphone15pro" width="464" height="558"/>
+        <image name="iphone16pro" width="1699" height="1699"/>
         <image name="keyboard" catalog="system" width="128" height="78"/>
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="mac" width="100" height="100"/>
@@ -4018,6 +4052,9 @@ iPad Pro 11 оснащён сверхширокоугольной камерой
         <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <image name="theatre" width="100" height="78"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="DEDEDE">
+            <color red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="primary">
             <color red="0.33725490196078434" green="0.49803921568627452" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
