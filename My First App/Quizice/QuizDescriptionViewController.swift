@@ -14,24 +14,20 @@ class QuizDescriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        themeName.text = chosenTheme.name
-        themeDescription.text = chosenTheme.description
+        themeName.text = QuizFactory.shared.chosenTheme.name
+        themeDescription.text = QuizFactory.shared.chosenTheme.description
     }
     
-    @IBAction func startButtonTapped() {
-        chosenThemeQuestionsArray = Array(chosenTheme.questionsAndAnswers.keys).shuffled()
-        questionsToComplete = chosenThemeQuestionsArray.count
-        questionCount = 0
-        correctAnswers = 0
-        currentProgress = 0.2
+    @IBAction private func startButtonTapped() {
+        QuizFactory.shared.loadQuestions()
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizQuestionID")
         self.present(vc, animated: true)
     }
     
     
-    @IBAction func backButtonTapped() {
+    @IBAction private func backButtonTapped() {
         dismiss(animated: true)
     }
-    
 }

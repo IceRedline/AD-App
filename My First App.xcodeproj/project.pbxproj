@@ -60,8 +60,8 @@
 		99A96A032D242A67009CE917 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A022D242A67009CE917 /* ThemeModel.swift */; };
 		99A96A092D247840009CE917 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A082D247840009CE917 /* QuizViewController.swift */; };
 		99A96A0B2D24786D009CE917 /* QuizDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A0A2D24786D009CE917 /* QuizDescriptionViewController.swift */; };
-		99A96A0F2D2478B1009CE917 /* QuizClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A0E2D2478B1009CE917 /* QuizClasses.swift */; };
 		99A96A112D247BFD009CE917 /* QuizQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A102D247BFD009CE917 /* QuizQuestionViewController.swift */; };
+		99A96A132D25577A009CE917 /* QuizFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A96A122D25577A009CE917 /* QuizFactory.swift */; };
 		99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */; };
 		99AB36F72BC5C18B00C5E520 /* NamesCompOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */; };
 		99C44D002D0F2DC000A7A7C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99C44CFF2D0F2DC000A7A7C0 /* IQKeyboardManagerSwift */; };
@@ -126,8 +126,8 @@
 		99A96A022D242A67009CE917 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		99A96A082D247840009CE917 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		99A96A0A2D24786D009CE917 /* QuizDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDescriptionViewController.swift; sourceTree = "<group>"; };
-		99A96A0E2D2478B1009CE917 /* QuizClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizClasses.swift; sourceTree = "<group>"; };
 		99A96A102D247BFD009CE917 /* QuizQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestionViewController.swift; sourceTree = "<group>"; };
+		99A96A122D25577A009CE917 /* QuizFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizFactory.swift; sourceTree = "<group>"; };
 		99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompTwo.swift; sourceTree = "<group>"; };
 		99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompOne.swift; sourceTree = "<group>"; };
 		99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQTestViewController.swift; sourceTree = "<group>"; };
@@ -295,10 +295,10 @@
 			isa = PBXGroup;
 			children = (
 				99A96A022D242A67009CE917 /* ThemeModel.swift */,
-				99A96A0E2D2478B1009CE917 /* QuizClasses.swift */,
+				99A96A122D25577A009CE917 /* QuizFactory.swift */,
 				99A96A082D247840009CE917 /* QuizViewController.swift */,
-				99A96A102D247BFD009CE917 /* QuizQuestionViewController.swift */,
 				99A96A0A2D24786D009CE917 /* QuizDescriptionViewController.swift */,
+				99A96A102D247BFD009CE917 /* QuizQuestionViewController.swift */,
 				99F959992CB437C7001BF337 /* QuizResultViewController.swift */,
 			);
 			path = Quizice;
@@ -414,9 +414,9 @@
 				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
 				993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */,
 				99A96A092D247840009CE917 /* QuizViewController.swift in Sources */,
-				99A96A0F2D2478B1009CE917 /* QuizClasses.swift in Sources */,
 				99A96A0B2D24786D009CE917 /* QuizDescriptionViewController.swift in Sources */,
 				9993052F2D06BCBA00E8651D /* AnimationTestViewController.swift in Sources */,
+				99A96A132D25577A009CE917 /* QuizFactory.swift in Sources */,
 				9925D88C2D11A8CD0097A325 /* Contacts2TableViewController.swift in Sources */,
 				996E7A122D0D7EBC0065F873 /* Animations.swift in Sources */,
 				991F2B4D2D216EE4002D992C /* AlbumModel.swift in Sources */,

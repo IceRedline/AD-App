@@ -14,9 +14,9 @@ class QuizResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        resultLabel.text = "Твой результат:\n \(correctAnswers)/\(questionCount)"
-        switch correctAnswers {
+        
+        resultLabel.text = "Твой результат:\n \(QuizFactory.shared.correctAnswers)/\(QuizFactory.shared.questionCount)"
+        switch QuizFactory.shared.correctAnswers {
         case 0:
             resultDescription.text = "Эм..."
         case 1:

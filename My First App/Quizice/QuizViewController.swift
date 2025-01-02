@@ -15,41 +15,38 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func showVC() {
+    private func showVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
         self.present(vc, animated: true)
     }
     
-    @IBAction func themeButtonTouchedDown(_ sender: UIButton) {
+    @IBAction private func themeButtonTouchedDown(_ sender: UIButton) {
         animationsEngine.animateDownFloat(sender)
     }
     
-    @IBAction func themeButtonTouchedUpInside(_ sender: UIButton) {
+    @IBAction private func themeButtonTouchedUpInside(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            animationsEngine.animateUpFloat(sender)
-            chosenTheme = chosenMusicTheme
+            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "music")
         case 2:
-            animationsEngine.animateUpFloat(sender)
-            chosenTheme = chosenTechTheme
+            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "tech")
         case 3:
-            animationsEngine.animateUpFloat(sender)
-            chosenTheme = chosenHistoryTheme
+            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "history")
         case 4:
-            animationsEngine.animateUpFloat(sender)
-            chosenTheme = chosenPoliticsTheme
+            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "politics")
         default:
             break
         }
+        QuizFactory.shared.resetProgress()
         showVC()
     }
     
-    @IBAction func themeButtonTouchedUpOutside(_ sender: UIButton) {
+    @IBAction private func themeButtonTouchedUpOutside(_ sender: UIButton) {
         animationsEngine.animateUpFloat(sender)
     }
     
-    @IBAction func backButtonTapped() {
+    @IBAction private func backButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Navigation")
         self.present(vc, animated: true)
