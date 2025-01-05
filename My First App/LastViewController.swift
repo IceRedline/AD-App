@@ -13,7 +13,7 @@ class LastViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func BackButton(_ sender: UIButton) {
+    @IBAction private func BackButton(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
         // self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }

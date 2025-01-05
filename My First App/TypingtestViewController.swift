@@ -7,19 +7,17 @@
 
 import UIKit
 
-var text = ""
-var textArray = [String]()
-
 class TestViewController: UIViewController {
     
-    var timer = Timer()
-    var startTime = Date()
+    @IBOutlet private weak var generateButton: UIButton!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var errorLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
-    @IBOutlet weak var generateButton: UIButton!
-    @IBOutlet weak var textLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var resultLabel: UILabel!
+    private var text = ""
+    private var textArray = [String]()
+    private var startTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,27 +27,25 @@ class TestViewController: UIViewController {
                 let attributedString = try NSAttributedString(url: fileURL, options: [.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
                 text = attributedString.string
                 textArray = text.components(separatedBy: "\n")
-                print(textArray[0])
             } catch {
                 print("Error reading RTF file: \(error.localizedDescription)")
             }
         } else {
             print("File not found.")
         }
-        
     }
     
-    @IBAction func textGeneratorTapped() {
+    @IBAction private func textGeneratorTapped() {
         textField.isEnabled = true
         generateButton.setTitle("Другой текст", for: .normal)
-        textLabel.text = textArray[Int.random(in: 0...8)]
+        textLabel.text = textArray[Int.random(in: 0..<textArray.count)]
     }
     
-    @IBAction func editingBegan() {
+    @IBAction private func editingBegan() {
         startTime = Date()
     }
     
-    @IBAction func textFieldChanged() {
+    @IBAction private func textFieldChanged() {
         if textLabel.text!.contains(textField.text!) {
             errorLabel.text = "Typing test"
             textLabel.textColor = UIColor.label
