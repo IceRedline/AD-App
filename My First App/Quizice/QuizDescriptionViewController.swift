@@ -26,7 +26,6 @@ class QuizDescriptionViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    
     @IBAction private func backButtonTapped() {
         dismiss(animated: true)
     }

@@ -7,11 +7,10 @@
 
 import UIKit
 
-//var timer: Timer!
-//var progress: Float = 1.0
-
 class QuizQuestionViewController: UIViewController {
     
+    // MARK: - IBOutlet Properties
+
     @IBOutlet weak var themeName: UILabel!
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var question: UILabel!
@@ -22,26 +21,84 @@ class QuizQuestionViewController: UIViewController {
     @IBOutlet weak var answer4: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    // MARK: - Properties
+    
     var questionButtons: Array<UIButton>?
     let notificationFeedback = UINotificationFeedbackGenerator()
+    private var timer: Timer?
+    private var remainingTime: TimeInterval = 40.0
+    private let totalTime: TimeInterval = 40.0
+    private let QF = QuizFactory.shared
+    
+    // MARK: - viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadQuestion()
+    }
+    
+    // MARK: - Timer methods
+    
+    private func startTimer() {
+        timer?.invalidate() // Убедитесь, что предыдущий таймер сброшен
+        remainingTime = totalTime
+        timerBar.progress = 1.0 // Начальное значение прогрессбара
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
+            self.remainingTime -= 0.1
+            self.timerBar.progress = Float(self.remainingTime / self.totalTime)
+            
+            if self.remainingTime <= 0 {
+                self.timer?.invalidate()
+                self.timer = nil
+                self.timeExpired()
+            }
+        }
+    }
+    
+    private func timeExpired() {
+        colorButtons()
+        notificationFeedback.notificationOccurred(.error)
+        QF.updateQuizState(isCorrect: false)
+        nextButton.isEnabled = true
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    // MARK: - Methods
+    
+    private func colorButtons() {
+        questionButtons?.forEach() { button in
+            button.isEnabled = false
+            if QF.checkAnswer(selectedAnswer: button) {
+                button.setTitleColor(.white, for: .disabled)
+                button.backgroundColor = .correctAnswerButton
+            } else {
+                button.backgroundColor = .wrongAnswerButton
+            }
+        }
+    }
+    
+    private func loadQuestion() {
         questionButtons = [answer1, answer2, answer3, answer4]
         questionButtons?.forEach() { button in
-            button.backgroundColor = UIColor(red: 31/255.0, green: 40/255.0, blue: 59/255.0, alpha: 1.0)
+            button.backgroundColor = .defaultButton
             button.setTitleColor(.gray, for: .disabled)
             button.isEnabled = true
         }
         timerBar.tintColor = .systemBlue
-        timerBar.progress = Float(QuizFactory.shared.currentProgress)
-        
-        themeName.text = QuizFactory.shared.chosenTheme.name
         question.textColor = .white
-        QuizFactory.shared.currentQuestion = QuizFactory.shared.chosenThemeQuestionsArray[0]
-        question.text = QuizFactory.shared.currentQuestion
-        var currentAnswers = QuizFactory.shared.chosenTheme.questionsAndAnswers[QuizFactory.shared.currentQuestion]!.shuffled()
+        timerBar.progress = Float(QF.currentProgress)
         
+        themeName.text = QF.chosenTheme.name
+        QF.currentQuestion = QF.chosenThemeQuestionsArray[0]
+        question.text = QF.currentQuestion
+        var currentAnswers = QF.chosenTheme.questionsAndAnswers[QF.currentQuestion]!.shuffled()
         
         while !currentAnswers.isEmpty {
             questionButtons?.forEach() { button in
@@ -50,72 +107,51 @@ class QuizQuestionViewController: UIViewController {
             }
         }
         
-        questionNumber.text = "Вопрос №\(QuizFactory.shared.questionCount + 1)"
+        questionNumber.text = "Вопрос №\(QF.questionCount + 1)"
         nextButton.isEnabled = false
-        
-        //timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+        startTimer()
     }
     
+    private func showResultsController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
+        self.present(vc, animated: true)
+    }
     
-    /* ДОДЕЛАТЬ ПОСЛЕ ВСЕГО ОСТАЛЬНОГО
-     @objc func updateProgress() {
-     // Обновляем значение progress и проверяем завершение
-     if progress > 0 {
-     progress -= 0.01
-     timerBar.progress = progress
-     } else {
-     timer.invalidate()
-     answer1.isEnabled = false
-     answer2.isEnabled = false
-     answer3.isEnabled = false
-     answer4.isEnabled = false
-     }
-     }
-     */
+    // MARK: - IBAction Methods
     
     @IBAction func answerChosen(_ sender: UIButton) {
-            
-            let isCorrect = QuizFactory.shared.checkAnswer(selectedAnswer: sender)
-            
-            questionButtons?.forEach() { button in
-                button.isEnabled = false
-                if QuizFactory.shared.checkAnswer(selectedAnswer: button) {
-                    button.setTitleColor(.white, for: .disabled)
-                    button.backgroundColor = .correctAnswerButton
-                } else {
-                    button.backgroundColor = .wrongAnswerButton
-                }
-            }
-            
-            if isCorrect {
-                notificationFeedback.notificationOccurred(.success)
-                timerBar.tintColor = .correctAnswerBar
-            } else {
-                notificationFeedback.notificationOccurred(.error)
-                timerBar.tintColor = .wrongAnswerBar
-            }
-            
-            QuizFactory.shared.updateQuizState(isCorrect: isCorrect)
-            nextButton.isEnabled = true
-        }
-    
-    @IBAction func nextButtonTapped() {
-        if QuizFactory.shared.questionCount == QuizFactory.shared.questionsToComplete {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
-            self.present(vc, animated: true)
-            QuizFactory.shared.chosenThemeQuestionsArray.remove(at: 0)
+        let isCorrect = QF.checkAnswer(selectedAnswer: sender)
+        
+        colorButtons()
+        
+        if isCorrect {
+            notificationFeedback.notificationOccurred(.success)
+            timerBar.tintColor = .correctAnswerBar
         } else {
-            QuizFactory.shared.chosenThemeQuestionsArray.remove(at: 0)
-            viewDidLoad()
+            notificationFeedback.notificationOccurred(.error)
+            timerBar.tintColor = .wrongAnswerBar
         }
         
+        QF.updateQuizState(isCorrect: isCorrect)
+        nextButton.isEnabled = true
+        
+        stopTimer()
     }
     
+    @IBAction func nextButtonTapped() {
+        if QF.questionCount == QF.questionsToComplete {
+            showResultsController()
+            QF.chosenThemeQuestionsArray.remove(at: 0)
+        } else {
+            QF.chosenThemeQuestionsArray.remove(at: 0)
+            loadQuestion()
+        }
+    }
     
     @IBAction func backButtonTapped() {
         dismiss(animated: true)
-        QuizFactory.shared.resetProgress()
+        QF.resetProgress()
     }
     
 }

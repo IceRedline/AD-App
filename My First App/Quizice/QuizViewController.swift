@@ -26,19 +26,7 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction private func themeButtonTouchedUpInside(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "music")
-        case 2:
-            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "tech")
-        case 3:
-            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "history")
-        case 4:
-            QuizFactory.shared.loadTheme(&QuizFactory.shared.chosenTheme, themeName: "politics")
-        default:
-            break
-        }
-        QuizFactory.shared.resetProgress()
+        QuizFactory.shared.loadTheme(sender.tag)
         showVC()
     }
     
@@ -46,11 +34,20 @@ class QuizViewController: UIViewController {
         animationsEngine.animateUpFloat(sender)
     }
     
+    @IBAction private func progressButtonTapped() {
+        let alert = UIAlertController(
+            title: "Ой!",
+            message: "Этой страницы пока нету",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "ОК", style: .default))
+        present(alert, animated: true)
+    }
+    
     @IBAction private func backButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Navigation")
         self.present(vc, animated: true)
     }
-    
     
 }
