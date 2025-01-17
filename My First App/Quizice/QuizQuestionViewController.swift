@@ -24,7 +24,9 @@ class QuizQuestionViewController: UIViewController {
     // MARK: - Properties
     
     var questionButtons: Array<UIButton>?
-    let notificationFeedback = UINotificationFeedbackGenerator()
+    private let notificationFeedback = UINotificationFeedbackGenerator()
+    private let animationsEngine = Animations()
+    private let animationsDuration: Double = 0.15
     private var timer: Timer?
     private var remainingTime: TimeInterval = 40.0
     private let totalTime: TimeInterval = 40.0
@@ -43,6 +45,7 @@ class QuizQuestionViewController: UIViewController {
         timer?.invalidate() // Убедитесь, что предыдущий таймер сброшен
         remainingTime = totalTime
         timerBar.progress = 1.0 // Начальное значение прогрессбара
+        timerBar.tintColor = .systemBlue
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { [weak self] _ in
             guard let self = self else { return }
@@ -77,9 +80,9 @@ class QuizQuestionViewController: UIViewController {
             button.isEnabled = false
             if QF.checkAnswer(selectedAnswer: button) {
                 button.setTitleColor(.white, for: .disabled)
-                button.backgroundColor = .correctAnswerButton
+                animationsEngine.animateBackgroundColor(button, color: UIColor.correctAnswerButton.cgColor, duration: animationsDuration)
             } else {
-                button.backgroundColor = .wrongAnswerButton
+                animationsEngine.animateBackgroundColor(button, color: UIColor.wrongAnswerButton.cgColor, duration: animationsDuration)
             }
         }
     }
@@ -91,7 +94,7 @@ class QuizQuestionViewController: UIViewController {
             button.setTitleColor(.gray, for: .disabled)
             button.isEnabled = true
         }
-        timerBar.tintColor = .systemBlue
+        
         question.textColor = .white
         timerBar.progress = Float(QF.currentProgress)
         
@@ -127,10 +130,10 @@ class QuizQuestionViewController: UIViewController {
         
         if isCorrect {
             notificationFeedback.notificationOccurred(.success)
-            timerBar.tintColor = .correctAnswerBar
+            animationsEngine.animateTintColor(timerBar, color: .correctAnswerBar, duration: animationsDuration)
         } else {
             notificationFeedback.notificationOccurred(.error)
-            timerBar.tintColor = .wrongAnswerBar
+            animationsEngine.animateTintColor(timerBar, color: .wrongAnswerBar, duration: animationsDuration)
         }
         
         QF.updateQuizState(isCorrect: isCorrect)

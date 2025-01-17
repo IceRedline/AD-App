@@ -9,17 +9,20 @@ import UIKit
 
 class Contacts2TableViewController: UITableViewController {
     
-    private var people: [Person] = [Person(name: "Артём", phoneNumber: "+7 (906) 093-22-50", image: UIImage(named: "Artyom.jpeg")),
-                            Person(name: "Ярослав", phoneNumber: "+7 (963) 630-63-29", image: UIImage(named: "An.jpg")),
-                            Person(name: "Дмитрий", phoneNumber: "+7 (925) 380-18-59", image: UIImage(named: "Dima.jpg")),
-                            Person(name: "Георгий", phoneNumber: "+7 (903) 397-14-31", image: UIImage(named: "george.jpg"))]
+    private var people: [Person] = []
+    private var peopleLoader = PeopleLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        peopleLoader.loadContacts(arrayToFill: &people)
     }
     
     @IBAction private func addButtonPressed(_ sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Введите имя и номер", message: "Введите имя и номер контакта, который хотите добавить", preferredStyle: .alert)
+        let alertController = UIAlertController(
+            title: "Введите имя и номер",
+            message: "Введите имя и номер контакта, который хотите добавить",
+            preferredStyle: .alert
+        )
         alertController.addTextField() { textField in
             textField.placeholder = "Имя"
         }

@@ -20,46 +20,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AD Fade" translatesAutoresizingMaskIntoConstraints="NO" id="gek-db-Yyl">
-                                <rect key="frame" x="91" y="325.66666666666669" width="220" height="223.00000000000006"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="EBu-zB-E0y"/>
-                                    <constraint firstAttribute="height" constant="223" id="UaF-na-c9Z"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AD" translatesAutoresizingMaskIntoConstraints="NO" id="I5N-d4-Mpl">
-                                <rect key="frame" x="103" y="337.66666666666669" width="196" height="199.00000000000006"/>
+                                <rect key="frame" x="86" y="322" width="230" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="199" id="373-il-gt5"/>
-                                    <constraint firstAttribute="width" constant="196" id="ob9-ca-7Qo"/>
+                                    <constraint firstAttribute="height" constant="230" id="373-il-gt5"/>
+                                    <constraint firstAttribute="width" constant="230" id="ob9-ca-7Qo"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YqK-CM-Ysg">
-                                <rect key="frame" x="49" y="186" width="304" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8o-7F-tul">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6do-a2-jGF">
-                                        <rect key="frame" x="152" y="0.0" width="152" height="30"/>
-                                        <color key="tintColor" name="primary"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Tap to see &quot;Welcome&quot;"/>
-                                        <connections>
-                                            <action selector="welcomeButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="jIh-cg-llZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="304" id="4LO-B4-vyF"/>
-                                    <constraint firstAttribute="height" constant="30" id="fPC-0R-6tQ"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4em-5h-MvX">
-                                <rect key="frame" x="342.66666666666669" y="86" width="43.333333333333314" height="34.333333333333343"/>
+                                <rect key="frame" x="336" y="86" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Neq-XX-0lr"/>
+                                    <constraint firstAttribute="height" constant="50" id="qP4-8j-tLQ"/>
+                                </constraints>
+                                <color key="tintColor" name="primary"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
                                 <connections>
@@ -67,7 +41,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soundtrack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-Hg-NP2">
-                                <rect key="frame" x="238.66666666666666" y="93" width="90.333333333333343" height="20.333333333333329"/>
+                                <rect key="frame" x="232.00000000000003" y="101" width="90.333333333333343" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -176,59 +150,71 @@
                                     <segue destination="hl8-LX-FPP" kind="show" id="h7f-HJ-rR5"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="hNw-ZK-jyA">
-                                <rect key="frame" x="86" y="266" width="230" height="34.333333333333314"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-DX-ih9">
-                                        <rect key="frame" x="0.0" y="0.0" width="109" height="34.333333333333336"/>
-                                        <color key="tintColor" name="primary"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Animations"/>
-                                        <connections>
-                                            <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpInside" id="GLb-7v-8BG"/>
-                                            <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpOutside" id="WqP-Jt-x4d"/>
-                                            <action selector="animationsButtonTapped:" destination="JsT-y9-wIm" eventType="touchDown" id="Bn0-Dn-kgQ"/>
-                                            <segue destination="e8k-Va-nOx" kind="show" id="nU0-j4-Rm4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpJ-FK-vOy">
-                                        <rect key="frame" x="121" y="0.0" width="109" height="34.333333333333336"/>
-                                        <color key="tintColor" name="primary"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
-                                        <connections>
-                                            <action selector="galleryButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="Bd3-j8-Scj"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6do-a2-jGF">
+                                <rect key="frame" x="210" y="183.33333333333334" width="152" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4aa-GG-rOW"/>
+                                    <constraint firstAttribute="width" constant="152" id="iwV-XD-e6N"/>
+                                </constraints>
+                                <color key="tintColor" name="primary"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Tap to see &quot;Welcome&quot;"/>
+                                <connections>
+                                    <action selector="welcomeButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="jIh-cg-llZ"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8o-7F-tul">
+                                <rect key="frame" x="50" y="183.33333333333334" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="fOi-SX-t73"/>
+                                    <constraint firstAttribute="height" constant="30" id="qNv-6M-8ze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-DX-ih9">
+                                <rect key="frame" x="137" y="265.66666666666669" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="2jK-7b-4c1"/>
+                                    <constraint firstAttribute="height" constant="30" id="zig-z2-cgl"/>
+                                </constraints>
+                                <color key="tintColor" name="primary"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Animations"/>
+                                <connections>
+                                    <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpInside" id="GLb-7v-8BG"/>
+                                    <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpOutside" id="WqP-Jt-x4d"/>
+                                    <action selector="animationsButtonTapped:" destination="JsT-y9-wIm" eventType="touchDown" id="Bn0-Dn-kgQ"/>
+                                    <segue destination="e8k-Va-nOx" kind="show" id="nU0-j4-Rm4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EhP-mX-Epy"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Ezk-rJ-G5i" firstAttribute="leading" secondItem="EhP-mX-Epy" secondAttribute="leading" constant="40" id="0Rr-tH-uaH"/>
-                            <constraint firstItem="bG0-Hg-NP2" firstAttribute="top" secondItem="D4A-12-DMm" secondAttribute="top" constant="93" id="AA6-Pl-yn5"/>
+                            <constraint firstItem="I5N-d4-Mpl" firstAttribute="top" secondItem="1fP-DX-ih9" secondAttribute="bottom" constant="26.329999999999998" id="8Jz-ci-rJL"/>
                             <constraint firstItem="4em-5h-MvX" firstAttribute="leading" secondItem="bG0-Hg-NP2" secondAttribute="trailing" constant="13.67" id="DIG-Vs-n31"/>
-                            <constraint firstItem="YqK-CM-Ysg" firstAttribute="top" secondItem="EhP-mX-Epy" secondAttribute="top" constant="80" id="EkB-OF-cmo"/>
-                            <constraint firstItem="hNw-ZK-jyA" firstAttribute="top" secondItem="YqK-CM-Ysg" secondAttribute="bottom" constant="50" id="Gsg-Ch-l9s"/>
+                            <constraint firstItem="Ye7-nV-MFc" firstAttribute="top" secondItem="I5N-d4-Mpl" secondAttribute="bottom" constant="46.670000000000002" id="IPD-vy-ZQq"/>
+                            <constraint firstItem="bG0-Hg-NP2" firstAttribute="centerY" secondItem="4em-5h-MvX" secondAttribute="centerY" id="Jee-sm-FLX"/>
                             <constraint firstItem="EhP-mX-Epy" firstAttribute="trailing" secondItem="4em-5h-MvX" secondAttribute="trailing" constant="16" id="OGI-nh-Tjt"/>
                             <constraint firstItem="I5N-d4-Mpl" firstAttribute="centerY" secondItem="D4A-12-DMm" secondAttribute="centerY" id="W4F-PO-1tk"/>
-                            <constraint firstItem="Ye7-nV-MFc" firstAttribute="top" secondItem="gek-db-Yyl" secondAttribute="bottom" constant="50" id="bMt-m7-qir"/>
+                            <constraint firstItem="EhP-mX-Epy" firstAttribute="trailing" secondItem="6do-a2-jGF" secondAttribute="trailing" constant="40" id="Xy0-36-GVU"/>
+                            <constraint firstItem="6do-a2-jGF" firstAttribute="top" secondItem="bG0-Hg-NP2" secondAttribute="bottom" constant="62.000000000000014" id="d7I-S7-JGq"/>
                             <constraint firstItem="Ye7-nV-MFc" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="e8S-YO-Zfm"/>
                             <constraint firstItem="EhP-mX-Epy" firstAttribute="trailing" secondItem="Ezk-rJ-G5i" secondAttribute="trailing" constant="21.670000000000002" id="gYj-sc-yQA"/>
                             <constraint firstItem="EhP-mX-Epy" firstAttribute="bottom" secondItem="Ezk-rJ-G5i" secondAttribute="bottom" constant="25" id="h18-4k-fTP"/>
+                            <constraint firstItem="q8o-7F-tul" firstAttribute="leading" secondItem="EhP-mX-Epy" secondAttribute="leading" constant="50" id="iSR-WS-DVA"/>
                             <constraint firstItem="I5N-d4-Mpl" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="j0b-5V-v4w"/>
-                            <constraint firstItem="gek-db-Yyl" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="nAs-ad-Gms"/>
-                            <constraint firstItem="gek-db-Yyl" firstAttribute="centerY" secondItem="D4A-12-DMm" secondAttribute="centerY" id="nHm-Ug-Nvk"/>
                             <constraint firstItem="4em-5h-MvX" firstAttribute="top" secondItem="D4A-12-DMm" secondAttribute="top" constant="86" id="ovA-sh-mli"/>
-                            <constraint firstItem="hNw-ZK-jyA" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="qrE-l0-dLh"/>
-                            <constraint firstItem="YqK-CM-Ysg" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="y0f-fU-wCG"/>
+                            <constraint firstItem="q8o-7F-tul" firstAttribute="centerY" secondItem="6do-a2-jGF" secondAttribute="centerY" id="sB4-nP-chq"/>
+                            <constraint firstItem="1fP-DX-ih9" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="yLl-Np-5k7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6aF-XP-HbI"/>
                     <connections>
-                        <outlet property="logo1" destination="I5N-d4-Mpl" id="fqt-uh-yj1"/>
-                        <outlet property="logo2" destination="gek-db-Yyl" id="ryu-Zb-jbj"/>
+                        <outlet property="logo" destination="I5N-d4-Mpl" id="fqt-uh-yj1"/>
                         <outlet property="musicButton" destination="4em-5h-MvX" id="2D0-zh-UBL"/>
                         <outlet property="welcomeButton" destination="6do-a2-jGF" id="JIo-pQ-CoC"/>
                         <outlet property="welcomeLabel" destination="q8o-7F-tul" id="MRg-yZ-boP"/>
@@ -1521,8 +1507,6 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                 <color key="tintColor" name="primary"/>
                                                 <connections>
                                                     <action selector="volumeSliderChanged:" destination="vMd-Fg-qdi" eventType="valueChanged" id="G52-ze-CPg"/>
-                                                    <action selector="volumeSliderTouchedUp:" destination="vMd-Fg-qdi" eventType="touchUpOutside" id="OH5-DA-Xuf"/>
-                                                    <action selector="volumeSliderTouchedUp:" destination="vMd-Fg-qdi" eventType="touchUpInside" id="ltE-VJ-Fvs"/>
                                                 </connections>
                                             </slider>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-Aq-IRP">
@@ -3643,6 +3627,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                     <connections>
                         <outlet property="diceOneImage" destination="AJF-Lo-i7j" id="h6D-p2-BTs"/>
                         <outlet property="diceTwoImage" destination="Dat-vC-3N7" id="VQq-uU-jcE"/>
+                        <outlet property="playButton" destination="NDB-Tt-7ap" id="Nh0-6a-0hq"/>
                         <outlet property="resultOneLabel" destination="CGP-ew-fVH" id="etn-29-Tw7"/>
                         <outlet property="resultTwoLabel" destination="RBg-lT-Q9l" id="ZYk-1R-gdS"/>
                         <outlet property="textLabel" destination="p8S-7h-IQF" id="yaw-ug-WNj"/>
@@ -3683,7 +3668,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Начать">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
-                                            <color key="baseBackgroundColor" red="0.11906930172514746" green="0.15656471232908711" blue="0.23212594696969702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" name="defaultButtonColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startButtonTapped" destination="NQz-9q-tib" eventType="touchUpInside" id="6UK-iE-yla"/>
@@ -3698,7 +3683,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Назад">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                            <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" name="defaultButtonColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="backButtonTapped" destination="NQz-9q-tib" eventType="touchUpInside" id="P1g-qI-aY6"/>
@@ -3754,7 +3739,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIi-06-wOW">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
-                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="defaultButtonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="NYP-Jb-2fQ"/>
                                                     <constraint firstAttribute="height" constant="100" id="fLY-z9-nJ8"/>
@@ -3775,7 +3760,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH9-lN-y1s">
                                                 <rect key="frame" x="178" y="0.0" width="158" height="100"/>
-                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="defaultButtonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="SWp-06-PYW"/>
                                                     <constraint firstAttribute="height" constant="100" id="ij1-He-HkH"/>
@@ -3801,7 +3786,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJf-4u-deu">
                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="100"/>
-                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="defaultButtonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="4ZB-ay-b41"/>
                                                     <constraint firstAttribute="height" constant="100" id="btV-wW-TGI"/>
@@ -3822,7 +3807,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R63-0R-1iU">
                                                 <rect key="frame" x="178" y="0.0" width="158" height="100"/>
-                                                <color key="backgroundColor" red="0.1215686351" green="0.15686275059999999" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" name="defaultButtonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="158" id="2ry-it-Gna"/>
                                                     <constraint firstAttribute="height" constant="100" id="XOW-6o-kZZ"/>
@@ -3987,7 +3972,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Вернуться">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
-                                    <color key="baseBackgroundColor" red="0.1190693017" green="0.15656471229999999" blue="0.232125947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" name="defaultButtonColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="backButtonTapped" destination="enC-Oh-ED3" eventType="touchUpInside" id="Qil-aX-Ium"/>
@@ -4015,8 +4000,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         </scene>
     </scenes>
     <resources>
-        <image name="AD" width="1024" height="1024"/>
-        <image name="AD Fade" width="1144" height="1144"/>
+        <image name="AD" width="1200" height="1200"/>
         <image name="Icemusic" width="6000" height="4500"/>
         <image name="bell.slash" catalog="system" width="119" height="128"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
@@ -4057,6 +4041,9 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="calculatorGray">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="defaultButtonColor">
+            <color red="0.10588235294117647" green="0.15686274509803921" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primary">
             <color red="0.33725490196078434" green="0.49803921568627452" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

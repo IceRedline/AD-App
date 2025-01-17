@@ -10,8 +10,7 @@ import AVKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet private weak var logo1: UIImageView!
-    @IBOutlet private weak var logo2: UIImageView!
+    @IBOutlet private weak var logo: UIImageView!
     @IBOutlet private weak var welcomeButton: UIButton!
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var musicButton: UIButton!
@@ -27,27 +26,49 @@ class WelcomeViewController: UIViewController {
         // player.numberOfLoops = -1
     }
     
+    private func animateLogo(fade: Bool) {
+        switch fade {
+        case true:
+            UIView.transition(with: logo,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.logo.image = UIImage(named: "AD Fade") },
+                              completion: nil)
+        case false:
+            UIView.transition(with: logo,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.logo.image = UIImage(named: "AD") },
+                              completion: nil)
+        }
+    }
+    
     @IBAction private func welcomeButtonTapped() {
-        welcomeLabel.text = "Welcome"
+        welcomeLabel.fadeIn()
         welcomeButton.isEnabled = false
         musicplayer.play()
-        musicButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         musicButton.isEnabled = true
-        logo1.isHidden = true
-        logo2.isHidden = false
+        musicButton.isSymbolAnimationEnabled = true
+        /*
+        musicButton.imageView?.addSymbolEffect(.appear) { context in
+            if let imageView = context.sender as? UIImageView, context.isFinished {
+                self.view.addSubview(imageView)
+            }
+        }
+        */
+        musicButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        animateLogo(fade: true)
     }
     
     @IBAction func musicButtonTapped() {
         if musicplayer.isPlaying {
             musicplayer.stop()
             musicButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
-            logo1.isHidden = false
-            logo2.isHidden = true
+            animateLogo(fade: false)
         } else {
             musicplayer.play()
             musicButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
-            logo1.isHidden = true
-            logo2.isHidden = false
+            animateLogo(fade: true)
         }
     }
     
