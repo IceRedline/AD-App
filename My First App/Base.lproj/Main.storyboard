@@ -15,7 +15,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="FJG-fB-gdB">
             <objects>
-                <viewController storyboardIdentifier="StartID" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="JsT-y9-wIm" customClass="WelcomeViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="startID" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="JsT-y9-wIm" customClass="WelcomeViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D4A-12-DMm">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,31 +173,59 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-DX-ih9">
-                                <rect key="frame" x="137" y="265.66666666666669" width="128" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="128" id="2jK-7b-4c1"/>
-                                    <constraint firstAttribute="height" constant="30" id="zig-z2-cgl"/>
-                                </constraints>
-                                <color key="tintColor" name="primary"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Animations"/>
-                                <connections>
-                                    <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpInside" id="GLb-7v-8BG"/>
-                                    <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpOutside" id="WqP-Jt-x4d"/>
-                                    <action selector="animationsButtonTapped:" destination="JsT-y9-wIm" eventType="touchDown" id="Bn0-Dn-kgQ"/>
-                                    <segue destination="e8k-Va-nOx" kind="show" id="nU0-j4-Rm4"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSZ-qm-Ibf">
+                                <rect key="frame" x="14.666666666666657" y="265.33333333333331" width="373" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9X-iQ-Wpw">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="118" id="35k-mH-tlg"/>
+                                        </constraints>
+                                        <color key="tintColor" name="primary"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="safari" catalog="system" title=" Browser"/>
+                                        <connections>
+                                            <action selector="browserButtonTapped" destination="JsT-y9-wIm" eventType="touchUpInside" id="Cku-zB-mE7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-DX-ih9">
+                                        <rect key="frame" x="118" y="0.0" width="140" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="2jK-7b-4c1"/>
+                                        </constraints>
+                                        <color key="tintColor" name="primary"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="rays" catalog="system" imagePlacement="trailing" title="Animations "/>
+                                        <connections>
+                                            <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpInside" id="GLb-7v-8BG"/>
+                                            <action selector="animationsButtonReleased:" destination="JsT-y9-wIm" eventType="touchUpOutside" id="WqP-Jt-x4d"/>
+                                            <action selector="animationsButtonTapped:" destination="JsT-y9-wIm" eventType="touchDown" id="Bn0-Dn-kgQ"/>
+                                            <segue destination="e8k-Va-nOx" kind="show" id="nU0-j4-Rm4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qP-mb-CTC">
+                                        <rect key="frame" x="258" y="0.0" width="115" height="34.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="5Ip-Pn-9z2"/>
+                                        </constraints>
+                                        <color key="tintColor" name="primary"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="tablecells" catalog="system" imagePlacement="trailing" title="Colors "/>
+                                        <connections>
+                                            <segue destination="x1V-QJ-YNM" kind="show" id="Rts-sc-Lvo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EhP-mX-Epy"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Ezk-rJ-G5i" firstAttribute="leading" secondItem="EhP-mX-Epy" secondAttribute="leading" constant="40" id="0Rr-tH-uaH"/>
-                            <constraint firstItem="I5N-d4-Mpl" firstAttribute="top" secondItem="1fP-DX-ih9" secondAttribute="bottom" constant="26.329999999999998" id="8Jz-ci-rJL"/>
                             <constraint firstItem="4em-5h-MvX" firstAttribute="leading" secondItem="bG0-Hg-NP2" secondAttribute="trailing" constant="13.67" id="DIG-Vs-n31"/>
                             <constraint firstItem="Ye7-nV-MFc" firstAttribute="top" secondItem="I5N-d4-Mpl" secondAttribute="bottom" constant="46.670000000000002" id="IPD-vy-ZQq"/>
                             <constraint firstItem="bG0-Hg-NP2" firstAttribute="centerY" secondItem="4em-5h-MvX" secondAttribute="centerY" id="Jee-sm-FLX"/>
+                            <constraint firstItem="fSZ-qm-Ibf" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="MbA-Hp-aQS"/>
                             <constraint firstItem="EhP-mX-Epy" firstAttribute="trailing" secondItem="4em-5h-MvX" secondAttribute="trailing" constant="16" id="OGI-nh-Tjt"/>
                             <constraint firstItem="I5N-d4-Mpl" firstAttribute="centerY" secondItem="D4A-12-DMm" secondAttribute="centerY" id="W4F-PO-1tk"/>
                             <constraint firstItem="EhP-mX-Epy" firstAttribute="trailing" secondItem="6do-a2-jGF" secondAttribute="trailing" constant="40" id="Xy0-36-GVU"/>
@@ -208,8 +236,8 @@
                             <constraint firstItem="q8o-7F-tul" firstAttribute="leading" secondItem="EhP-mX-Epy" secondAttribute="leading" constant="50" id="iSR-WS-DVA"/>
                             <constraint firstItem="I5N-d4-Mpl" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="j0b-5V-v4w"/>
                             <constraint firstItem="4em-5h-MvX" firstAttribute="top" secondItem="D4A-12-DMm" secondAttribute="top" constant="86" id="ovA-sh-mli"/>
+                            <constraint firstItem="fSZ-qm-Ibf" firstAttribute="top" secondItem="6do-a2-jGF" secondAttribute="bottom" constant="52.329999999999998" id="phQ-x1-8fd"/>
                             <constraint firstItem="q8o-7F-tul" firstAttribute="centerY" secondItem="6do-a2-jGF" secondAttribute="centerY" id="sB4-nP-chq"/>
-                            <constraint firstItem="1fP-DX-ih9" firstAttribute="centerX" secondItem="D4A-12-DMm" secondAttribute="centerX" id="yLl-Np-5k7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6aF-XP-HbI"/>
@@ -385,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2M-qe-j9q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309.16030534351142" y="766.90140845070425"/>
+            <point key="canvasLocation" x="-128" y="780"/>
         </scene>
         <!--Навигация-->
         <scene sceneID="TE0-uG-rut">
@@ -570,6 +598,22 @@ QXBwbGUgU3RvcmUgIAHvo78
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ik-MO-iRV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799" y="780"/>
+        </scene>
+        <!--RandomColors-->
+        <scene sceneID="CuX-Fc-Aq7">
+            <objects>
+                <viewController id="x1V-QJ-YNM" customClass="RandomColorsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jii-ez-YaP">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OgQ-5A-EC0"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="RandomColors" id="mav-jk-zES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsO-Pk-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896" y="715"/>
         </scene>
         <!--AirDev Calculator-->
         <scene sceneID="99O-zw-Tn3">
@@ -1058,7 +1102,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Quiz View Controller-->
         <scene sceneID="RNF-X1-FZQ">
             <objects>
-                <viewController storyboardIdentifier="QuizID" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="d8A-Gm-iny" customClass="QuizViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quiziceID" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="d8A-Gm-iny" customClass="QuizViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8m4-1d-8s0">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1244,12 +1288,12 @@ QXBwbGUgU3RvcmUgIAHvo78
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAB-vq-oaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="1260"/>
+            <point key="canvasLocation" x="1896" y="1396"/>
         </scene>
         <!--IQ Тест-->
         <scene sceneID="Jfv-Ht-Qvf">
             <objects>
-                <viewController storyboardIdentifier="iqtest" modalPresentationStyle="fullScreen" id="hl8-LX-FPP" customClass="IQTestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="iqtestID" modalPresentationStyle="fullScreen" id="hl8-LX-FPP" customClass="IQTestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d3k-nF-iSe">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1407,7 +1451,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Настройки звука-->
         <scene sceneID="0sV-jl-qtk">
             <objects>
-                <viewController storyboardIdentifier="sound" modalPresentationStyle="fullScreen" id="vMd-Fg-qdi" customClass="SoundSettingsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="soundsettingsID" modalPresentationStyle="fullScreen" id="vMd-Fg-qdi" customClass="SoundSettingsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="syy-lh-BvO">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1457,7 +1501,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                 <color key="tintColor" red="0.27058823529999998" green="0.41176470590000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="onTintColor" name="primary"/>
                                                 <connections>
-                                                    <action selector="notificationsSwitchEnabled:" destination="vMd-Fg-qdi" eventType="valueChanged" id="1tp-vb-vEg"/>
+                                                    <action selector="notificationsSwitchToggled:" destination="vMd-Fg-qdi" eventType="valueChanged" id="1tp-vb-vEg"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -1497,7 +1541,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                         <color key="tintColor" red="0.27058823529999998" green="0.41176470590000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="onTintColor" name="primary"/>
                                                         <connections>
-                                                            <action selector="soundSwitchEnabled:" destination="vMd-Fg-qdi" eventType="valueChanged" id="S0Z-i2-ZVL"/>
+                                                            <action selector="soundSwitchToggled:" destination="vMd-Fg-qdi" eventType="valueChanged" id="S0Z-i2-ZVL"/>
                                                         </connections>
                                                     </switch>
                                                 </subviews>
@@ -1566,7 +1610,7 @@ QXBwbGUgU3RvcmUgIAHvo78
                                                 <color key="tintColor" red="0.27058823529999998" green="0.41176470590000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="onTintColor" name="primary"/>
                                                 <connections>
-                                                    <action selector="hapticSwitchChanged" destination="vMd-Fg-qdi" eventType="valueChanged" id="Et4-Jf-Jfv"/>
+                                                    <action selector="hapticSwitchToggled" destination="vMd-Fg-qdi" eventType="valueChanged" id="Et4-Jf-Jfv"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
@@ -1797,7 +1841,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Photoshop-->
         <scene sceneID="BTL-90-k0d">
             <objects>
-                <viewController storyboardIdentifier="photoshop" modalPresentationStyle="fullScreen" id="rSy-mo-GZE" customClass="PhotoEditorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="photoshopID" modalPresentationStyle="fullScreen" id="rSy-mo-GZE" customClass="PhotoEditorViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2A-ht-pJv">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2018,7 +2062,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Cookie Clicker View Controller-->
         <scene sceneID="wF2-w4-H5c">
             <objects>
-                <viewController storyboardIdentifier="cookieClicker" modalPresentationStyle="fullScreen" id="40X-Uj-g4X" customClass="CookieClickerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cookieclickerID" modalPresentationStyle="fullScreen" id="40X-Uj-g4X" customClass="CookieClickerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wai-iF-gLl">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2155,7 +2199,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Игра завершена!-->
         <scene sceneID="oaj-Zr-xT1">
             <objects>
-                <viewController storyboardIdentifier="six" modalPresentationStyle="fullScreen" id="68c-uk-8l6" customClass="CookieResultsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cookieresultsID" modalPresentationStyle="fullScreen" id="68c-uk-8l6" customClass="CookieResultsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8je-In-fDW">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2287,7 +2331,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Конаткты-->
         <scene sceneID="tnf-qO-njd">
             <objects>
-                <viewController storyboardIdentifier="contacts" id="FCa-l1-xak" customClass="ContactsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="contactsID" id="FCa-l1-xak" customClass="ContactsViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHG-BB-Edt">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2331,7 +2375,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Контакты 2.0-->
         <scene sceneID="Bjt-H7-nna">
             <objects>
-                <tableViewController storyboardIdentifier="contacts2" modalPresentationStyle="fullScreen" id="3HM-Hd-Yf2" customClass="Contacts2TableViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="contacts2ID" modalPresentationStyle="fullScreen" id="3HM-Hd-Yf2" customClass="Contacts2TableViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hXc-7o-MaC">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2404,7 +2448,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--ICE MUSIC-->
         <scene sceneID="kbb-oO-oaW">
             <objects>
-                <viewController storyboardIdentifier="icemusic" id="G0Q-5W-Ia2" customClass="MusicPlayerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="icemusicID" id="G0Q-5W-Ia2" customClass="MusicPlayerViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZL-Jj-dlS">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2490,7 +2534,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Page View Controller-->
         <scene sceneID="o1e-9t-7pM">
             <objects>
-                <pageViewController storyboardIdentifier="PAGESID" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="rf7-jX-ReX" customClass="PageViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="pagesVCID" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="rf7-jX-ReX" customClass="PageViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OJy-Tw-VRC"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLH-DQ-Dzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2500,7 +2544,7 @@ QXBwbGUgU3RvcmUgIAHvo78
         <!--Text Scroll View Controller-->
         <scene sceneID="Q9v-Gv-Ghs">
             <objects>
-                <viewController storyboardIdentifier="VC10SID" modalPresentationStyle="fullScreen" id="Pmv-Sp-srA" customClass="TextScrollViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="textscrollID" modalPresentationStyle="fullScreen" id="Pmv-Sp-srA" customClass="TextScrollViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sn8-RI-qES">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2649,7 +2693,7 @@ iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с ра�
         <!--Tab View Controller-->
         <scene sceneID="feC-VL-k0r">
             <objects>
-                <tabBarController storyboardIdentifier="TABSID" modalPresentationStyle="fullScreen" id="dKh-9F-Uii" customClass="TabViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="applestoretabVCID" modalPresentationStyle="fullScreen" id="dKh-9F-Uii" customClass="TabViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="yXE-XP-wY4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eYr-me-0Zo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -2731,7 +2775,7 @@ iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с ра�
         <!--Navigation Controller-->
         <scene sceneID="Fsb-nI-s93">
             <objects>
-                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="MRF-hf-pci" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="globalnavigationVCID" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="MRF-hf-pci" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vo2-fs-SGO">
                         <rect key="frame" x="0.0" y="62" width="402" height="44"/>
@@ -2753,7 +2797,7 @@ iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с ра�
         <!--Typing Test-->
         <scene sceneID="g36-Gh-99v">
             <objects>
-                <viewController storyboardIdentifier="typingtest" id="Fse-qQ-rrR" customClass="TestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="typingtestID" id="Fse-qQ-rrR" customClass="TestViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6t-xT-LbZ">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2850,7 +2894,7 @@ iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с ра�
                                         <rect key="frame" x="0.0" y="0.0" width="402" height="1060"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="M7V-pA-mZg">
-                                                <rect key="frame" x="20.666666666666657" y="30" width="361" height="999"/>
+                                                <rect key="frame" x="20.666666666666657" y="30" width="361" height="1018"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MacBook Air" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-ds-zie">
                                                         <rect key="frame" x="54" y="0.0" width="253" height="48"/>
@@ -2862,30 +2906,30 @@ iPhone 16 Pro оснащен 6,3-дюймовым OLED-дисплеем с ра�
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbookair" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-KH-xbY">
-                                                        <rect key="frame" x="30" y="78" width="301" height="241"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbookairm3" translatesAutoresizingMaskIntoConstraints="NO" id="ULr-KH-xbY">
+                                                        <rect key="frame" x="20.333333333333343" y="78" width="320" height="260"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="241" id="Nu1-Uj-wp1"/>
-                                                            <constraint firstAttribute="width" constant="301" id="ruK-5A-qv7"/>
+                                                            <constraint firstAttribute="height" constant="260" id="Nu1-Uj-wp1"/>
+                                                            <constraint firstAttribute="width" constant="320" id="ruK-5A-qv7"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-sH-cTz">
-                                                        <rect key="frame" x="0.0" y="349" width="361" height="650"/>
+                                                        <rect key="frame" x="0.0" y="368" width="361" height="650"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="361" id="pk5-RL-0Rz"/>
                                                             <constraint firstAttribute="height" constant="650" id="qf5-3t-oQk"/>
                                                         </constraints>
-                                                        <string key="text">MacBook Air 15” на чипе M2 представляет собой тонкий, мощный и энергоэффективный ноутбук для работы и творчества. Его аппаратной основой служит чип Apple M2, оснащенный 8-ядерным CPU и 10-ядерным GPU, который обеспечивает превосходную производительность как в повседневных задачах, так и при работе с графикой, кодом или мультимедийными проектами. Neural Engine с 16 ядрами ускоряет работу функций машинного обучения, таких как обработка изображений и аудио.
+                                                        <mutableString key="text">MacBook Air 15” на чипе M3 представляет собой тонкий, мощный и энергоэффективный ноутбук для работы и творчества. Его аппаратной основой служит чип Apple M3, оснащенный 8-ядерным CPU и 10-ядерным GPU, который обеспечивает превосходную производительность как в повседневных задачах, так и при работе с графикой, кодом или мультимедийными проектами. Neural Engine с 16 ядрами ускоряет работу функций машинного обучения, таких как обработка изображений и аудио.
 
 У MacBook Air 15” впечатляющий Liquid Retina дисплей с диагональю 15,3 дюйма, разрешением 2880 × 1864 пикселя, яркостью до 500 нит и поддержкой технологии True Tone, что делает картинку яркой и насыщенной, а глаза — менее уставшими.
 
 Корпус устройства выполнен из переработанного алюминия, что делает его не только прочным и легким (вес всего 1,5 кг), но и экологичным. Толщина ноутбука составляет всего 11,5 мм, что делает его самым тонким в своей категории.
 
-Благодаря активному охлаждению и энергоэффективности чипа M2 ноутбук работает практически бесшумно и обеспечивает до 18 часов автономной работы, что идеально подходит для длительных сессий работы или путешествий.
+Благодаря активному охлаждению и энергоэффективности чипа M3 ноутбук работает практически бесшумно и обеспечивает до 18 часов автономной работы, что идеально подходит для длительных сессий работы или путешествий.
 
 MacBook Air 15” оснащен портами MagSafe для безопасной зарядки, двумя разъемами Thunderbolt/USB 4 и разъемом для наушников 3,5 мм. Улучшенная FaceTime HD камера с разрешением 1080p и высококачественные динамики с поддержкой пространственного звука обеспечивают превосходный опыт видеозвонков и мультимедиа.
 
-Этот ноутбук идеально подходит для студентов, профессионалов и всех, кто ценит портативность, производительность и стильный дизайн.</string>
+Этот ноутбук идеально подходит для студентов, профессионалов и всех, кто ценит портативность, производительность и стильный дизайн.</mutableString>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2930,7 +2974,7 @@ MacBook Air 15” оснащен портами MagSafe для безопасн�
         <!--Last View Controller-->
         <scene sceneID="Tbz-Hq-x9L">
             <objects>
-                <viewController storyboardIdentifier="LASTVCID" id="SaC-lZ-P4P" customClass="LastViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lastVCID" id="SaC-lZ-P4P" customClass="LastViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NPI-BE-n4h">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3071,10 +3115,131 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
             </objects>
             <point key="canvasLocation" x="10546" y="785"/>
         </scene>
+        <!--Browser View Controller-->
+        <scene sceneID="zWe-vm-gTN">
+            <objects>
+                <viewController storyboardIdentifier="WebVCID" modalPresentationStyle="fullScreen" id="3KI-9k-CJQ" customClass="BrowserViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KGk-ZG-elu">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FMn-Th-r1g">
+                                <rect key="frame" x="69" y="312" width="264.33333333333331" height="303"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Браузер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM3-hw-CVO">
+                                        <rect key="frame" x="70.333333333333343" y="0.0" width="123.66666666666666" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="apple.com" borderStyle="roundedRect" placeholder="введите сайт:" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMi-si-71V">
+                                        <rect key="frame" x="2" y="86" width="260" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="G4D-Ip-K7r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="baF-RJ-JBH">
+                                        <rect key="frame" x="0.0" y="170" width="264.33333333333331" height="133"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcE-eF-acC">
+                                                <rect key="frame" x="85.333333333333343" y="0.0" width="93.333333333333343" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Перейти"/>
+                                                <connections>
+                                                    <action selector="loadButtonTapped" destination="3KI-9k-CJQ" eventType="touchUpInside" id="Jgm-zo-olJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwo-98-ChJ">
+                                                <rect key="frame" x="0.0" y="49.333333333333371" width="264.33333333333331" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Открыть во встроенном Safari"/>
+                                                <connections>
+                                                    <action selector="sfButtonTapped" destination="3KI-9k-CJQ" eventType="touchUpInside" id="mJ1-Hg-Elh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6I-2d-vxO">
+                                                <rect key="frame" x="55.333333333333329" y="98.666666666666629" width="153.66666666666669" height="34.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Открыть в Safari"/>
+                                                <connections>
+                                                    <action selector="safariButtonTapped" destination="3KI-9k-CJQ" eventType="touchUpInside" id="oTR-K1-YKA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQC-h0-pCR">
+                                <rect key="frame" x="168" y="783" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="История"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VLw-6e-2cH"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="FMn-Th-r1g" firstAttribute="centerX" secondItem="KGk-ZG-elu" secondAttribute="centerX" id="gLh-FO-oA5"/>
+                            <constraint firstItem="FMn-Th-r1g" firstAttribute="top" secondItem="VLw-6e-2cH" secondAttribute="top" constant="250" id="i0V-Eh-LgP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="IMi-si-71V" id="tG6-FW-Qku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQA-RM-oYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5978" y="-883"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="60E-Bk-ntK">
+            <objects>
+                <viewController storyboardIdentifier="WKWebViewVCID" id="Uip-Th-kqp" customClass="WKWebViewViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynL-3U-a6J">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4F-j7-6Fc">
+                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-3m-C1C">
+                                <rect key="frame" x="0.0" y="62" width="402" height="4"/>
+                                <color key="tintColor" name="primary"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KMq-KW-Vew"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="rAb-3m-C1C" firstAttribute="top" secondItem="KMq-KW-Vew" secondAttribute="top" id="1o1-0X-397"/>
+                            <constraint firstItem="y4F-j7-6Fc" firstAttribute="leading" secondItem="KMq-KW-Vew" secondAttribute="leading" id="5EG-8N-Tqt"/>
+                            <constraint firstItem="rAb-3m-C1C" firstAttribute="leading" secondItem="KMq-KW-Vew" secondAttribute="leading" id="VCh-BV-1t8"/>
+                            <constraint firstItem="KMq-KW-Vew" firstAttribute="trailing" secondItem="rAb-3m-C1C" secondAttribute="trailing" id="Wxg-qn-azP"/>
+                            <constraint firstItem="KMq-KW-Vew" firstAttribute="bottom" secondItem="y4F-j7-6Fc" secondAttribute="bottom" id="c37-sw-Fc6"/>
+                            <constraint firstItem="KMq-KW-Vew" firstAttribute="trailing" secondItem="y4F-j7-6Fc" secondAttribute="trailing" id="gWW-Dn-19E"/>
+                            <constraint firstItem="y4F-j7-6Fc" firstAttribute="top" secondItem="KMq-KW-Vew" secondAttribute="top" id="tHw-f2-BkW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="soL-Q1-c5q"/>
+                    <connections>
+                        <outlet property="loadingProgressBar" destination="rAb-3m-C1C" id="gvH-s6-9I8"/>
+                        <outlet property="webView" destination="y4F-j7-6Fc" id="yBg-Hz-U2V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHw-s4-sxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6854" y="-883"/>
+        </scene>
         <!--LifeDays-->
         <scene sceneID="w7Q-UD-Raw">
             <objects>
-                <viewController storyboardIdentifier="lifedays" id="BpN-3m-g5k" customClass="LifeDaysOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lifedaysID" id="BpN-3m-g5k" customClass="LifeDaysOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tv4-wo-Him">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3293,7 +3458,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <!-- Напоминания-->
         <scene sceneID="IDT-bM-j0f">
             <objects>
-                <tableViewController storyboardIdentifier="reminders" id="Ota-Ge-bu2" customClass="RemindersController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="remindersID" id="Ota-Ge-bu2" customClass="RemindersController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7fq-pV-AT2">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3318,7 +3483,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <!--Names Comp One-->
         <scene sceneID="C9g-IP-zJi">
             <objects>
-                <viewController storyboardIdentifier="names" modalPresentationStyle="fullScreen" id="Cxj-Qo-8Pm" customClass="NamesCompOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="namescompID" modalPresentationStyle="fullScreen" id="Cxj-Qo-8Pm" customClass="NamesCompOne" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gGm-Cs-R4U">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3510,7 +3675,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <!--Dice-->
         <scene sceneID="1kd-6N-ck9">
             <objects>
-                <viewController storyboardIdentifier="dice" id="ksI-Kh-8DS" customClass="DiceGameViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="diceID" id="ksI-Kh-8DS" customClass="DiceGameViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBX-Ip-ekB">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3641,7 +3806,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <!--Quiz Description View Controller-->
         <scene sceneID="Ttn-h1-hsP">
             <objects>
-                <viewController storyboardIdentifier="QuizDescriptionID" modalPresentationStyle="fullScreen" id="NQz-9q-tib" customClass="QuizDescriptionViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="quizdescriptionID" modalPresentationStyle="fullScreen" id="NQz-9q-tib" customClass="QuizDescriptionViewController" customModule="My_First_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CGU-OI-pIv">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3721,7 +3886,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLE-9V-Sdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2594" y="1260"/>
+            <point key="canvasLocation" x="2593" y="1396"/>
         </scene>
         <!--Quiz Question View Controller-->
         <scene sceneID="S0b-Pb-GcK">
@@ -3926,7 +4091,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3c-5I-d3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3309" y="1260"/>
+            <point key="canvasLocation" x="3309" y="1396"/>
         </scene>
         <!--Quiz Result View Controller-->
         <scene sceneID="OCM-zn-lhH">
@@ -3996,7 +4161,7 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIh-sU-gbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4045" y="1260"/>
+            <point key="canvasLocation" x="4045" y="1396"/>
         </scene>
     </scenes>
     <resources>
@@ -4027,16 +4192,19 @@ iPad Pro поддерживает аксессуары Apple Pencil 2-го по�
         <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="mac" width="100" height="100"/>
         <image name="macbook.gen2" catalog="system" width="128" height="71"/>
-        <image name="macbookair" width="1280" height="778"/>
+        <image name="macbookairm3" width="903" height="723"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="music" width="100" height="78"/>
         <image name="music icon" width="100" height="100"/>
         <image name="picture frame" width="640" height="640"/>
         <image name="play.fill" catalog="system" width="120" height="128"/>
         <image name="questionmark.square" catalog="system" width="128" height="114"/>
+        <image name="rays" catalog="system" width="128" height="123"/>
+        <image name="safari" catalog="system" width="128" height="123"/>
         <image name="speaker.fill" catalog="system" width="128" height="125"/>
         <image name="speaker.slash" catalog="system" width="115" height="128"/>
         <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
+        <image name="tablecells" catalog="system" width="128" height="93"/>
         <image name="theatre" width="100" height="78"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="calculatorGray">

@@ -86,7 +86,7 @@ extension MusicPlayerViewController: UICollectionViewDataSource {
         player?.stop()
         currentlyPlayingCell?.nowplayingIcon.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vcp = storyboard.instantiateViewController(withIdentifier: "PAGESID") as! PageViewController
+        let vcp = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.pagesVC) as! PageViewController
         self.navigationController?.pushViewController(vcp, animated: true)
     }
 }

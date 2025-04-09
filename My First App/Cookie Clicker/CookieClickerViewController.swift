@@ -134,7 +134,7 @@ class CookieClickerViewController: UIViewController {
     
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! CookieResultsViewController
+            let vc6 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.cookieresults) as! CookieResultsViewController
             self.navigationController?.pushViewController(vc6, animated: true)
         }
 

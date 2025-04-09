@@ -47,9 +47,9 @@ class SoundSettingsViewController: UIViewController {
         hapticButtons = [hapticButton1, hapticButton2, hapticButton3, hapticSelectionButton, hapticSuccessButton, hapticErrorButton, hapticWarningButton]
         
         let viewsArray = [notificationsView, soundView, hapticView]
-        viewsArray.forEach { elem in
-            elem?.layer.masksToBounds = true
-            elem?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
+        viewsArray.forEach {
+            $0?.layer.masksToBounds = true
+            $0?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
         }
     }
     
@@ -57,8 +57,8 @@ class SoundSettingsViewController: UIViewController {
     
     private func disableElements() {
         let arrayToDisable = [hapticSwitch, soundSwitch, volumeSlider]
-        arrayToDisable.forEach() { elem in
-            elem?.isEnabled = false
+        arrayToDisable.forEach() {
+            $0?.isEnabled = false
         }
     }
     
@@ -105,7 +105,7 @@ class SoundSettingsViewController: UIViewController {
     
     // MARK: - Notifications
     
-    @IBAction private func notificationsSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func notificationsSwitchToggled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -119,8 +119,8 @@ class SoundSettingsViewController: UIViewController {
             
         case false:
             
-            [speakerSymbol, hapticSymbol, notificationsSymbol].forEach() { x in
-                disableSymbol(x)
+            [speakerSymbol, hapticSymbol, notificationsSymbol].forEach() {
+                disableSymbol($0)
             }
             
             disableElements()
@@ -139,7 +139,7 @@ class SoundSettingsViewController: UIViewController {
     
     // MARK: - Sounds
     
-    @IBAction private func soundSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func soundSwitchToggled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -193,7 +193,7 @@ class SoundSettingsViewController: UIViewController {
     }
     // MARK: - Haptics
     
-    @IBAction private func hapticSwitchChanged() {
+    @IBAction private func hapticSwitchToggled() {
         if hapticSwitch.isOn == true {
             
             hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)

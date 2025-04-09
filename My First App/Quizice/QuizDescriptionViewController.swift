@@ -22,7 +22,7 @@ class QuizDescriptionViewController: UIViewController {
         QuizFactory.shared.loadQuestions()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizQuestionID")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.quizicequestion)
         self.present(vc, animated: true)
     }
     

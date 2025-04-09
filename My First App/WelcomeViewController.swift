@@ -79,7 +79,7 @@ class WelcomeViewController: UIViewController {
         }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizID")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.quizice)
         self.present(vc, animated: true)
     }
     
@@ -91,10 +91,8 @@ class WelcomeViewController: UIViewController {
         animationsEngine.animateUpFloat(sender)
     }
     
-    @IBAction private func galleryButtonTapped() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RandomGallery")
-        self.present(vc, animated: true)
+    @IBAction func browserButtonTapped() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: StoryboardIDs.web) as! BrowserViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
 }

@@ -117,7 +117,7 @@ class QuizQuestionViewController: UIViewController {
     
     private func showResultsController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizResultID")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.quiziceresult)
         self.present(vc, animated: true)
     }
     
