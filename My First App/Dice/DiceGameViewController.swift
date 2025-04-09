@@ -15,6 +15,7 @@ class DiceGameViewController: UIViewController {
     @IBOutlet private weak var resultTwoLabel: UILabel!
     @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var winLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
     
     private var dice: [Dice] = [Dice(number: "1", image: UIImage(named: "dice1.png")),
                         Dice(number: "2", image: UIImage(named: "dice2.png")),
@@ -37,6 +38,7 @@ class DiceGameViewController: UIViewController {
     
     @IBAction private func playButtonTapped(_ sender: Any) {
         
+        playButton.isEnabled = false
         textLabel.text = "Испытай свою удачу, бросив кубик против Айса!"
         resultOneLabel.text = "-"
         resultTwoLabel.text = "-"
@@ -64,6 +66,7 @@ class DiceGameViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             self.timer2?.invalidate() // Остановка второй анимации
             self.resultTwoLabel.text = dice2.number
+            self.playButton.isEnabled = true
             if Int(dice1.number)! < Int(dice2.number)! {
                 self.resultHapticFeedback.notificationOccurred(.success)
                 self.textLabel.text = "Отлично, ты выиграл! Попробуешь ещё раз?"

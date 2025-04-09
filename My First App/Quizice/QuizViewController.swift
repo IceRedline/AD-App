@@ -15,9 +15,20 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        showAlert()
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Новая версия", message: "Внимание! Эта версия устарела, так как теперь Quizice является отдельным приложением!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "ОК", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+    
     private func showVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizDescriptionID")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.quizicedescription)
         self.present(vc, animated: true)
     }
     
@@ -46,7 +57,7 @@ class QuizViewController: UIViewController {
     
     @IBAction private func backButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Navigation")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.globalnavigation)
         self.present(vc, animated: true)
     }
     

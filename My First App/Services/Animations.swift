@@ -69,7 +69,7 @@ class Animations {
         }
     }
     
-    func animateTintColor(_ viewToAnimate: UIView, color: UIColor = UIColor.black, duration: Double = 1) {
+    func animateTintColor(_ viewToAnimate: UIView, color: UIColor = UIColor.black, duration: Double = 0.5) {
         UIView.transition(
             with: viewToAnimate,
             duration: duration,
@@ -79,10 +79,10 @@ class Animations {
         })
     }
     
-    func animateBackgroundColor(_ viewToAnimate: UIView, color: CGColor) {
+    func animateBackgroundColor(_ viewToAnimate: UIView, color: CGColor, duration: Double = 0.5) {
         UIView.transition(
             with: viewToAnimate,
-            duration: 0.2,
+            duration: duration,
             options: [.transitionCrossDissolve, .allowUserInteraction],
             animations: {
                 viewToAnimate.layer.backgroundColor = color

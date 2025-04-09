@@ -29,14 +29,17 @@ class PhotoEditorViewController: UIViewController {
         slidersArray = [alphaSlider, blurSlider, cornerRadiusSlider]
     }
     
+    private func enableSliders() {
+        self.slidersArray?.forEach({
+            $0.isEnabled = true
+        })
+    }
     
     func openImagePicker(sourceType: UIImagePickerController.SourceType) {
         // Открываем UIImagePickerController с указанным источником
         imagePicker.showImagePicker(in: self, sourceType: sourceType) { image in
-            self.slidersArray?.forEach({ elem in
-                elem.isEnabled = true
-            })
             self.buttonsStack.isHidden = true
+            self.enableSliders()
             self.imageView.image = image
         }
     }
@@ -44,16 +47,13 @@ class PhotoEditorViewController: UIViewController {
     @IBAction private func choosePictureButtonTapped(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            // Создаем UIAlertController
             let alertController = UIAlertController(title: "Выберите источник", message: nil, preferredStyle: .actionSheet)
             
-            // Добавляем действие для открытия галереи
             let galleryAction = UIAlertAction(title: "Галерея", style: .default) { _ in
                 self.openImagePicker(sourceType: .photoLibrary)
             }
             alertController.addAction(galleryAction)
             
-            // Добавляем действие для открытия камеры
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let cameraAction = UIAlertAction(title: "Камера", style: .default) { _ in
                     self.openImagePicker(sourceType: .camera)
@@ -61,14 +61,13 @@ class PhotoEditorViewController: UIViewController {
                 alertController.addAction(cameraAction)
             }
             
-            // Добавляем действие для отмены
             let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             
-            // Отображаем UIAlertController
             present(alertController, animated: true, completion: nil)
         case 2:
             buttonsStack.isHidden = true
+            self.enableSliders()
             imageView.image = UIImage(named: "UIKit")
         default: return
         }

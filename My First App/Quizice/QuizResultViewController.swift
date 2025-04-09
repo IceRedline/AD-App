@@ -36,7 +36,7 @@ class QuizResultViewController: UIViewController {
     
     @IBAction func backButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizID")
+        let vc = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.quizice)
         self.present(vc, animated: true)
     }
     

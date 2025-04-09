@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Frame 3.1 1.png",
+      "filename" : "Default Logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 5.png",
+      "filename" : "Dark Logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

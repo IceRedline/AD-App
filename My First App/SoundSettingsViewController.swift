@@ -47,9 +47,9 @@ class SoundSettingsViewController: UIViewController {
         hapticButtons = [hapticButton1, hapticButton2, hapticButton3, hapticSelectionButton, hapticSuccessButton, hapticErrorButton, hapticWarningButton]
         
         let viewsArray = [notificationsView, soundView, hapticView]
-        viewsArray.forEach { elem in
-            elem?.layer.masksToBounds = true
-            elem?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
+        viewsArray.forEach {
+            $0?.layer.masksToBounds = true
+            $0?.traitOverrides.userInterfaceLevel = .elevated // переопределение приоритетных цветов (iOS 17+)
         }
     }
     
@@ -57,8 +57,8 @@ class SoundSettingsViewController: UIViewController {
     
     private func disableElements() {
         let arrayToDisable = [hapticSwitch, soundSwitch, volumeSlider]
-        arrayToDisable.forEach() { elem in
-            elem?.isEnabled = false
+        arrayToDisable.forEach() {
+            $0?.isEnabled = false
         }
     }
     
@@ -105,7 +105,7 @@ class SoundSettingsViewController: UIViewController {
     
     // MARK: - Notifications
     
-    @IBAction private func notificationsSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func notificationsSwitchToggled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -119,8 +119,8 @@ class SoundSettingsViewController: UIViewController {
             
         case false:
             
-            [speakerSymbol, hapticSymbol, notificationsSymbol].forEach() { x in
-                disableSymbol(x)
+            [speakerSymbol, hapticSymbol, notificationsSymbol].forEach() {
+                disableSymbol($0)
             }
             
             disableElements()
@@ -139,7 +139,7 @@ class SoundSettingsViewController: UIViewController {
     
     // MARK: - Sounds
     
-    @IBAction private func soundSwitchEnabled(_ sender: UISwitch) {
+    @IBAction private func soundSwitchToggled(_ sender: UISwitch) {
         
         switch sender.isOn {
             
@@ -165,6 +165,20 @@ class SoundSettingsViewController: UIViewController {
     
     @IBAction private func volumeSliderChanged(_ sender: UISlider) {
         volumeLabel.text = "\(Int(sender.value)) %"
+        
+        let volume = sender.value
+        if volume == 0 && speakerSymbol.image != UIImage(systemName: "speaker") {
+            speakerSymbol.setSymbolImage(UIImage(systemName: "speaker")!, contentTransition: .replace)
+        }
+        if (1...33).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.1") {
+            speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.wave.1")!, contentTransition: .replace)
+        }
+        if (34...66).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.2") {
+            speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.wave.2")!, contentTransition: .replace)
+        }
+        if (67...100).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.3") {
+            speakerSymbol.setSymbolImage(UIImage(systemName: "speaker.wave.3")!, contentTransition: .replace)
+        }
     }
     
     private func animateSpeakerSymbol(symbolName: String) {
@@ -177,27 +191,9 @@ class SoundSettingsViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction private func volumeSliderTouchedUp(_ sender: UISlider) {
-        
-        let volume = sender.value
-        if volume == 0 && speakerSymbol.image != UIImage(systemName: "speaker") {
-            animateSpeakerSymbol(symbolName: "speaker")
-        }
-        if (1...33).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.1") {
-            animateSpeakerSymbol(symbolName: "speaker.wave.1")
-        }
-        if (34...66).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.2") {
-            animateSpeakerSymbol(symbolName: "speaker.wave.2")
-        }
-        if (67...100).contains(volume) && speakerSymbol.image != UIImage(systemName: "speaker.wave.3") {
-            animateSpeakerSymbol(symbolName: "speaker.wave.3")
-        }
-    }
-    
     // MARK: - Haptics
     
-    @IBAction private func hapticSwitchChanged() {
+    @IBAction private func hapticSwitchToggled() {
         if hapticSwitch.isOn == true {
             
             hapticSymbol.setSymbolImage(UIImage(systemName: "iphone.motion", withConfiguration: UIImage.SymbolConfiguration(hierarchicalColor: .primary))!, contentTransition: .replace)

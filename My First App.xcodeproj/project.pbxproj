@@ -21,7 +21,8 @@
 		991F2B4B2D216EB5002D992C /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F2B492D216EB5002D992C /* MusicPlayerViewController.swift */; };
 		991F2B4D2D216EE4002D992C /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F2B4C2D216EE4002D992C /* AlbumModel.swift */; };
 		991F2B4F2D216F3C002D992C /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F2B4E2D216F3C002D992C /* MusicCell.swift */; };
-		991F2B512D217434002D992C /* MuiscLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F2B502D217434002D992C /* MuiscLoader.swift */; };
+		991F2B512D217434002D992C /* MusicLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991F2B502D217434002D992C /* MusicLoader.swift */; };
+		992486AB2D396F9D007D09F0 /* PeopleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992486AA2D396F9D007D09F0 /* PeopleLoader.swift */; };
 		99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C5E2BAE32FB003B2550 /* ImagePicker.swift */; };
 		99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99256C622BAF0BF8003B2550 /* LastViewController.swift */; };
 		9925D88C2D11A8CD0097A325 /* Contacts2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */; };
@@ -31,6 +32,8 @@
 		993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */; };
 		993F6F402C2C91B50071650D /* testtext.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 993F6F3F2C2C91B50071650D /* testtext.rtf */; };
 		993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F6F412C2C92410071650D /* TypingtestViewController.swift */; };
+		9950D8A52D4A31D7002C7E7C /* WKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9950D8A42D4A31D7002C7E7C /* WKWebViewViewController.swift */; };
+		9950D8AD2D4A3CD7002C7E7C /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9950D8AC2D4A3CD7002C7E7C /* BrowserViewController.swift */; };
 		995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */; };
 		9957C4072B9E02980054D61C /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9957C4062B9E02980054D61C /* ContactsViewController.swift */; };
 		996539C92C1B2F3400602588 /* Покиньте Зал.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */; };
@@ -67,6 +70,11 @@
 		99C44D002D0F2DC000A7A7C0 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99C44CFF2D0F2DC000A7A7C0 /* IQKeyboardManagerSwift */; };
 		99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */; };
 		99D1C8772D13349700CAE9FD /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D1C8762D13349700CAE9FD /* NavigationViewController.swift */; };
+		99D4E13A2DA683F4000D29C7 /* FlowLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4E1392DA683F4000D29C7 /* FlowLayoutViewController.swift */; };
+		99D4E13D2DA6847E000D29C7 /* GeometricParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4E13C2DA6847E000D29C7 /* GeometricParams.swift */; };
+		99D4E13F2DA68497000D29C7 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4E13E2DA68497000D29C7 /* ColorCell.swift */; };
+		99D4E1412DA684BE000D29C7 /* FlowLayoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4E1402DA684BE000D29C7 /* FlowLayoutService.swift */; };
+		99D4E1432DA6941C000D29C7 /* StoryboardIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4E1422DA6941C000D29C7 /* StoryboardIDs.swift */; };
 		99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */; };
 		99F9599A2CB437C7001BF337 /* QuizResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F959992CB437C7001BF337 /* QuizResultViewController.swift */; };
 /* End PBXBuildFile section */
@@ -88,7 +96,8 @@
 		991F2B492D216EB5002D992C /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		991F2B4C2D216EE4002D992C /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
 		991F2B4E2D216F3C002D992C /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
-		991F2B502D217434002D992C /* MuiscLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuiscLoader.swift; sourceTree = "<group>"; };
+		991F2B502D217434002D992C /* MusicLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLoader.swift; sourceTree = "<group>"; };
+		992486AA2D396F9D007D09F0 /* PeopleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleLoader.swift; sourceTree = "<group>"; };
 		99256C5E2BAE32FB003B2550 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		99256C622BAF0BF8003B2550 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 		9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts2TableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +107,8 @@
 		993179EE2BB81EC90020A2D4 /* LifeDaysTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeDaysTwo.swift; sourceTree = "<group>"; };
 		993F6F3F2C2C91B50071650D /* testtext.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = testtext.rtf; sourceTree = "<group>"; };
 		993F6F412C2C92410071650D /* TypingtestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingtestViewController.swift; sourceTree = "<group>"; };
+		9950D8A42D4A31D7002C7E7C /* WKWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewViewController.swift; sourceTree = "<group>"; };
+		9950D8AC2D4A3CD7002C7E7C /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
 		995182F22C0BAEC50064D136 /* RemindersTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTextPicker.swift; sourceTree = "<group>"; };
 		9957C4062B9E02980054D61C /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		996539C82C1B2F3400602588 /* Покиньте Зал.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Покиньте Зал.mp3"; sourceTree = "<group>"; };
@@ -132,6 +143,11 @@
 		99AB36F62BC5C18B00C5E520 /* NamesCompOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NamesCompOne.swift; sourceTree = "<group>"; };
 		99C507BA2B9A2A6F00076A8B /* IQTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQTestViewController.swift; sourceTree = "<group>"; };
 		99D1C8762D13349700CAE9FD /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		99D4E1392DA683F4000D29C7 /* FlowLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutViewController.swift; sourceTree = "<group>"; };
+		99D4E13C2DA6847E000D29C7 /* GeometricParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometricParams.swift; sourceTree = "<group>"; };
+		99D4E13E2DA68497000D29C7 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		99D4E1402DA684BE000D29C7 /* FlowLayoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutService.swift; sourceTree = "<group>"; };
+		99D4E1422DA6941C000D29C7 /* StoryboardIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIDs.swift; sourceTree = "<group>"; };
 		99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
 		99F959992CB437C7001BF337 /* QuizResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +190,8 @@
 				9914AD7F2B94735C00202CAC /* WelcomeViewController.swift */,
 				99D1C8762D13349700CAE9FD /* NavigationViewController.swift */,
 				9993052E2D06BCBA00E8651D /* AnimationTestViewController.swift */,
+				99D4E13B2DA6846A000D29C7 /* RandomColors */,
+				9950D8AE2D4A4AA9002C7E7C /* Web */,
 				9936A6A92C00C4C8002813F2 /* NamesComp */,
 				9936A6A72C00C4B0002813F2 /* LifeDays */,
 				995182F42C0BAECD0064D136 /* Reminders */,
@@ -207,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				991F2B4C2D216EE4002D992C /* AlbumModel.swift */,
-				991F2B502D217434002D992C /* MuiscLoader.swift */,
+				991F2B502D217434002D992C /* MusicLoader.swift */,
 				991F2B4E2D216F3C002D992C /* MusicCell.swift */,
 				991F2B492D216EB5002D992C /* MusicPlayerViewController.swift */,
 			);
@@ -218,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				9925D88D2D11A8F00097A325 /* PersonModel.swift */,
-				9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */,
+				992486AA2D396F9D007D09F0 /* PeopleLoader.swift */,
 				99F758AA2BA1EAE30068F192 /* PersonViewCell.swift */,
+				9925D88A2D11A8CD0097A325 /* Contacts2TableViewController.swift */,
 			);
 			path = "Contacts 2.0";
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 			children = (
 				996E7A112D0D7EBC0065F873 /* Animations.swift */,
 				99256C5E2BAE32FB003B2550 /* ImagePicker.swift */,
+				99D4E1422DA6941C000D29C7 /* StoryboardIDs.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -260,6 +280,15 @@
 				99AB36F42BC5C18100C5E520 /* NamesCompTwo.swift */,
 			);
 			path = NamesComp;
+			sourceTree = "<group>";
+		};
+		9950D8AE2D4A4AA9002C7E7C /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				9950D8AC2D4A3CD7002C7E7C /* BrowserViewController.swift */,
+				9950D8A42D4A31D7002C7E7C /* WKWebViewViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 		995182F42C0BAECD0064D136 /* Reminders */ = {
@@ -311,6 +340,17 @@
 				99A96A002D241F18009CE917 /* DiceModel.swift */,
 			);
 			path = Dice;
+			sourceTree = "<group>";
+		};
+		99D4E13B2DA6846A000D29C7 /* RandomColors */ = {
+			isa = PBXGroup;
+			children = (
+				99D4E13C2DA6847E000D29C7 /* GeometricParams.swift */,
+				99D4E13E2DA68497000D29C7 /* ColorCell.swift */,
+				99D4E1402DA684BE000D29C7 /* FlowLayoutService.swift */,
+				99D4E1392DA683F4000D29C7 /* FlowLayoutViewController.swift */,
+			);
+			path = RandomColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				991373B82C0F036A006D1A8D /* Model.swift in Sources */,
+				99D4E13D2DA6847E000D29C7 /* GeometricParams.swift in Sources */,
 				9900E1892B9B8EB5002E372E /* PhotoEditorViewController.swift in Sources */,
 				995182F32C0BAEC50064D136 /* RemindersTextPicker.swift in Sources */,
 				99A96A032D242A67009CE917 /* ThemeModel.swift in Sources */,
@@ -408,10 +449,13 @@
 				99C507BB2B9A2A6F00076A8B /* IQTestViewController.swift in Sources */,
 				9925D88E2D11A8F00097A325 /* PersonModel.swift in Sources */,
 				9957C4072B9E02980054D61C /* ContactsViewController.swift in Sources */,
+				9950D8A52D4A31D7002C7E7C /* WKWebViewViewController.swift in Sources */,
 				991F2B4B2D216EB5002D992C /* MusicPlayerViewController.swift in Sources */,
 				99A96A012D241F18009CE917 /* DiceModel.swift in Sources */,
 				990EBBDD2C0794720059A612 /* RemindersController.swift in Sources */,
 				9998E1972C19E99100A353FD /* DiceGameViewController.swift in Sources */,
+				99D4E1412DA684BE000D29C7 /* FlowLayoutService.swift in Sources */,
+				99D4E1432DA6941C000D29C7 /* StoryboardIDs.swift in Sources */,
 				993179EF2BB81EC90020A2D4 /* LifeDaysTwo.swift in Sources */,
 				99A96A092D247840009CE917 /* QuizViewController.swift in Sources */,
 				99A96A0B2D24786D009CE917 /* QuizDescriptionViewController.swift in Sources */,
@@ -421,8 +465,10 @@
 				996E7A122D0D7EBC0065F873 /* Animations.swift in Sources */,
 				991F2B4D2D216EE4002D992C /* AlbumModel.swift in Sources */,
 				996F6B3B2CE65B5300958E3C /* CalculatorViewController.swift in Sources */,
+				99D4E13F2DA68497000D29C7 /* ColorCell.swift in Sources */,
 				9914AD802B94735C00202CAC /* WelcomeViewController.swift in Sources */,
 				99948A3A2BAB327200A4D34E /* Ninth(1)ViewController.swift in Sources */,
+				9950D8AD2D4A3CD7002C7E7C /* BrowserViewController.swift in Sources */,
 				993179ED2BB81E630020A2D4 /* LifeDaysOne.swift in Sources */,
 				991F2B4F2D216F3C002D992C /* MusicCell.swift in Sources */,
 				99256C632BAF0BF8003B2550 /* LastViewController.swift in Sources */,
@@ -430,8 +476,10 @@
 				993F6F422C2C92410071650D /* TypingtestViewController.swift in Sources */,
 				99256C5F2BAE32FB003B2550 /* ImagePicker.swift in Sources */,
 				99948A3E2BAC1EC500A4D34E /* TextScrollViewController.swift in Sources */,
+				99D4E13A2DA683F4000D29C7 /* FlowLayoutViewController.swift in Sources */,
 				99AB36F52BC5C18100C5E520 /* NamesCompTwo.swift in Sources */,
 				99D1C8772D13349700CAE9FD /* NavigationViewController.swift in Sources */,
+				992486AB2D396F9D007D09F0 /* PeopleLoader.swift in Sources */,
 				99948A3C2BAC1EA800A4D34E /* PageViewController.swift in Sources */,
 				997D2DDD2B9CDA3F007E394A /* CookieResultsViewController.swift in Sources */,
 				99A96A112D247BFD009CE917 /* QuizQuestionViewController.swift in Sources */,
@@ -443,7 +491,7 @@
 				9914AD7E2B94735C00202CAC /* SceneDelegate.swift in Sources */,
 				99F758AB2BA1EAE30068F192 /* PersonViewCell.swift in Sources */,
 				9900E1912B9C91FE002E372E /* CookieClickerViewController.swift in Sources */,
-				991F2B512D217434002D992C /* MuiscLoader.swift in Sources */,
+				991F2B512D217434002D992C /* MusicLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

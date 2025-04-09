@@ -17,11 +17,11 @@ class NavigationViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let cookieClickerAction = UIAction(title: "Cookie Clicker") { _ in
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "cookieClicker") as! CookieClickerViewController
+            let vc6 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.cookieclicker) as! CookieClickerViewController
             self.navigationController?.pushViewController(vc6, animated: true)
         }
         let cookieResultAction = UIAction(title: "Cookie Results") { _ in
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "six") as! CookieResultsViewController
+            let vc6 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.cookieresults) as! CookieResultsViewController
             self.navigationController?.pushViewController(vc6, animated: true)
         }
         
@@ -29,11 +29,11 @@ class NavigationViewController: UIViewController {
         cookieClickerButton.menu = cookieMenu
         
         let contactsAction = UIAction(title: "Контакты 1.0") { _ in
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "contacts")
+            let vc6 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.contacts)
             self.navigationController?.pushViewController(vc6, animated: true)
         }
         let contacts2Action = UIAction(title: "Контакты 2.0") { _ in
-            let vc6 = storyboard.instantiateViewController(withIdentifier: "contacts2")
+            let vc6 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.contacts2)
             self.navigationController?.pushViewController(vc6, animated: true)
         }
         
@@ -46,18 +46,18 @@ class NavigationViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
             let viewControllers: [Int: String] = [
-                1: "iqtest",
-                2: "sound",
-                3: "photoshop",
-                4: "cookieClicker",
-                7: "icemusic",
-                8: "PAGESID",
-                10: "lifedays",
-                11: "names",
-                12: "reminders",
-                13: "dice",
-                14: "typingtest",
-                15: "QuizID"
+                1: StoryboardIDs.iqtest,
+                2: StoryboardIDs.soundsettings,
+                3: StoryboardIDs.photoshop,
+                4: StoryboardIDs.cookieclicker,
+                7: StoryboardIDs.icemusic,
+                8: StoryboardIDs.applestore,
+                10:StoryboardIDs.lifedays,
+                11:StoryboardIDs.namescomp,
+                12:StoryboardIDs.reminders,
+                13:StoryboardIDs.dice,
+                14:StoryboardIDs.typingtest,
+                15:StoryboardIDs.quizice
             ]
             
             guard let identifier = viewControllers[sender.tag],

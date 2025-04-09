@@ -27,8 +27,8 @@ class CalculatorViewController: UIViewController {
     private var canStartAgain = true
     
     private let animationsEngine = Animations()
-    private let startColor: CGColor = UIColor.calculatorGray.cgColor // CGColor(red: 44/255, green: 44/255, blue: 46/255, alpha: 1)
-    private let endColor: CGColor = UIColor.calculatorGrayAccent.cgColor // CGColor(red: 150/255, green: 150/255, blue: 150/255, alpha: 1)
+    private let startColor: CGColor = UIColor.calculatorGray.cgColor
+    private let endColor: CGColor = UIColor.calculatorGrayAccent.cgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,11 @@ class CalculatorViewController: UIViewController {
         
         switch currentAction {
         case "/":
-            currentNumber = firstNumber / currentNumber
+            if currentNumber != 0 {
+                currentNumber = firstNumber / currentNumber
+            } else {
+                currentNumber = 404
+            }
             break
         case "*":
             currentNumber *= firstNumber
@@ -78,6 +82,9 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction private func actionButtonTouchedUp(_ sender: UIButton) {
+        if currentSender != nil {
+            animationsEngine.animateBackgroundColor(currentSender!, color: startColor)
+        }
         if ![10, 16].contains(sender.tag) {
             animationsEngine.animateBackgroundColor(sender, color: endColor)
             currentSender = sender

@@ -17,7 +17,7 @@ class TabViewController: UITabBarController {
     
     @objc func pushLastVC() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let lastVC = storyboard.instantiateViewController(withIdentifier: "LASTVCID")
+        let lastVC = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.lastVC)
         self.navigationController?.pushViewController(lastVC, animated: true)
     }
 }

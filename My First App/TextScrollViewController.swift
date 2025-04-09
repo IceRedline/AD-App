@@ -12,7 +12,7 @@ class TextScrollViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     static func create(text: String) -> TextScrollViewController {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "VC10SID") as! TextScrollViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: StoryboardIDs.textscroll) as! TextScrollViewController
         vc.text = text
         return vc
     }
@@ -32,7 +32,7 @@ class TextScrollViewController: UIViewController {
     
     @IBAction func nextButtonTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc11 = storyboard.instantiateViewController(withIdentifier: "TABSID") as! UITabBarController
+        let vc11 = storyboard.instantiateViewController(withIdentifier: StoryboardIDs.applestore) as! UITabBarController
         self.navigationController?.pushViewController(vc11, animated: true) // переход с использованием первого Navigation Controller
     }
     
